@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(const FigmaToCodeApp());
 }
+
 class FigmaToCodeApp extends StatelessWidget {
   const FigmaToCodeApp({super.key});
 
@@ -91,7 +92,7 @@ class TelaInicial extends StatelessWidget {
                             ),
                         ],
                     ),
-                ),
+                ), 
             ),
             Positioned(
                 left: 109,
@@ -99,7 +100,7 @@ class TelaInicial extends StatelessWidget {
                 child: Container(
                     width: 168,
                     height: 171,
-                    decoration: ShapeDecoration(
+                    decoration: const ShapeDecoration(
                         color: Color(0xFFD9D9D9),
                         shape: RoundedRectangleBorder(side: BorderSide(width: 1)),
                         shadows: [
@@ -113,22 +114,8 @@ class TelaInicial extends StatelessWidget {
                     ),
                 ),
             ),
-            Positioned(
-                left: 87,
-                top: 212,
-                child: Container(
-                    width: 212,
-                    height: 280,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: NetworkImage("https://via.placeholder.com/212x280"),
-                            fit: BoxFit.fill,
-                        ),
-                    ),
-                ),
-            ),
-            Positioned(
-                left: 94,
+            const Positioned(
+                left: 85,
                 top: 463,
                 child: SizedBox(
                     width: 243,
@@ -136,53 +123,177 @@ class TelaInicial extends StatelessWidget {
                         'HandHelp',
                         style: TextStyle(
                             color: Color(0xFF004AAD),
-                            fontSize: 48,
+                            fontSize: 38,
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.w900,
-                            height: 0,
                         ),
                     ),
                 ),
             ),
-            Positioned(
-                left: 61,
-                top: 556,
-                child: Container(
-                    width: 267,
-                    height: 61,
-                    decoration: ShapeDecoration(
-                        color: Color(0xFF5667FD),
+                Stack(
+                  children: <Widget>[
+                    Positioned(
+                      top: 650,
+                      left: 70,
+                      child: ElevatedButton(
+                        child: const Text(
+                          'continua',
+                          style: TextStyle(
+                            color: Color.fromARGB(255, 243, 240, 240),
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                          ),
+                        onPressed: (){
+                          print('Clicou botão tela 2');
+                            Navigator.push(
+                              context, 
+                             MaterialPageRoute(
+                              builder: (context) => Tela2()
+                              ),
+                            );
+                      }, 
+                      style: ElevatedButton.styleFrom(
+                        primary: Color(0xFF5667FD),
+                        minimumSize: Size(250, 60),
                         shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(12),
-                        ),
-                        shadows: [
-                            BoxShadow(
-                                color: Color(0x19000000),
-                                blurRadius: 32,
-                                offset: Offset(0, 14),
-                                spreadRadius: -2,
-                            )
-                        ],
-                    ),
-                ),
-            ),
-            Positioned(
-                left: 165,
-                top: 567,
-                child: Text(
-                    'continua\n',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontFamily: 'Exo',
-                        fontWeight: FontWeight.w600,
-                        height: 0,
-                    ),
-                ),
-            ),
+                          borderRadius: BorderRadius.circular(9),
+                        )
+                      ) 
+                      ),
+                    )
+                  ],
+                )
         ],
+      ),
+    );
+  }
+}
+
+class Tela2 extends StatelessWidget {
+  final List<String> itens = [
+    'Libras sinais',
+    'Libras sinais',
+    'Libras sinais',
+    'Libras sinais',
+    'Libras sinais',
+    'Libras sinais',
+    'Libras sinais',
+    'Libras sinais',
+    'Libras sinais',
+    'Libras sinais',
+  ];
+
+@override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          onPressed: () {
+            print('Clicou botão tela 1');
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const TelaInicial(),
+              ),
+            );
+          },
+          icon: const Icon(Icons.arrow_back),
+        ),
+      ),
+      body: Column(
+        children: <Widget>[            
+          Container(
+            padding: const EdgeInsets.only(bottom: 7),
+            height: 150,
+            width: 350,
+            // color: Colors.amber,              
+            child: const Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,                
+              children: <Widget>[   
+                Row(   
+                             
+                  children: <Widget>[
+                    SizedBox(
+                      width: 85.0,
+                      height: 13.0,
+                      child: Card(),
+                    ),                    
+                    SizedBox(
+                      width: 85.0,
+                      height: 13.0,
+                      child: Card(),
+                    ),                    
+                    SizedBox(
+                      width: 85.0,
+                      height: 13.0,
+                      child: Card(),
+                    ),                    
+                    SizedBox(
+                      width: 85.0,
+                      height: 13.0,
+                      child: Card(),
+                    ),
+                  ],
+                ),               
+                Text(
+                  'sintomas',
+                  style: TextStyle(
+                    fontSize: 28,
+                    fontWeight: FontWeight.bold,                                           
+                  ),
+                ),
+                Text(
+                  'selecione o que sente?',
+                  style: TextStyle(
+                    fontSize: 14,                                      
+                  ),
+                ),
+
+              ],
+            ),
+          ),
+          Expanded(
+            child: GridView.builder(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisSpacing: 20.0,
+                crossAxisCount: 2, // Número de colunas na grade
+              ),
+              itemCount: itens.length,
+              itemBuilder: (BuildContext context, int index) {
+                return MyGridItem(title: itens[index]);
+              },
+            ),
+          ),
+        ],
+      ),
     ),
-);
+  );
+}
+}
+
+class MyGridItem extends StatelessWidget {
+  final String title;
+
+  MyGridItem({required this.title});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 2.0,
+      margin: EdgeInsets.all(25.0),
+      child: Center(
+        child: Text(
+          title,
+          style: const TextStyle(
+            fontSize: 20.0,
+            height: 17.0,
+            fontWeight: FontWeight.bold,
+            ),
+        ),
+      ),
+    );
   }
 }
