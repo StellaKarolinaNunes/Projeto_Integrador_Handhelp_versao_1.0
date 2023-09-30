@@ -1,12 +1,27 @@
+// This is a basic Flutter widget test.
+//
+// To perform an interaction with a widget in your test, use the WidgetTester
+// utility in the flutter_test package. For example, you can send tap and scroll
+// gestures. You can also use WidgetTester to find child widgets in the widget
+// tree, read text, and verify that the values of widget properties are correct.
+
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:handhelp/Pages/TelaInicial.dart';
+
+// Este é um teste básico de widget Flutter.
+//
+// Para interagir com um widget em seu teste, use a utilidade WidgetTester
+// no pacote flutter_test. Por exemplo, você pode enviar gestos de toque e rolagem.
+// Você também pode usar o WidgetTester para encontrar widgets filhos na árvore de widgets,
+// ler texto, e verificar se os valores das propriedades do widget estão corretos.
 
 void main() {
-  testWidgets('Teste de incremento do contador', (WidgetTester tester) async {
-    // Construa o nosso app e acione um frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+    // Construa nosso aplicativo e acione um frame.
+    await tester.pumpWidget(const TelaInicial()); // Substitua MyApp pelo widget raiz do seu aplicativo.
 
-    // Verifique se o nosso contador começa em 0.
+    // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
     expect(find.text('1'), findsNothing);
 
@@ -14,30 +29,8 @@ void main() {
     await tester.tap(find.byIcon(Icons.add));
     await tester.pump();
 
-    // Verifique se o nosso contador foi incrementado.
+    // Verify that our counter has incremented.
     expect(find.text('0'), findsNothing);
     expect(find.text('1'), findsOneWidget);
   });
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Meu App'),
-        ),
-        body: const Center(
-          child: Text('0'),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {},
-          child: const Icon(Icons.add),
-        ),
-      ),
-    );
-  }
 }
