@@ -1,6 +1,6 @@
 {
-    "name": "teste",
-    "short_name": "teste",
+    "name": "projeto_integrador",
+    "short_name": "projeto_integrador",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

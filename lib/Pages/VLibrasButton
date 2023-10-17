@@ -1,6 +1,0 @@
-VLibras(
-  appBarTheme: VLibrasAppBarTheme.light,
-  startText: 'Ativar tradução em Libras',
-  endText: 'Desativar tradução em Libras',
-  consumerKey: 'sua_chave_do_vlibras',
-)

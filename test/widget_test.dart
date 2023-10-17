@@ -7,25 +7,19 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:handhelp/Pages/TelaInicial.dart';
+import 'package:projeto_integrador/main.dart';
 
-// Este é um teste básico de widget Flutter.
-//
-// Para interagir com um widget em seu teste, use a utilidade WidgetTester
-// no pacote flutter_test. Por exemplo, você pode enviar gestos de toque e rolagem.
-// Você também pode usar o WidgetTester para encontrar widgets filhos na árvore de widgets,
-// ler texto, e verificar se os valores das propriedades do widget estão corretos.
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Construa nosso aplicativo e acione um frame.
-    await tester.pumpWidget(const TelaInicial()); // Substitua MyApp pelo widget raiz do seu aplicativo.
+    // Build our app and trigger a frame.
+    await tester.pumpWidget(const FigmaToCodeApp());
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);
     expect(find.text('1'), findsNothing);
 
-    // Toque no ícone '+' e acione um frame.
+    // Tap the '+' icon and trigger a frame.
     await tester.tap(find.byIcon(Icons.add));
     await tester.pump();
 
