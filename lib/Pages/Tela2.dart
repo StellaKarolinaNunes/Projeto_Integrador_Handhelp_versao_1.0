@@ -20,6 +20,7 @@ class Tela2 extends StatelessWidget {
   @override
 Widget build(BuildContext context) {
   return MaterialApp(
+          debugShowCheckedModeBanner: false,  // Correção aqui
     home: Scaffold(
       appBar: AppBar(
         leading: IconButton(

@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
-import 'Pages/FigmaToCodeApp.dart';
+import 'Pages/TelaInicial.dart';
+
 
 void main() {
-  runApp(const FigmaToCodeApp());
+  runApp(
+    MaterialApp(
+      debugShowCheckedModeBanner: false,  // Correção aqui
+      home: TelaInicial(),
+    ),
+  );
 }
