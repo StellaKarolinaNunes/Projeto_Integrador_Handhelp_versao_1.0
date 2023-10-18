@@ -283,11 +283,10 @@ class Home2 extends StatelessWidget {
     );
   }
 
-
-  void _navigateToIntensidadeDor(BuildContext context) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => const IntensidadeDorPage()),
-    );
-  }
+void _navigateToIntensidadeDor(BuildContext context) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => IntensityPage([])),
+  );
+}
 }
