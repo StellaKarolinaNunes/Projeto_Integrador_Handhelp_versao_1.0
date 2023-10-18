@@ -31,7 +31,7 @@ class tela1 extends StatelessWidget {
       children: [
         Container(
           width: 409,
-          height: 812,
+          height: 780,
           clipBehavior: Clip.antiAlias,
           decoration: ShapeDecoration(
             color: Colors.white,
@@ -39,11 +39,11 @@ class tela1 extends StatelessWidget {
               borderRadius: BorderRadius.circular(30),
             ),
           ),
-          child: Stack(
+          child: Stack(             
             children: [
               const Positioned(
                 left: 125.50,
-                top: 489.94,
+                top: 479.94,
                 child: Text(
                   'HANDHELP',
                   textAlign: TextAlign.center,
@@ -72,7 +72,7 @@ class tela1 extends StatelessWidget {
                     );
                   },
                   child: Container(
-                    width: 212,
+                    width: 200,
                     height: 280,
                     decoration: const BoxDecoration(
                       

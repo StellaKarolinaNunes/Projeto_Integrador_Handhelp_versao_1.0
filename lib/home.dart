@@ -36,7 +36,7 @@ class Home1 extends StatelessWidget {
           child: Row(
             children: [
               // Primeira Column - Imagem
-              const SizedBox(width: 25.0),
+              const SizedBox(width: 15.0),
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
@@ -50,7 +50,7 @@ class Home1 extends StatelessWidget {
                   
                 ],
               ),
-              const SizedBox(width: 16.0),
+              const SizedBox(width: 0.20),
               // Segunda Column - Texto
               const Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -65,7 +65,7 @@ class Home1 extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(width: 200.0),
+              const SizedBox(width: 140.0),
               // Terceira Column - Ícone
               const Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -169,7 +169,7 @@ class Home1 extends StatelessWidget {
                       maxLines: 4,
                       softWrap: false,
                       style: TextStyle(
-                        fontSize: 10,
+                        fontSize: 16,
                         fontWeight: FontWeight.w400,
                       ),
                     ),

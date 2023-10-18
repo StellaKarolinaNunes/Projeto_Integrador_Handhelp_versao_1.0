@@ -43,7 +43,7 @@ class Home2 extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(
-                    width: 80.0,
+                    width: 40.0,
                     height: 95.0,
                     child: GestureDetector(
                       onTap: () {
@@ -62,8 +62,8 @@ class Home2 extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(width: 100.0),
-              Column(
+              const SizedBox(width: 10.0),
+              Column(                
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
