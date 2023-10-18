@@ -175,7 +175,7 @@ class Home1 extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
+              ), 
             ],
           ),
         ),
