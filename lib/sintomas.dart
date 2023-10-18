@@ -12,6 +12,7 @@ class Sintomas extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: const Color.fromARGB(255, 255, 255, 255),
       ),
@@ -28,7 +29,7 @@ class Sintomas extends StatelessWidget {
 
 class Home2 extends StatelessWidget {
   final String tipoSaude;
-  Home2(this.tipoSaude, {Key? key}) : super(key: key);
+  const Home2(this.tipoSaude, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -87,7 +88,7 @@ class Home2 extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             color: const Color(0x4cd9d9d9),
           ),
-          child: Row(
+          child: const Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Column(
@@ -148,12 +149,12 @@ class Home2 extends StatelessWidget {
                   color: const Color.fromARGB(236, 184, 176, 176),
                 ),
                 width: 95,
-                child: Column(
+                child: const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [],
                 ),
               ),
-              Column(
+              const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
@@ -182,12 +183,12 @@ class Home2 extends StatelessWidget {
                   color: const Color.fromARGB(236, 184, 176, 176),
                 ),
                 width: 95,
-                child: Column(
+                child: const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [],
                 ),
               ),
-              Column(
+              const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
@@ -252,7 +253,7 @@ class Home2 extends StatelessWidget {
                 width: 95,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [],
+                  children: const [],
                 ),
               ),
               Column(

@@ -274,12 +274,12 @@ class Home1 extends StatelessWidget {
                     color: const Color.fromARGB(236, 184, 176, 176),
                   ),
                   width: 150,
-                  child: Column(
+                  child: const Column(
                     children: [
-                      const SizedBox(height: 110),
+                      SizedBox(height: 110),
                       Text(
                         TipoSaude,
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 19.5,
                           fontWeight: FontWeight.w400,
                           color: Colors.black,
