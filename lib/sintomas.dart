@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_integrador/home.dart';
+import 'package:projeto_integrador/intensidade_dor.dart';
 
 void main() {
   runApp(const Sintomas("Algum tipo de saúde"));
 }
+
 
 class Sintomas extends StatelessWidget {
   final String tipoSaude;
@@ -143,15 +145,20 @@ class Home2 extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: const Color.fromARGB(236, 184, 176, 176),
-                ),
-                width: 95,
-                child: const Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [],
+              GestureDetector(
+                onTap: () {
+                  _navigateToIntensidadeDor(context);
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: const Color.fromARGB(236, 184, 176, 176),
+                  ),
+                  width: 95,
+                  child: const Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [],
+                  ),
                 ),
               ),
               const Column(
@@ -217,7 +224,7 @@ class Home2 extends StatelessWidget {
                   color: const Color.fromARGB(236, 184, 176, 176),
                 ),
                 width: 95,
-                child: Column(
+                child: const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [],
                 ),
@@ -226,7 +233,7 @@ class Home2 extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Alguém questão causa?',
+                    'dor de cabeça',
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -273,6 +280,14 @@ class Home2 extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+
+
+  void _navigateToIntensidadeDor(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const IntensidadeDorPage()),
     );
   }
 }
