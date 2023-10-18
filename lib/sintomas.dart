@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_integrador/home.dart';
+import 'package:projeto_integrador/intensidade_dor.dart';
 
 void main() {
   runApp(const Sintomas("Algum tipo de saúde"));
 }
+
 
 class Sintomas extends StatelessWidget {
   final String tipoSaude;
@@ -12,6 +14,7 @@ class Sintomas extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: const Color.fromARGB(255, 255, 255, 255),
       ),
@@ -28,7 +31,7 @@ class Sintomas extends StatelessWidget {
 
 class Home2 extends StatelessWidget {
   final String tipoSaude;
-  Home2(this.tipoSaude, {Key? key}) : super(key: key);
+  const Home2(this.tipoSaude, {Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -87,7 +90,7 @@ class Home2 extends StatelessWidget {
             borderRadius: BorderRadius.circular(10),
             color: const Color(0x4cd9d9d9),
           ),
-          child: Row(
+          child: const Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Column(
@@ -142,18 +145,23 @@ class Home2 extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: const Color.fromARGB(236, 184, 176, 176),
-                ),
-                width: 95,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [],
+              GestureDetector(
+                onTap: () {
+                  _navigateToIntensidadeDor(context);
+                },
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: const Color.fromARGB(236, 184, 176, 176),
+                  ),
+                  width: 95,
+                  child: const Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [],
+                  ),
                 ),
               ),
-              Column(
+              const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
@@ -182,12 +190,12 @@ class Home2 extends StatelessWidget {
                   color: const Color.fromARGB(236, 184, 176, 176),
                 ),
                 width: 95,
-                child: Column(
+                child: const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [],
                 ),
               ),
-              Column(
+              const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
@@ -216,7 +224,7 @@ class Home2 extends StatelessWidget {
                   color: const Color.fromARGB(236, 184, 176, 176),
                 ),
                 width: 95,
-                child: Column(
+                child: const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [],
                 ),
@@ -225,7 +233,7 @@ class Home2 extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Alguém questão causa?',
+                    'dor de cabeça',
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
@@ -252,7 +260,7 @@ class Home2 extends StatelessWidget {
                 width: 95,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [],
+                  children: const [],
                 ),
               ),
               Column(
@@ -272,6 +280,14 @@ class Home2 extends StatelessWidget {
           ),
         ),
       ],
+    );
+  }
+
+
+  void _navigateToIntensidadeDor(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const IntensidadeDorPage()),
     );
   }
 }
