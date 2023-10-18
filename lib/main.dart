@@ -3,6 +3,7 @@ import 'package:projeto_integrador/home.dart';
 
 void main() {
   runApp(const FigmaToCodeApp());
+ 
 }
 
 class FigmaToCodeApp extends StatelessWidget {

@@ -3,14 +3,15 @@ import 'package:projeto_integrador/sintomas.dart';
 
 void main() {
   runApp(const CodeApp());
-  }
+}
 
 class CodeApp extends StatelessWidget {
-  const CodeApp({super.key});
+  const CodeApp({Key? key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: const Color.fromARGB(255, 255, 255, 255),
       ),
@@ -24,9 +25,11 @@ class CodeApp extends StatelessWidget {
 }
 
 class Home1 extends StatelessWidget {
-  const Home1({Key? key}) : super(key: key);
+  const Home1({Key? key});
+
   // ignore: non_constant_identifier_names
   final String TipoSaude = "Bronquite";
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -40,14 +43,11 @@ class Home1 extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  
-                     Image.asset(
-                       'assets/images/logo_transpa.png',
-                       width: 80.0,
-                       height: 80.0,
-                       
-                     ),
-                  
+                  Image.asset(
+                    'assets/images/logo_transpa.png',
+                    width: 80.0,
+                    height: 80.0,
+                  ),
                 ],
               ),
               const SizedBox(width: 0.20),
@@ -98,17 +98,6 @@ class Home1 extends StatelessWidget {
                     size: 26.0,
                     color: Color.fromARGB(237, 137, 126, 126),
                   ),
-                  // Align(
-                  //   alignment: Alignment.center,
-                  //   child: IconButton(
-                  //     icon: Icon(Icons.search),
-                  //     iconSize: 26.0,
-                  //     color: Color.fromARGB(237, 137, 126, 126),
-                  //     onPressed: () {
-                  //       // Adicione aqui a lógica de pesquisa
-                  //     },
-                  //   ),
-                  // ),
                 ],
               ),
               Column(
@@ -127,7 +116,6 @@ class Home1 extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // const SizedBox(width: 50.0),
                   Icon(
                     Icons.settings_voice_outlined,
                     size: 26.0,
@@ -183,7 +171,7 @@ class Home1 extends StatelessWidget {
           height: 15,
           width: 90,
           margin: const EdgeInsets.only(top: 20),
-          child: const Row(
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Column(
@@ -227,7 +215,7 @@ class Home1 extends StatelessWidget {
         ),
         Container(
           margin: const EdgeInsets.only(top: 20),
-          child: const Row(
+          child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Column(
@@ -275,21 +263,21 @@ class Home1 extends StatelessWidget {
                   ),
                   width: 150,
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      const SizedBox(height: 110),
                       Text(
                         TipoSaude,
-                        style: const TextStyle(
-                          fontSize: 19.5,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.black,
+                        style: TextStyle(
+                          color: Colors.blue,
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold,
                         ),
                       ),
                     ],
                   ),
                 ),
               ),
-              InkWell(
+              GestureDetector(
                 onTap: () {
                   _navigateToSintomas(context, "Febre");
                 },
@@ -299,7 +287,7 @@ class Home1 extends StatelessWidget {
                     color: const Color.fromARGB(236, 184, 176, 176),
                   ),
                   width: 150,
-                  child: const Column(
+                  child: Column(
                     children: [
                       SizedBox(height: 110),
                       Text(
@@ -313,7 +301,7 @@ class Home1 extends StatelessWidget {
                     ],
                   ),
                 ),
-              )
+              ),
             ],
           ),
         ),
@@ -334,7 +322,7 @@ class Home1 extends StatelessWidget {
                     color: const Color.fromARGB(236, 184, 176, 176),
                   ),
                   width: 150,
-                  child: const Column(
+                  child: Column(
                     children: [
                       SizedBox(height: 110),
                       Text(
@@ -359,7 +347,7 @@ class Home1 extends StatelessWidget {
                     color: const Color.fromARGB(236, 184, 176, 176),
                   ),
                   width: 150,
-                  child: const Column(
+                  child: Column(
                     children: [
                       SizedBox(height: 110),
                       Text(
@@ -383,7 +371,8 @@ class Home1 extends StatelessWidget {
 
   void _navigateToSintomas(BuildContext context, tipoSaude) {
     Navigator.push(
-        context, MaterialPageRoute(builder: (context) => Sintomas(tipoSaude)),
+      context,
+      MaterialPageRoute(builder: (context) => Sintomas(tipoSaude)),
     );
   }
 }
