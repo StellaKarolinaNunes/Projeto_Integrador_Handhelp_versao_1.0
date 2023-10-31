@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_integrador/GeraTexto.dart';
 
 class IntensityPage extends StatefulWidget {
   final List<String> escolhasAnteriores;
@@ -28,17 +29,6 @@ class _IntensityPageState extends State<IntensityPage> {
     }
   }
 
-// Função para navegar para outra página
-  void _navigateToNextPage() {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) =>
-            GerarText(), // Certifique-se de que a classe GerarText está corretamente definida
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,21 +36,24 @@ class _IntensityPageState extends State<IntensityPage> {
         centerTitle: true,
         backgroundColor: Colors.white,
         title: Stack(
-          alignment: Alignment.center,
+          alignment: Alignment.topLeft,
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
               height: 0, // Altura zero para ocupar apenas o espaço necessário
             ),
-            Text(
-              'intensidade',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Color(
-                    0xFF198EB6), // Alterei a cor para preto, ajuste conforme necessário
-                fontSize: 26,
-                fontFamily: 'Averia Sans Libre',
-                fontWeight: FontWeight.w700,
+            Container(
+              width: 240,
+              child: Text(
+                'intensidade',
+                textAlign: TextAlign.end,
+                style: TextStyle(
+                  color: Color(
+                      0xFF198EB6), // Alterei a cor para preto, ajuste conforme necessário
+                  fontSize: 26,
+                  fontFamily: 'Averia Sans Libre',
+                  fontWeight: FontWeight.w700,
+                ),
               ),
             ),
           ],
@@ -88,32 +81,39 @@ class _IntensityPageState extends State<IntensityPage> {
               activeColor: getColor(intensidade),
             ),
             const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                print('Botão OK pressionado! Intensidade: $intensidade');
-                _navigateToNextPage();
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 18, 18, 18),
+            Container(
+              height: 45,
+              width: 350,
+              child: ElevatedButton(
+                onPressed: () {
+                  print('Botão OK pressionado! Intensidade: $intensidade');
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => GeraText(), // Certifique-se de que a classe GerarText está corretamente definida
+                    ),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.green,
+                ),
+                child: Rectangle45(),
               ),
-              child: Rectangle45(),
             ),
           ],
         ),
       ),
     );
   }
-
-  GerarText() {}
 }
 
 class Rectangle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 20.0),
+      padding: const EdgeInsets.only(top: 10.0),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Container(
             width: 295,
@@ -135,20 +135,23 @@ class Rectangle extends StatelessWidget {
 class Rectangle45 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Text(
-          'OK',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 30,
-            fontFamily: 'Averia Sans Libre',
-            fontWeight: FontWeight.w700,
-            height: 0,
+    return Container(
+      height: 35,
+      child: Column(
+        children: [
+          Text(
+            'OK',
+            textAlign: TextAlign.end,
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 30,
+              fontFamily: 'Averia Sans Libre',
+              fontWeight: FontWeight.w700,
+              height: 0,
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }
