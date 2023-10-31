@@ -100,9 +100,9 @@ class _PaginaSintomasState extends State<PaginaSintomas> {
         onPressed: () {
           // Navigator.push(
           //   context,
-            // MaterialPageRoute(
-            //   builder: (context) => PaginaIntensidadeDor(_sintomasSelecionados),
-            // ),
+          //   MaterialPageRoute(
+          //     builder: (context) => PaginaIntensidadeDor(_sintomasSelecionados),
+          //   ),
           // );
         },
         child: const Text('Próxima Pergunta'),
