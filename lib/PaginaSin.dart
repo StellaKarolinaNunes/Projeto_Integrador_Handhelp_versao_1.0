@@ -1,15 +1,100 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(PaginaSintomas());
-}
-
 class PaginaSintomas extends StatefulWidget {
   @override
   _PaginaSintomasState createState() => _PaginaSintomasState();
 }
 
 class _PaginaSintomasState extends State<PaginaSintomas> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Sintomas',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Colors.blue,
+            fontSize: 26,
+            fontFamily: 'averia sans libre',
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Adiciona a imagem ao lado da coluna de sintomas
+            Expanded(
+              child: _buildInteractiveViewer(),
+            ),
+            const SizedBox(
+              width: 20,
+            ), // Espaçamento entre a imagem e os sintomas
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: _construirBotoesCategorias(),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildInteractiveViewer() {
+    return InteractiveViewer(
+      maxScale: 5.0,
+      child: Stack(
+        children: [
+          Image.asset(
+            'assets/images/CorpoM.png',
+            width: 300,
+            height: 300,
+          ),
+          Positioned(
+            top: 9.8,
+            left: 70.0,
+            child: _buildPainfulArea(25.0, 15.0, 'Dor na Cabeça!'),
+          ),
+          Positioned(
+            top: 28.0,
+            left: 68.0,
+            child: _buildPainfulArea(6.0, 8.0, 'Dor na Ouvido!'),
+          ),
+          Positioned(
+            top: 28.0,
+            left: 78.0,
+            child: _buildPainfulArea(17.5, 4.9, 'Dor na Olho!'),
+          ),
+          Positioned(
+            top: 60.0,
+            left: 65.0,
+            child: _buildPainfulArea(40.0, 40.0, 'Dor no Peito!'),
+          ),
+          // Adicione mais áreas de dor conforme necessário
+        ],
+      ),
+    );
+  }
+
+  Widget _buildPainfulArea(double width, double height, String mensagem) {
+    return GestureDetector(
+      onTap: () {
+        print(mensagem);
+      },
+      child: Container(
+        color: const Color.fromARGB(0, 244, 67, 54),
+        // color: Colors.red,
+        width: width,
+        height: height,
+      ),
+    );
+  }
+
   List<String> _sintomasSelecionados = [];
   final Map<String, List<String>> _categoriasSintomas = {
     'Respiratórios': ['Tosse', 'Falta de ar', 'Chiado no peito'],
@@ -110,45 +195,5 @@ class _PaginaSintomasState extends State<PaginaSintomas> {
     );
 
     return botoes;
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Sintomas',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.blue,
-            fontSize: 26,
-            fontFamily: 'averia sans libre',
-            fontWeight: FontWeight.w700,
-          ),
-        ),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            // Adiciona a imagem ao lado da coluna de sintomas
-            Image.asset(
-              'assets/images/2.png',
-              width: 500, // Ajuste o tamanho conforme necessário
-              height: 500,
-            ),
-            const SizedBox(
-                width: 20), // Espaçamento entre a imagem e os sintomas
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: _construirBotoesCategorias(),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
   }
 }
