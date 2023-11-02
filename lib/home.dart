@@ -6,7 +6,7 @@ void main() {
 }
 
 class CodeApp extends StatelessWidget {
-  const CodeApp({Key? key});
+  const CodeApp({super.key, Key? Key});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class CodeApp extends StatelessWidget {
 }
 
 class Home1 extends StatelessWidget {
-  const Home1({Key? key});
+  const Home1({super.key, Key? Key});
 
   // ignore: non_constant_identifier_names
   final String TipoSaude = "Bronquite";
@@ -163,7 +163,7 @@ class Home1 extends StatelessWidget {
                     ),
                   ],
                 ),
-              ), 
+              ),
             ],
           ),
         ),
@@ -171,7 +171,7 @@ class Home1 extends StatelessWidget {
           height: 15,
           width: 90,
           margin: const EdgeInsets.only(top: 20),
-          child: Row(
+          child: const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Column(
@@ -215,7 +215,7 @@ class Home1 extends StatelessWidget {
         ),
         Container(
           margin: const EdgeInsets.only(top: 20),
-          child: Row(
+          child: const Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Column(
@@ -257,20 +257,24 @@ class Home1 extends StatelessWidget {
                   _navigateToSintomas(context, TipoSaude);
                 },
                 child: Container(
+                  width: 150, // Defina a largura aqui
+                  height: 140,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: const Color.fromARGB(236, 184, 176, 176),
+                    image: const DecorationImage(
+                      image: AssetImage('assets/images/Bronquite.png'),
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                  width: 150,
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
+                      const SizedBox(height: 110),
                       Text(
                         TipoSaude,
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
+                        style: const TextStyle(
+                          fontSize: 19.5,
+                          fontWeight: FontWeight.w400,
+                          color: Colors.black,
                         ),
                       ),
                     ],
@@ -282,12 +286,15 @@ class Home1 extends StatelessWidget {
                   _navigateToSintomas(context, "Febre");
                 },
                 child: Container(
+                  width: 150, // Defina a largura aqui
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: const Color.fromARGB(236, 184, 176, 176),
+                    image: const DecorationImage(
+                      image: AssetImage('assets/images/febre.png'),
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                  width: 150,
-                  child: Column(
+                  child: const Column(
                     children: [
                       SizedBox(height: 110),
                       Text(
@@ -317,12 +324,16 @@ class Home1 extends StatelessWidget {
                   _navigateToSintomas(context, "Dor de ouvido");
                 },
                 child: Container(
+                  width: 150,
+                  height: 140,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: const Color.fromARGB(236, 184, 176, 176),
+                    image: const DecorationImage(
+                      image: AssetImage('assets/images/Dor_de_Ouvido.png'),
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                  width: 150,
-                  child: Column(
+                  child: const Column(
                     children: [
                       SizedBox(height: 110),
                       Text(
@@ -342,12 +353,16 @@ class Home1 extends StatelessWidget {
                   _navigateToSintomas(context, "Dor de Cabeça");
                 },
                 child: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: const Color.fromARGB(236, 184, 176, 176),
-                  ),
                   width: 150,
-                  child: Column(
+                  height: 140,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),                    
+                    image: const DecorationImage(
+                      image: AssetImage('assets/images/Dor_de_Cabeça.png'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),                  
+                  child: const Column(
                     children: [
                       SizedBox(height: 110),
                       Text(

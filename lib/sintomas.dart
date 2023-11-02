@@ -129,6 +129,8 @@ class Home2 extends StatelessWidget {
             ],
           ),
         ),
+
+                //Aqui é usar vídeos de libras ou Api de libras
         Container(
           margin: const EdgeInsets.only(top: 25),
           width: 248,
@@ -138,9 +140,10 @@ class Home2 extends StatelessWidget {
             color: Colors.black12,
           ),
         ),
+
         Container(
           width: 350,
-          height: 80,
+          height: 20,
           margin: const EdgeInsets.only(top: 46),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -154,7 +157,7 @@ class Home2 extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                     color: const Color.fromARGB(236, 184, 176, 176),
                   ),
-                  width: 95,
+                  width: 20,
                   child: const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [],
@@ -179,7 +182,7 @@ class Home2 extends StatelessWidget {
         ),
         Container(
           width: 350,
-          height: 80,
+          height: 20,
           margin: const EdgeInsets.only(top: 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -189,7 +192,7 @@ class Home2 extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   color: const Color.fromARGB(236, 184, 176, 176),
                 ),
-                width: 95,
+                width: 20,
                 child: const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [],
@@ -212,18 +215,19 @@ class Home2 extends StatelessWidget {
           ),
         ),
         Container(
+          color: Colors.amber,
           width: 350,
-          height: 80,
+          height: 20,
           margin: const EdgeInsets.only(top: 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Container(
+              Container(                
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: const Color.fromARGB(236, 184, 176, 176),
                 ),
-                width: 95,
+                width: 20,
                 child: const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [],
@@ -247,7 +251,7 @@ class Home2 extends StatelessWidget {
         ),
         Container(
           width: 350,
-          height: 80,
+          height: 20,
           margin: const EdgeInsets.only(bottom: 30, top: 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -257,7 +261,7 @@ class Home2 extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   color: const Color.fromARGB(236, 184, 176, 176),
                 ),
-                width: 95,
+                width: 20,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [],

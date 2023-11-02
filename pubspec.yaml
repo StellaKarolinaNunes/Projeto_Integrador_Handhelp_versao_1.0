@@ -38,6 +38,7 @@ dependencies:
   video_player: ^2.4.0
   camera: ^0.10.5+5
   flutter_tts: ^3.8.3
+  http: ^1.1.0
   
 dev_dependencies:
   flutter_test:
@@ -59,6 +60,11 @@ flutter:
   assets:
     - assets/images/
     - assets/images/logo_transpa.png
+    - assets/images/Bronquite.png
+    - assets/images/Dor_de_Cabeça.png  
+    - assets/images/Dor_de_Ouvido.png   
+    - assets/images/febre.png   
+    - assets/images/CorpoM.png   
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in

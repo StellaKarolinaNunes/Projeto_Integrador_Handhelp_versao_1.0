@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_integrador/PaginaSin.dart';
 import 'package:projeto_integrador/home.dart';
 
 void main() {
@@ -69,7 +70,7 @@ class tela1 extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const CodeApp()),
+                      MaterialPageRoute(builder: (context) => PaginaSintomas()),
                     );
                   },
                   child: Container(
