@@ -54,46 +54,97 @@ class _PaginaSintomasState extends State<PaginaSintomas> {
             'assets/images/CorpoM.png',
             width: 300,
             height: 300,
+          ),          
+          Positioned(
+            top: 13.0,
+            left: 75.0,
+            child: Column(
+              children: [
+                MaterialButton(
+                  minWidth: 32,
+                  height: 20,
+                  color: Colors.blue,
+                  onPressed: () {
+                    _mostrarSintomas(
+                        context, 'Dor no Cabeça!', ['Symptom 1', 'Symptom 2']);
+                  },
+                  // Other properties...
+                ),                
+              ],
+            ),
           ),
           Positioned(
-            top: 9.8,
-            left: 70.0,
-            child: _buildPainfulArea(25.0, 15.0, 'Dor na Cabeça!'),
+            top: 6.0,
+            left: 8.0,
+            child: Column(
+              children: [
+                MaterialButton(
+                  minWidth: 15.1,
+                  color: Colors.blue,
+                  onPressed: () {
+                    _mostrarSintomas(
+                        context, 'Dor no Ouvido!', ['Symptom 1', 'Symptom 2']);
+                  },
+                  // Other properties...
+                ),                
+              ],
+            ),
           ),
           Positioned(
-            top: 28.0,
-            left: 68.0,
-            child: _buildPainfulArea(6.0, 8.0, 'Dor na Ouvido!'),
+            top: 17.5,
+            left: 4.9,
+            child: Column(
+              children: [
+                MaterialButton(
+                  minWidth: 15.1,
+                  color: Colors.blue,
+                  onPressed: () {
+                    _mostrarSintomas(
+                        context, 'Dor no Olho!', ['Symptom 1', 'Symptom 2']);
+                  },
+                  // Other properties...
+                ),                
+              ],
+            ),
           ),
           Positioned(
-            top: 28.0,
-            left: 78.0,
-            child: _buildPainfulArea(17.5, 4.9, 'Dor na Olho!'),
+            top: 63.0,
+            left: 66.5,
+            child: Column(
+              children: [
+                MaterialButton(
+                  minWidth: 50.1,
+                  height: 30,
+                  color: Colors.blue,
+                  onPressed: () {
+                    _mostrarSintomas(
+                        context, 'Dor no Peito!', ['Symptom 1', 'Symptom 2']);
+                  },
+                  // Other properties...
+                ),                
+              ],
+            ),
           ),
-          Positioned(
-            top: 60.0,
-            left: 65.0,
-            child: _buildPainfulArea(40.0, 40.0, 'Dor no Peito!'),
-          ),
+
           // Adicione mais áreas de dor conforme necessário
         ],
       ),
     );
   }
 
-  Widget _buildPainfulArea(double width, double height, String mensagem) {
-    return GestureDetector(
-      onTap: () {
-        print(mensagem);
-      },
-      child: Container(
-        color: const Color.fromARGB(0, 244, 67, 54),
-        // color: Colors.red,
-        width: width,
-        height: height,
-      ),
-    );
-  }
+  // Widget _buildPainfulArea(double width, double height, String mensagem) {
+  //   return GestureDetector(
+  //     onTap: () {
+  //       print(mensagem);
+  //     },
+  //     child: Container(
+  //       // color: const Color.fromARGB(0, 244, 67, 54),
+  //       color: Colors.red,
+  //       width: width,
+  //       height: height,
+  //     ),
+  //   );
+  // }
 
   List<String> _sintomasSelecionados = [];
   final Map<String, List<String>> _categoriasSintomas = {
