@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "projeto_integrador" "\0"
+            VALUE "FileDescription", "handhelp" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "projeto_integrador" "\0"
+            VALUE "InternalName", "handhelp" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2023 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "projeto_integrador.exe" "\0"
-            VALUE "ProductName", "projeto_integrador" "\0"
+            VALUE "OriginalFilename", "handhelp.exe" "\0"
+            VALUE "ProductName", "handhelp" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
