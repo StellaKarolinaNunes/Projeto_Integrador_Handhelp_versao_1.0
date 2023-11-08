@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'PaginaDefinirAtendimento.dart';
+import 'package:webview_flutter_plus/webview_flutter_plus.dart';
 
 class Libras extends StatelessWidget {
   @override
@@ -18,18 +18,25 @@ class Libras extends StatelessWidget {
           ),
         ),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => PaginaDefinirAtendimento(),
-              ),
-            );
-          },
-          child: const Text('Próxima Página'),
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          WebViewPlus(
+            initialUrl: 'assets/Vlibras/vlibras.html',
+            javascriptMode: JavascriptMode.unrestricted,
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PaginaDefinirAtendimento(),
+                ),
+              );
+            },
+            child: const Text('Próxima Página'),
+          ),
+        ],
       ),
     );
   }

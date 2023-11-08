@@ -1,7 +1,7 @@
-
-import 'package:flutter/material.dart';import 'screens/app.dart';
+import 'package:flutter/material.dart';
+import 'screens/MeuApp.dart';
 
 
 void main() {
-  runApp(App() as Widget);
+  runApp(MeuApp());
 }

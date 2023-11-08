@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'PaginaIntensidadeDor.dart';
+
 class PaginaSintomas extends StatefulWidget {
   @override
   _PaginaSintomasState createState() => _PaginaSintomasState();
@@ -327,12 +329,12 @@ class _PaginaSintomasState extends State<PaginaSintomas> {
     botoes.add(
       ElevatedButton(
         onPressed: () {
-          // Navigator.push(
-          //   context,
-          //   MaterialPageRoute(
-          //     builder: (context) => PaginaIntensidadeDor(_sintomasSelecionados),
-          //   ),
-          // );
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => PaginaIntensidadeDor(_sintomasSelecionados),
+            ),
+          );
         },
         child: const Text('Próxima Pergunta'),
       ),

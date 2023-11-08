@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+
 import 'pagina_inicial.dart';
 
-class App extends StatelessWidget {
+class MeuApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -14,9 +15,3 @@ class App extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-

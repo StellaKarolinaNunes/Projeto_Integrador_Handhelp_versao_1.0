@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  webview_flutter_plus: ^0.2.4
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -45,6 +46,9 @@ dependencies:
   flutter_inappwebview: ^5.8.0
   http: ^1.1.0
   flutter_svg: ^2.0.9
+  flutter_html: ^3.0.0-beta.2
+  flutter_webview_plugin: ^0.4.0
+  html: ^0.15.4
 
 dev_dependencies:
   flutter_test:
@@ -65,13 +69,15 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
-    - assets/images/
+    - assets/Vlibras/
     - assets/images/logo_transpa.png
     - assets/images/Bronquite.png
     - assets/images/Dor_de_Cabeça.png  
     - assets/images/Dor_de_Ouvido.png   
     - assets/images/febre.png   
-    - assets/images/CorpoM.png   
+    - assets/images/CorpoM.png
+    - assets/Vlibras/vlibras.html
+    
  
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
