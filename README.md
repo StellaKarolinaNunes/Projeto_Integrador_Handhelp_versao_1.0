@@ -23,7 +23,7 @@
 
   <h2>Documentação do projeto</h2>
 
-  <p><a href="https://app.gitbook.com/o/SyRBxUMK4xj3AHlt7rrV/s/3qIIDzLkqivQ3faIWRcr/">Documentação do projeto no GitBook</a></p>
+  <p><a href="https://app.gitbook.com/o/SyRBxUMK4xj3AHlt7rrV/s/3qIIDzLkqivQ3faIWRcr/">Documentação do projeto</a></p>
 
   <h2>Contato</h2>
 
