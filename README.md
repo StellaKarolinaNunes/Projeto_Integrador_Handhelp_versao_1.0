@@ -17,9 +17,7 @@
   <ul>
     <li><strong>1. Dicas e Sugestões:</strong> Compartilhe suas ideias e sugestões para aprimorar o projeto. Toda contribuição é valiosa.</li>
     <li><strong>2. Revisão de Materiais e Documentação:</strong> Ajude-nos a melhorar a qualidade dos materiais e documentação, garantindo que estejam claros e compreensíveis.</li>
-    <li><strong>3. Desenvolvimento de Firmware e Bibliotecas:</strong> Se você tem habilidades em desenvolvimento de firmware ou bibliotecas, sua expertise será fundamental para o sucesso do projeto.</li>
     <li><strong>4. Desenvolvimento de Hardware:</strong> Contribua com o desenvolvimento de hardware, auxiliando na criação de dispositivos que melhorem a experiência de triagem.</li>
-    <li><strong>5. Oficinas:</strong> Organize oficinas e eventos para disseminar conhecimento sobre o uso das tecnologias assistivas e a importância da inclusão.</li>
     <li><strong>6. Patrocínio:</strong> Considere patrocinar o projeto para viabilizar recursos necessários e garantir seu contínuo desenvolvimento.</li>
   </ul>
 
