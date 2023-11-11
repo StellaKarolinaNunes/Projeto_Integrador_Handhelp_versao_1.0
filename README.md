@@ -2,13 +2,15 @@
 
 <body>
 
-  <h1>Sobre o projeto HandHelp</h1>
+<h1> <img src="assets/images/1.png" alt="Descrição da imagem" style="width: 60px; height: 60px;"> Sobre o projeto HandHelp</h1>
+
+
 
   <p><strong>Projeto HandHelp - Auxílio na Triagem para Surdos em Unidades Básicas de Saúde em Tucuruí, Pará</strong></p>
 
   <p>O projeto HandHelp tem como objetivo proporcionar uma experiência inclusiva e acessível para pessoas surdas durante o processo de triagem em unidades básicas de saúde em Tucuruí, Pará. Nosso compromisso é desenvolver ferramentas para facilitar o processo de atendimento e triagem nas unidades básicas de saúde em Tucuruí, Pará, para garantir que pessoas surdas tenham acesso adequado aos serviços de saúde, promovendo a inclusão e contribuindo para a capacitação no uso das tecnologias de assistência. O HandHelp está comprometido em criar um ambiente de saúde mais acessível, proporcionando uma experiência positiva e informativa para todos, independentemente das barreiras linguísticas.</p>
 
-  <h2>Como Contribuir</h2>
+  <h2>:purple_heart: Como Contribuir</h2>
 
   <p>O HandHelp é um projeto aberto e acolhe contribuições de diversas formas. Sua participação é fundamental para tornar a experiência de triagem nas unidades básicas de saúde em Tucuruí, Pará, mais inclusiva e acessível. Aqui estão algumas maneiras de contribuir:</p>
 
@@ -21,13 +23,13 @@
     <li><strong>6. Patrocínio:</strong> Considere patrocinar o projeto para viabilizar recursos necessários e garantir seu contínuo desenvolvimento.</li>
   </ul>
 
-  <h2>Documentação do projeto</h2>
+  <h2> :bookmark_tabs: Documentação do projeto</h2>
 
   <p><a href="https://app.gitbook.com/o/SyRBxUMK4xj3AHlt7rrV/s/3qIIDzLkqivQ3faIWRcr/">Documentação do projeto</a></p>
 
-  <h2>Contato</h2>
+  <h2>:octocat: Contato</h2>
 
-  <p>Email: Stellakarolina.peixoto@gmail.com e Igorwenceslau90@gmail.com</p>
+  <p> Email: Stellakarolina.peixoto@gmail.com e Igorwenceslau90@gmail.com</p>
   <p>GitHub: <a href="https://github.com/StellaKarolinaNunes/Projeto_Integrador">https://github.com/StellaKarolinaNunes/Projeto_Integrador</a></p>
 
 </body>
