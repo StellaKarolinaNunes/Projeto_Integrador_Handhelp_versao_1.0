@@ -1,6 +1,6 @@
 # Contributing/Contribuindo
 
-- [Como o projeto está estruturado?](./STRUCTURE.md)
+- [Como o projeto está estruturado?](./ESTRUTURA.md)
 
 ## PT-BR 🇧🇷
 1. Crie um fork!
