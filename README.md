@@ -1,35 +1,43 @@
+# HandHelp.dart
+
+[![licence mit](https://img.shields.io/badge/licence-MIT-blue.svg)](./License)
+
+O projeto Integrador alunos IFPA, ciencia da computação tem como criação do HandHelp  com o objetivo proporcionar uma experiência inclusiva e acessível para pessoas surdas durante o processo de triagem em unidades básicas de saúde em Tucuruí, Pará. Nosso compromisso é desenvolver ferramentas para facilitar o processo de atendimento e triagem nas unidades básicas de saúde em Tucuruí, Pará, para garantir que pessoas surdas tenham acesso adequado aos serviços de saúde, promovendo a inclusão e contribuindo para a capacitação no uso das tecnologias de assistência. O HandHelp está comprometido em criar um ambiente de saúde mais acessível, proporcionando uma experiência positiva e informativa para todos, independentemente das barreiras linguísticas.
+
+<p align="center">
+   <img src="assets/images/handhelpbanner.png" />
+</p>
+
+# FAQ/Perguntas Frequentes
+
+## O que é o Projeto Handhelp?
+> **R:** Aplicativo para auxiliar pessoas surdas no atendimento das triagem nas unidades básicas de saúde Tucuruí Pará
 
 
-<body>
-
-<h1> <img src="assets/images/1.png" alt="Descrição da imagem" style="width: 60px; height: 60px;"> Sobre o projeto HandHelp</h1>
-
+## Posso gerar meu próprio guia usando esse repositório?
+> **R:** Sim! Só pedimos que você faça um link para  https://github.com/StellaKarolinaNunes/Projeto_Integrador 😁 e respeite a licença de uso. 
 
 
-  <p><strong>Projeto HandHelp - Auxílio na Triagem para Surdos em Unidades Básicas de Saúde em Tucuruí, Pará</strong></p>
+## Posso sugerir novas funcionalidades?
+> **R:** Sim! Use o mecanismo de contribuição do Github. Nesse momento estamos focados em corrigir erros e melhorar as funcionalidade existentes.
 
-  <p>O projeto HandHelp tem como objetivo proporcionar uma experiência inclusiva e acessível para pessoas surdas durante o processo de triagem em unidades básicas de saúde em Tucuruí, Pará. Nosso compromisso é desenvolver ferramentas para facilitar o processo de atendimento e triagem nas unidades básicas de saúde em Tucuruí, Pará, para garantir que pessoas surdas tenham acesso adequado aos serviços de saúde, promovendo a inclusão e contribuindo para a capacitação no uso das tecnologias de assistência. O HandHelp está comprometido em criar um ambiente de saúde mais acessível, proporcionando uma experiência positiva e informativa para todos, independentemente das barreiras linguísticas.</p>
+# About the Project/Sobre o Projeto
 
-  <h2>:purple_heart: Como Contribuir</h2>
+## Contributing/Contribuir
 
-  <p>O HandHelp é um projeto aberto e acolhe contribuições de diversas formas. Sua participação é fundamental para tornar a experiência de triagem nas unidades básicas de saúde em Tucuruí, Pará, mais inclusiva e acessível. Aqui estão algumas maneiras de contribuir:</p>
+### O que devo ter em mente antes de abrir um PullRequest?
+- Esse é um projeto handhelp feito pela Equipe Help Five para a comunidade e contribuições são bem vindas.
+- Para aumentar a chance de a sua contribuição ser aprovada, escolha um título legal, simples e explicativo para os itens, e siga a formatação correta dos arquivos.
+- Mais interessante seria ajudar com o código e projeto em si
+- 🇧🇷: :purple_heart: Como Contribuir com o projeto? [Confira o passo a passo](./CONTRIBUTING.md)
 
-  <ul>
-    <li><strong>1. Dicas e Sugestões:</strong> Compartilhe suas ideias e sugestões para aprimorar o projeto. Toda contribuição é valiosa.</li>
-    <li><strong>2. Revisão de Materiais e Documentação:</strong> Ajude-nos a melhorar a qualidade dos materiais e documentação, garantindo que estejam claros e compreensíveis.</li>
-    <li><strong>4. Desenvolvimento de Hardware:</strong> Contribua com o desenvolvimento de hardware, auxiliando na criação de dispositivos que melhorem a experiência de triagem.</li>
-    <li><strong>6. Patrocínio:</strong> Considere patrocinar o projeto para viabilizar recursos necessários e garantir seu contínuo desenvolvimento.</li>
-  </ul>
 
-  <h2> :bookmark_tabs: Documentação do projeto</h2>
+## History/Histórico
+- 🇧🇷: Da uma olhada na aba [Releases](link) pra acompanhar as alterações feitas no projeto.
 
-  <p><a href="https://app.gitbook.com/o/SyRBxUMK4xj3AHlt7rrV/s/3qIIDzLkqivQ3faIWRcr/">Documentação do projeto</a></p>
+## License/Licença do Projeto
 
-  <h2>:octocat: Contato</h2>
+- [MIT](./License)
 
-  <p> Email: Stellakarolina.peixoto@gmail.com e Igorwenceslau90@gmail.com</p>
-  <p>GitHub: <a href="https://github.com/StellaKarolinaNunes/Projeto_Integrador">https://github.com/StellaKarolinaNunes/Projeto_Integrador</a></p>
-
-</body>
-
-</html>
+## Agradecimentos
+> Aos contribuidores Stella Karolina Nunes Peixoto,Igor Wenceslau Machado Conceição,João Gabriel Peres De Castro, Jhonefer Vinicius Lima Da Silva e  Aline Cély Araújo da Silva.
