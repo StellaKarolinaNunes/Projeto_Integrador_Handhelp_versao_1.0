@@ -15,7 +15,7 @@ O projeto Integrador alunos IFPA, ciencia da computação tem como criação do 
 
 
 ## Posso gerar meu próprio guia usando esse repositório?
-> **R:** Sim! Só pedimos que você faça um link para  https://github.com/StellaKarolinaNunes/Projeto_Integrador 😁 e respeite a licença de uso. 
+> **R:** Sim! Só pedimos que você faça um link para [Link do HandHelp](https://github.com/StellaKarolinaNunes/Projeto_Integrador)  😁 e respeite a licença de uso. 
 
 
 ## Posso sugerir novas funcionalidades?
@@ -29,7 +29,7 @@ O projeto Integrador alunos IFPA, ciencia da computação tem como criação do 
 - Esse é um projeto handhelp feito pela Equipe Help Five para a comunidade e contribuições são bem vindas.
 - Para aumentar a chance de a sua contribuição ser aprovada, escolha um título legal, simples e explicativo para os itens, e siga a formatação correta dos arquivos.
 - Mais interessante seria ajudar com o código e projeto em si
-- 🇧🇷: :purple_heart: Como Contribuir com o projeto? [Confira o passo a passo](./CONTRIBUTING.md)
+- 🇧🇷: :purple_heart: Como Contribuir com o projeto? [Confira o passo a passo](./Contribuindo.md)
 
 
 ## History/Histórico
@@ -39,5 +39,5 @@ O projeto Integrador alunos IFPA, ciencia da computação tem como criação do 
 
 - [MIT](./License)
 
-## Agradecimentos
+## Equipe handhelp 
 > Aos contribuidores Stella Karolina Nunes Peixoto,Igor Wenceslau Machado Conceição,João Gabriel Peres De Castro, Jhonefer Vinicius Lima Da Silva e  Aline Cély Araújo da Silva.
