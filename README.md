@@ -5,8 +5,9 @@
 O projeto Integrador dos alunos IFPA, ciencia da computação tem como criação do HandHelp  com o objetivo proporcionar uma experiência inclusiva e acessível para pessoas surdas durante o processo de triagem em unidades básicas de saúde em Tucuruí, Pará. Nosso compromisso é desenvolver ferramentas para facilitar o processo de atendimento e triagem nas unidades básicas de saúde em Tucuruí, Pará, para garantir que pessoas surdas tenham acesso adequado aos serviços de saúde, promovendo a inclusão e contribuindo para a capacitação no uso das tecnologias de assistência. O HandHelp está comprometido em criar um ambiente de saúde mais acessível, proporcionando uma experiência positiva e informativa para todos, independentemente das barreiras linguísticas.
 
 <p align="center">
-   <img src="assets/images/handhelpnome.png" />
+   <img src="assets/images/Librasbanner.png" width="800" />
 </p>
+
 
 # FAQ/Perguntas Frequentes
 
@@ -29,7 +30,7 @@ O projeto Integrador dos alunos IFPA, ciencia da computação tem como criação
 - Esse é um projeto handhelp feito pela Equipe Help Five para a comunidade e contribuições são bem vindas.
 - Para aumentar a chance de a sua contribuição ser aprovada, escolha um título legal, simples e explicativo para os itens, e siga a formatação correta dos arquivos.
 - Mais interessante seria ajudar com o código e projeto em si
-- 🇧🇷: :purple_heart: Como Contribuir com o projeto? [Confira o passo a passo](./Contribuindo.md)
+- 🇧🇷:  :purple_heart: Como Contribuir com o projeto? [Confira o passo a passo](./Contribuindo.md)
 
 
 ## History/Histórico
