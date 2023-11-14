@@ -33,7 +33,7 @@ O projeto Integrador dos alunos IFPA, ciencia da computação tem como criação
 
 
 ## History/Histórico
-- 🇧🇷: Da uma olhada na aba [Releases](link) pra acompanhar as alterações feitas no projeto.
+- 🇧🇷: Da uma olhada na aba [Releases](./Releases.md) pra acompanhar as alterações feitas no projeto.
 
 ## License/Licença do Projeto
 
