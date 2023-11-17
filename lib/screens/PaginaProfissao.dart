@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'PaginaDefinirAtendimento.dart';
 
-
-
 class PaginaProfissao extends StatelessWidget {
   final String profissao;
 

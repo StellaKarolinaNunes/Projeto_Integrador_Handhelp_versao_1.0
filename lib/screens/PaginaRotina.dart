@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'PaginaProfissao.dart';
 
-
 class PaginaRotina extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

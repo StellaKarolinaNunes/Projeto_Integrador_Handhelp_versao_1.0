@@ -48,3 +48,4 @@ class PaginaTriagemConcluida extends StatelessWidget {
   }
 }
 
+

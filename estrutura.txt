@@ -1,0 +1,1076 @@
+
+lib/main.dart
+
+import 'package:flutter/material.dart';
+import 'screens/MeuApp.dart';
+
+void main() {
+  runApp(MeuApp());
+}
+
+
+lib\Widget\CustomButton.dart
+
+import 'package:flutter/material.dart';
+
+class CustomButton extends StatelessWidget {
+  final String text;
+  final VoidCallback onPressed;
+
+  CustomButton({required this.text, required this.onPressed});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onPressed,
+      child: Container(
+        width: 159,
+        height: 153,
+        decoration: BoxDecoration(color: Color(0xFFC4C4C4)),
+        child: Stack(
+          children: [
+            Positioned(
+              left: 46.90,
+              top: 127.44,
+              child: Text(
+                text,
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontFamily: 'Averia Sans Libre',
+                  fontWeight: FontWeight.w400,
+                  height: 0.05,
+                  letterSpacing: -0.40,
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+          
+lib\Widget\EscolhaAtendimentoWidget.dart
+
+import 'package:flutter/material.dart';
+
+import '../screens/PaginaRotina.dart';
+import '../screens/PaginaSintomas.dart';
+import 'CustomButton.dart';
+
+
+class EscolhaAtendimentoWidget extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Dor ou Rotina',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Color(0xFF198EB6),
+            fontSize: 26,
+            fontFamily: 'averia sans libre',
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+      ),
+      body: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            CustomButton(
+              text: 'Rotina',
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PaginaRotina(),
+                  ),
+                );
+              },
+            ),
+            SizedBox(width: 20),
+            CustomButton(
+              text: 'Dor',
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PaginaSintomas(),
+                  ),
+                );
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+lib\Widget\flutter_tts.dart
+
+import 'package:flutter_tts/flutter_tts.dart';
+
+FlutterTts flutterTts = FlutterTts()
+  ..setLanguage('pt-BR')
+  ..setSpeechRate(1.5)
+  ..setVolume(1.0)
+  ..setPitch(1.0);
+
+Future<void> falarTexto(String texto) async {
+  var result = await flutterTts.speak(texto);
+  if (result == 1) {
+    // A fala foi iniciada com sucesso
+  } else {
+    // Houve algum erro na fala
+  }
+}
+
+
+lib\screens\Libras.dart
+
+import 'package:flutter/material.dart';
+import 'package:webview_flutter_plus/webview_flutter_plus.dart';
+import 'PaginaDefinirAtendimento.dart';
+
+
+class Libras extends StatelessWidget {
+  final List<String> sintomasSelecionados;
+  final double intensidadeDor;
+  final String textoResultado;
+
+  Libras(String textoDigitado, this.sintomasSelecionados, this.intensidadeDor, this.textoResultado);
+
+  @override
+  Widget build(BuildContext context) {
+   
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Libras',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Color(0xFF198EB6),
+            fontSize: 26,
+            fontFamily: 'averia sans libre',
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Resultado: $textoResultado",
+              style: TextStyle(fontSize: 18),
+            ),
+            WebViewPlus(
+              initialUrl: 'assets/Vlibras/vlibras.html',
+              javascriptMode: JavascriptMode.unrestricted,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PaginaDefinirAtendimento(),
+                  ),
+                );
+              },
+              child: const Text('Próxima Página'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+lib\screens\MeuApp.dart
+
+import 'package:flutter/material.dart';
+
+import 'pagina_inicial.dart';
+
+class MeuApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'HandHelp',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: PaginaInicial(),
+    );
+  }
+}
+
+lib\screens\pagina_inicial.dart
+
+import 'package:flutter/material.dart';
+import 'package:handhelp/screens/PaginaDadosMedicos.dart';
+
+
+class PaginaInicial extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
+      body: Container(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PaginaDadosMedicos(),
+                  ),
+                );
+              },
+              child: Container(
+                width: 200,
+                height: 200,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/1.png'),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+            const Text(
+              'HANDHELP',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.blue,
+                fontSize: 30,
+                fontFamily: 'Averia Sans Libre',
+                fontWeight: FontWeight.w700,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+
+lib\screens\PaginaDadoMedicosLibras.dart
+
+import 'package:flutter/material.dart';
+import 'package:handhelp/screens/Libras.dart';
+import 'PaginaResultado.dart'; // Certifique-se de importar a classe PaginaResultado
+
+class PaginaDadoMedicosLibras extends StatefulWidget {
+  @override
+  _PaginaDadoMedicosLibrasState createState() =>
+      _PaginaDadoMedicosLibrasState();
+}
+
+class _PaginaDadoMedicosLibrasState extends State<PaginaDadoMedicosLibras> {
+  TextEditingController textoController = TextEditingController();
+  String textoDigitado = '';
+  List<String> sintomasSelecionados = [];
+  double intensidadeDor = 0.0;
+  String textoResultado = '';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'PaginaDadoMedicosLibras',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Color(0xFF198EB6),
+            fontSize: 26,
+            fontFamily: 'averia sans libre',
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextField(
+              controller: textoController,
+              decoration: const InputDecoration(labelText: 'Digite um texto'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                // Acessando o texto digitado usando textoController.text
+                textoDigitado = textoController.text;
+                // Exibindo o texto em um print
+                print('Texto digitado: $textoDigitado');
+
+                // Navegar para a próxima página (exemplo: PaginaResultado)
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Libras(textoDigitado,sintomasSelecionados,intensidadeDor,textoResultado       ),
+                  ),
+                );
+              },
+              child: Text('Próxima Página'), // Adicionando o argumento child
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+lib\screens\PaginaDadosMedicos.dart
+
+import 'package:flutter/material.dart';
+import '../Widget/EscolhaAtendimentoWidget.dart';
+
+class PaginaDadosMedicos extends StatefulWidget {
+  @override
+  _PaginaDadosMedicosState createState() => _PaginaDadosMedicosState();
+}
+
+class _PaginaDadosMedicosState extends State<PaginaDadosMedicos> {
+  TextEditingController pesoController = TextEditingController();
+  TextEditingController pressaoController = TextEditingController();
+  TextEditingController alturaController = TextEditingController();
+  TextEditingController oximetroController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(), // Substitua minhaAppBar() pela sua AppBar personalizada
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            TextField(
+              controller: pesoController,
+              keyboardType: TextInputType.number,
+              decoration: const InputDecoration(labelText: 'Peso (kg)'),
+            ),
+            TextField(
+              controller: pressaoController,
+              keyboardType: TextInputType.text,
+              decoration: const InputDecoration(labelText: 'Pressão'),
+            ),
+            TextField(
+              controller: alturaController,
+              keyboardType: TextInputType.number,
+              decoration: const InputDecoration(labelText: 'Altura (cm)'),
+            ),
+            TextField(
+              controller: oximetroController,
+              keyboardType: TextInputType.number,
+              decoration: const InputDecoration(labelText: 'Oxímetro'),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                _irParaPaginaAssistente(context);
+              },
+              child: const Text('Concluir'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  void _irParaPaginaAssistente(BuildContext context) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => EscolhaAtendimentoWidget(),
+      ),
+    );
+  }
+}
+
+lib\screens\PaginaDefinirAtendimento.dart
+
+import 'package:flutter/material.dart';
+
+import 'PaginaTriagemConcluida.dart';
+
+class PaginaDefinirAtendimento extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Definir Atendimento',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Color(0xFF198EB6),
+            fontSize: 26,
+            fontFamily: 'averia sans libre',
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => PaginaTriagemConcluida(),
+              ),
+            );
+          },
+          child: const Text('Próxima Página'),
+        ),
+      ),
+    );
+  }
+}
+
+lib\screens\PaginaIntensidadeDor.dart
+import 'package:flutter/material.dart';
+import 'PaginaResultado.dart';
+
+
+
+class PaginaIntensidadeDor extends StatefulWidget {
+   final List<String> sintomasSelecionados;
+
+PaginaIntensidadeDor(this.sintomasSelecionados);
+
+  @override
+  _PaginaIntensidadeDorState createState() => _PaginaIntensidadeDorState();
+}
+
+class _PaginaIntensidadeDorState extends State<PaginaIntensidadeDor> {
+  double intensidadeDor = 10; // Valor padrão inicial
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Intensidade da Dor',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Color(0xFF198EB6),
+            fontSize: 26,
+            fontFamily: 'averia sans libre',
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          // Descrição acima da barra de intensidade
+          Text(
+            obterDescricaoIntensidade(intensidadeDor),
+            style: const TextStyle(
+              fontSize: 1,
+            
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const SizedBox(height: 10),
+          // Barra de rolagem para indicar a intensidade da dor
+          Slider(
+            value: intensidadeDor,
+            min: 0,
+            max: 10,
+            divisions: 10,
+            onChanged: (value) {
+              setState(() {
+                intensidadeDor = value;
+              });
+            },
+            // Adicionando a cor diretamente à barra de rolagem
+            activeColor: obterCor(intensidadeDor),
+          ),
+          // Descrição da intensidade
+       
+         
+          const SizedBox(height: 20),
+          ElevatedButton(
+            onPressed: () {
+              // Lógica para lidar com a intensidade da dor e sintomas selecionados
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PaginaResultado(
+                      widget.sintomasSelecionados, intensidadeDor),
+                ),
+              );
+            },
+            child: const Text('OK'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Color obterCor(double valor) {
+    if (valor < 2) {
+      return const Color(0xFFBFFFE8); // Muito Baixo
+    } else if (valor < 4) {
+      return const Color(0xFF22EEB1); // Baixo
+    } else if (valor < 6) {
+      return const Color(0xFFFFC83F); // Normal
+    } else if (valor < 8) {
+      return const Color(0xFFFFCD4C); // Alto
+    } else if (valor < 10) {
+      return const Color(0xFFFF3B00); // Muito Alto
+    } else {
+      return const Color(0xFFFF3B00); // Muito Alto
+    }
+  }
+}
+
+String obterDescricaoIntensidade(double valor) {
+  if (valor < 3) {
+    return 'Muito Baixa';
+  } else if (valor < 5) {
+    return 'Baixa';
+  } else if (valor < 7) {
+    return 'Normal';
+  } else if (valor < 9) {
+    return 'Alta';
+  } else {
+    return 'Muito Alta';
+  }
+}
+
+lib\screens\PaginaProfissao.dart
+
+import 'package:flutter/material.dart';
+
+import 'PaginaDefinirAtendimento.dart';
+
+class PaginaProfissao extends StatelessWidget {
+  final String profissao;
+
+  PaginaProfissao(this.profissao);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(profissao),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Você será encaminhado para o $profissao adequado.'),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PaginaDefinirAtendimento(),
+                  ),
+                );
+              },
+              child: const Text('definir atendimento'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+lib\screens\PaginaResultado.dart
+
+import 'package:flutter/material.dart';
+import 'package:flutter_tts/flutter_tts.dart';
+
+import 'PaginaDadoMedicosLibras.dart';
+import 'PaginaIntensidadeDor.dart';
+
+class PaginaResultado extends StatelessWidget {
+  final List<String> sintomasSelecionados;
+  final double intensidadeDor;
+
+  PaginaResultado(this.sintomasSelecionados, this.intensidadeDor);
+
+  @override
+  Widget build(BuildContext context) {
+    String descricaoIntensidade = obterDescricaoIntensidade(intensidadeDor);
+    String textoResultado =
+        "\tSintomas selecionados: ${sintomasSelecionados.join(', ')}\t\t\nIntensidade da Dor: $descricaoIntensidade";
+
+    FlutterTts flutterTts = FlutterTts();
+    flutterTts.speak(textoResultado);
+
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Resultado',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Color(0xFF198EB6),
+            fontSize: 26,
+            fontFamily: 'averia sans libre',
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(textoResultado),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PaginaDadoMedicosLibras(),
+                  ),
+                );
+              },
+              child: const Text('Próximo'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+lib\screens\PaginaRotina.dart
+
+import 'package:flutter/material.dart';
+import 'PaginaProfissao.dart';
+
+class PaginaRotina extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Rotina',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Color(0xFF198EB6),
+            fontSize: 26,
+            fontFamily: 'averia sans libre',
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            _buildButtonWithRectangle(context, 'Nutricionista'),
+            _buildButtonWithRectangle(context, 'Fisioterapeuta'),
+            _buildButtonWithRectangle(context, 'Psicólogo'),
+            _buildButtonWithRectangle(context, 'Dentista'),
+            _buildButtonWithRectangle(context, 'Serviço Social'),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildButtonWithRectangle(BuildContext context, String profissao) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 8.0),
+      child: Row(
+        children: [
+          ElevatedButton(
+            onPressed: () {
+              _irParaPaginaProfissao(context, profissao);
+            },
+            child: Text(profissao),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _irParaPaginaProfissao(BuildContext context, String profissao) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => PaginaProfissao(profissao),
+      ),
+    );
+  }
+}
+
+lib\screens\PaginaSintomas.dart
+
+import 'package:flutter/material.dart';
+import 'PaginaIntensidadeDor.dart';
+
+class PaginaSintomas extends StatefulWidget {
+  @override
+  _PaginaSintomasState createState() => _PaginaSintomasState();
+}
+
+class _PaginaSintomasState extends State<PaginaSintomas> {
+  List<String> _sintomasSelecionados = [];
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Sintomas',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Colors.blue,
+            fontSize: 26,
+            fontFamily: 'averia sans libre',
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Expanded(
+              child: _buildInteractiveViewer(),
+            ),
+            const SizedBox(
+              width: 20,
+            ),
+            Expanded(
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          PaginaIntensidadeDor(_sintomasSelecionados),
+                    ),
+                  );
+                },
+                child: const Text('Próxima Pergunta'),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildInteractiveViewer() {
+    return InteractiveViewer(
+      maxScale: 5.0,
+      child: Stack(
+        children: [
+          Image.asset(
+            'assets/images/CorpoM.png',
+            width: 300,
+            height: 300,
+          ),
+          _buildPainButton(12.0, 75.0, 'Dor no Cabeça!', ['Symptom 1', 'Symptom 2']),
+          _buildPainButton(27.0, 65.0, 'Dor no Ouvido!', ['Symptom 1', 'Symptom 2']),
+          _buildPainButton(28.3, 83.9, 'Dor no Olho!', ['Symptom 1', 'Symptom 2']),
+          _buildPainButton(63.0, 66.5, 'Dor no Peito!', ['Tosse', 'Falta de ar', 'Chiado no peito']),
+          _buildPainButton(63.0, 195.5, 'Dor no Costa!', ['Symptom 1', 'Symptom 2']),
+          _buildPainButton(148.0, 41, 'Dor no Mão!', ['Symptom 1', 'Symptom 2']),
+          _buildPainButton(97, 74.5, 'Dor no barrigo!', ['Symptom 1', 'Symptom 2']),
+          _buildPainButton(220, 186, 'Dor no pantruilho!', ['Symptom 1', 'Symptom 2']),
+          _buildPainButton(110, 201.9, 'Dor no Coluna!', ['Symptom 1', 'Symptom 2']),
+          // Adicione mais áreas de dor conforme necessário
+        ],
+      ),
+    );
+  }
+
+  Widget _buildPainButton(double top, double left, String title, List<String> symptoms) {
+    return Positioned(
+      top: top,
+      left: left,
+      child: Column(
+        children: [
+          MaterialButton(
+            minWidth: 32,
+            height: 20,
+            onPressed: () {
+              _mostrarSintomas(context, title, symptoms);
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _mostrarSintomas(BuildContext context, String category, List<String> symptoms) {
+    List<String> _sintomasSelecionadosTemp = [];
+
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(category),
+          content: Column(
+            children: symptoms
+                .map(
+                  (sintoma) => ElevatedButton(
+                    onPressed: () {
+                      _alternarSintoma(sintoma);
+                      _sintomasSelecionadosTemp.add(sintoma);
+                    },
+                    style: ElevatedButton.styleFrom(
+                      primary: _sintomasSelecionados.contains(sintoma) ? Colors.grey : null,
+                    ),
+                    child: Text(sintoma),
+                  ),
+                )
+                .toList(),
+          ),
+          actions: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('Cancelar'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  _sintomasSelecionados.clear();
+                  _sintomasSelecionados.addAll(_sintomasSelecionadosTemp);
+                });
+
+                _sintomasSelecionadosTemp.clear();
+
+                Navigator.of(context).pop();
+              },
+              child: const Text('OK'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  void _alternarSintoma(String symptom) {
+    setState(() {
+      if (_sintomasSelecionados.contains(symptom)) {
+        _sintomasSelecionados.remove(symptom);
+      } else {
+        _sintomasSelecionados.add(symptom);
+      }
+    });
+  }
+}
+
+lib\screens\PaginaTriagemConcluida.dart
+
+
+import 'package:flutter/material.dart';
+
+class PaginaTriagemConcluida extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Triagem Realizada',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: Color(0xFF198EB6),
+            fontSize: 26,
+            fontFamily: 'averia sans libre',
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              width: 272,
+              height: 228,
+              decoration: ShapeDecoration(
+                color: const Color(0xFFC4C4C4),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(32),
+                ),
+              ),
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.popUntil(
+                  context,
+                  ModalRoute.withName('/'), // Retorna à primeira página
+                );
+              },
+              child: const Text('Voltar à Primeira Página'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+pubspec.yaml
+
+name: handhelp
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.2.0-134.1.beta <4.0.0'
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+  webview_flutter_plus: ^0.2.4
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+  video_player: ^2.4.0
+  camera: ^0.10.5+5
+  flutter_tts: ^3.8.3
+  babylonjs_viewer: ^1.2.1
+  rive: ^0.12.1
+  flutter_animate: ^4.2.0+1
+  webview_flutter: ^2.8.0
+  flutter_inappwebview: ^5.8.0
+  http: ^1.1.0
+  flutter_svg: ^2.0.9
+  flutter_html: ^3.0.0-beta.2
+  flutter_webview_plugin: ^0.4.0
+  html: ^0.15.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^3.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/Vlibras/
+    - assets/images/logo_transpa.png
+    - assets/images/Bronquite.png
+    - assets/images/Dor_de_Cabeça.png  
+    - assets/images/Dor_de_Ouvido.png   
+    - assets/images/febre.png   
+    - assets/images/CorpoM.png
+    - assets/Vlibras/vlibras.html
+    
+ 
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+
+      
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
+
+assets
+assets\fonts
+assets\fonts\DM_Mono
+assets\fonts\DMMono-Italic.ttf
+assets\fonts\DMMono-Light.ttf
+assets\fonts\DMMono-LightItalic.ttf
+assets\fonts\DMMono-Medium.ttf
+assets\fonts\DMMono-MediumItalic.ttf
+assets\fonts\DMMono-Regular.ttf
+assets\fonts\OFL.txt
+assets\images
+assets\images\0.jpg
+assets\images\1.png
+assets\images\2.png
+assets\images\3.png
+assets\images\4.png
+assets\images\Bronquite.png
+assets\images\CorpoM.png
+assets\images\Dor_de_Cabeça.png
+assets\images\Dor_de_Ouvido.png
+assets\images\febre.png
+assets\images\handhelpbanner.png
+assets\images\logo_transpa.png
+assets\images\mixing_animations.riv
+assets\images\rectangle2.svg
+assets\images\vector1.svg
+assets\images\vector2.svg
+assets\images\vector3.svg
+assets\images\vector4.svg
+assets\images\vector5.svg
+assets\images\vector6.svg
+assets\Vlibras
+assets\Vlibras\react-vlibras-main
+assets\Vlibras\vlibras.html
+
+
+
+
+
+

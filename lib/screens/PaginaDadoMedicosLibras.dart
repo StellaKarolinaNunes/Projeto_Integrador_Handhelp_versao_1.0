@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'Libras.dart';
+import 'package:handhelp/screens/Libras.dart';
 
 class PaginaDadoMedicosLibras extends StatefulWidget {
   @override
@@ -10,12 +9,16 @@ class PaginaDadoMedicosLibras extends StatefulWidget {
 
 class _PaginaDadoMedicosLibrasState extends State<PaginaDadoMedicosLibras> {
   TextEditingController textoController = TextEditingController();
+  String textoDigitado = '';
+  List<String> sintomasSelecionados = [];
+  double intensidadeDor = 0.0;
+  String textoResultado = '';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title: Text(
           'PaginaDadoMedicosLibras',
           textAlign: TextAlign.center,
           style: TextStyle(
@@ -38,20 +41,21 @@ class _PaginaDadoMedicosLibrasState extends State<PaginaDadoMedicosLibras> {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Você pode acessar o texto digitado usando textoController.text
-                String textoDigitado = textoController.text;
-                // Aqui você pode fazer o que quiser com o texto, como exibir em um print
+                // Acessando o texto digitado usando textoController.text
+                textoDigitado = textoController.text;
+                // Exibindo o texto em um print
                 print('Texto digitado: $textoDigitado');
 
-                // Navegar para a próxima página (exemplo: PaginaDefinirAtendimento)
+                // Navegar para a próxima página (exemplo: PaginaResultado)
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Libras(),
+                    builder: (context) => Libras(
+                        textoDigitado, sintomasSelecionados, intensidadeDor),
                   ),
                 );
               },
-              child: const Text('Próxima Página'),
+              child: Text('Próxima Página'), // Adicionando o argumento child
             ),
           ],
         ),

@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
-
 import 'PaginaResultado.dart';
 
-
-// ignore: must_be_immutable
 class PaginaIntensidadeDor extends StatefulWidget {
-  var sintomasSelecionados;
+  final List<String> sintomasSelecionados;
 
-
-PaginaIntensidadeDor(this.sintomasSelecionados, {super.key});
+  PaginaIntensidadeDor(this.sintomasSelecionados);
 
   @override
   _PaginaIntensidadeDorState createState() => _PaginaIntensidadeDorState();
@@ -40,7 +36,6 @@ class _PaginaIntensidadeDorState extends State<PaginaIntensidadeDor> {
             obterDescricaoIntensidade(intensidadeDor),
             style: const TextStyle(
               fontSize: 1,
-            
               fontWeight: FontWeight.bold,
             ),
           ),
@@ -60,8 +55,7 @@ class _PaginaIntensidadeDorState extends State<PaginaIntensidadeDor> {
             activeColor: obterCor(intensidadeDor),
           ),
           // Descrição da intensidade
-       
-         
+
           const SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
