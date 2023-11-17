@@ -6,7 +6,6 @@ class Libras extends StatelessWidget {
   final List<String> sintomasSelecionados;
   final double descricaoIntensidade;
 
-
   Libras(
     String textoDigitado,
     this.sintomasSelecionados,
