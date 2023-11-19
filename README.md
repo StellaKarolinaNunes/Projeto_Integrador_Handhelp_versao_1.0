@@ -8,12 +8,9 @@ O projeto Integrador dos alunos IFPA, ciencia da computação tem como criação
    <img src="assets/images/Librasbanner.png" width="800" />
 </p>
 
-<<<<<<< HEAD
-<body>
-=======
 
 # FAQ/Perguntas Frequentes
->>>>>>> 24e8dc1c8fda7f484ef444a924fc4b445657e15d
+> **R:**
 
 ## O que é o Projeto Handhelp?
 > **R:** Aplicativo para auxiliar pessoas surdas no atendimento das triagem nas unidades básicas de saúde Tucuruí Pará
