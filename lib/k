@@ -1,5 +1,4 @@
 lib/screens/Libras.dart
-
 import 'package:flutter/material.dart';
 import 'package:webview_flutter_plus/webview_flutter_plus.dart';
 import 'PaginaDefinirAtendimento.dart';
@@ -60,12 +59,8 @@ class Libras extends StatelessWidget {
     );
   }
 }
-
-
 lib/screens/MeuApp.dart
-
 import 'package:flutter/material.dart';
-
 import 'pagina_inicial.dart';
 
 class MeuApp extends StatelessWidget {
@@ -83,10 +78,8 @@ class MeuApp extends StatelessWidget {
 }
 
 lib/screens/pagina_inicial.dart
-
 import 'package:flutter/material.dart';
 import 'package:handhelp/screens/PaginaDadosMedicos.dart';
-
 
 class PaginaInicial extends StatelessWidget {
   @override
@@ -136,9 +129,7 @@ class PaginaInicial extends StatelessWidget {
 
 
 lib/screens/PaginaDadoMedicosLibras.dart
-
 import 'package:flutter/material.dart';
-
 import 'Libras.dart';
 
 class PaginaDadoMedicosLibras extends StatefulWidget {
@@ -200,7 +191,6 @@ class _PaginaDadoMedicosLibrasState extends State<PaginaDadoMedicosLibras> {
 }
 
 lib/screens/PaginaDadosMedicos.dart
-
 import 'package:flutter/material.dart';
 import '../Widget/EscolhaAtendimentoWidget.dart';
 
@@ -1104,3 +1094,16 @@ import 'screens/MeuApp.dart';
 void main() {
   runApp(MeuApp());
 }
+
+
+
+lib
+|-- main.dart
+|-- screens
+|   |-- ...
+|-- widgets
+|   |-- ...
+|-- models
+|   |-- modelo.dart
+|-- utils
+|   |-- util.dart

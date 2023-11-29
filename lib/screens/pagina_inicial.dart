@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:handhelp/screens/PaginaDadosMedicos.dart';
+import 'package:handhelp/Widget/EscolhaAtendimentoWidget.dart';
 
+//responsiva
 
 class PaginaInicial extends StatelessWidget {
   @override
@@ -16,7 +17,7 @@ class PaginaInicial extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => PaginaDadosMedicos(),
+                    builder: (context) => EscolhaAtendimentoWidget(),
                   ),
                 );
               },

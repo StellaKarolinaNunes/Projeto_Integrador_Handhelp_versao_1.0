@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
-import 'PaginaDadoMedicosLibras.dart';
+import 'package:handhelp/screens/PaginaTriagemConcluida.dart';
+
 import 'PaginaIntensidadeDor.dart';
 
 class PaginaResultado extends StatelessWidget {
@@ -42,7 +43,7 @@ class PaginaResultado extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => PaginaDadoMedicosLibras(),
+                    builder: (context) => PaginaTriagemConcluida(),
                   ),
                 );
               },

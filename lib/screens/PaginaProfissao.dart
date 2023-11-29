@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'PaginaDefinirAtendimento.dart';
+import 'package:handhelp/screens/PaginaTriagemConcluida.dart';
 
 class PaginaProfissao extends StatelessWidget {
   final String profissao;
@@ -24,11 +23,11 @@ class PaginaProfissao extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => PaginaDefinirAtendimento(),
+                    builder: (context) => PaginaTriagemConcluida(),
                   ),
                 );
               },
-              child: const Text('definir atendimento'),
+              child: const Text('Fim atendimento '),
             ),
           ],
         ),
