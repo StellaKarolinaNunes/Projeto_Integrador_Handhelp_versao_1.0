@@ -8,21 +8,10 @@ O projeto Integrador dos alunos IFPA, ciencia da computação tem como criação
   <img src="assets/images/Librasbanner.png" width="800" />
 </p>
 
-<<<<<<< HEAD
-<body>
-=======
-
 # FAQ/Perguntas Frequentes
-> **R:**
->
-
-## O que é o Projeto Handhelp?
-> **R:** Aplicativo para auxiliar pessoas surdas no atendimento das triagem nas unidades básicas de saúde Tucuruí Pará
-
 
 ## Posso gerar meu próprio guia usando esse repositório?
 > **R:** Sim! Só pedimos que você faça um link para [Link do HandHelp](https://github.com/StellaKarolinaNunes/Projeto_Integrador)  😁 e respeite a licença de uso. 
-
 
 ## Posso sugerir novas funcionalidades?
 > **R:** Sim! Use o mecanismo de contribuição do Github. Nesse momento estamos focados em corrigir erros e melhorar as funcionalidade existentes.
