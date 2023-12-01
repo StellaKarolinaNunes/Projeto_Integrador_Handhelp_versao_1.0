@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_integrador/main.dart';
 import 'package:projeto_integrador/sintomas.dart';
 
 void main() {
@@ -38,15 +39,29 @@ class Home1 extends StatelessWidget {
           margin: const EdgeInsets.only(top: 20),
           child: Row(
             children: [
-              // Primeira Column - Imagem
+              // Primeira Column - icons de votla
               const SizedBox(width: 15.0),
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Image.asset(
-                    'assets/images/logo_transpa.png',
-                    width: 80.0,
-                    height: 80.0,
+                  SizedBox(
+                    width: 60.0,
+                    height: 95.0,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const FigmaToCodeApp(),
+                          ),
+                        );
+                      },
+                      child: const Icon(
+                        Icons.keyboard_arrow_left_rounded,
+                        size: 28.0,
+                        color: Colors.blue,
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -56,70 +71,48 @@ class Home1 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'HandHelp',
+                    'Escolha Atendimento',
                     style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 18.0,
+                      color: Colors.blue,
+                      fontSize: 20,
+                      fontFamily: 'Urbanist',
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],
               ),
               const SizedBox(width: 140.0),
-              // Terceira Column - Ícone
-              const Column(
+              // Terceira Column - Ícone de elemento
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Icon(
-                    Icons.notifications_none,
-                    size: 28.0,
-                    color: Colors.black,
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-        Container(
-          margin: const EdgeInsets.only(top: 78),
-          width: 346.03778076171875,
-          height: 54.574623107910156,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: const Color(0x4cd9d9d9)),
-          child: const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.search_rounded,
-                    size: 26.0,
-                    color: Color.fromARGB(237, 137, 126, 126),
-                  ),
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "selecione os sintomas",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w400,
-                      color: Color.fromARGB(237, 137, 126, 126),
+                  Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                    clipBehavior: Clip.antiAlias,
+                    decoration: ShapeDecoration(
+                      color: const Color(0xFF0B8FAC),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(100),
+                      ),
                     ),
-                  ),
-                ],
-              ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.settings_voice_outlined,
-                    size: 26.0,
-                    color: Color.fromARGB(237, 137, 126, 126),
+                    child: const Row(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          '1 a 6',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                            fontFamily: 'Urbanist',
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -132,117 +125,22 @@ class Home1 extends StatelessWidget {
           height: 136,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(10),
-            color: const Color(0xff198eb6),
+            color: const Color(0x4cd9d9d9),
           ),
-          child: const Row(
-            children: [
-              SizedBox(width: 12),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(height: 10),
-                    Text(
-                      "Triagem",
-                      style: TextStyle(
-                        fontSize: 26,
-                        fontWeight: FontWeight.w400,
-                        color: Colors.black,
-                      ),
-                    ),
-                    SizedBox(height: 2),
-                    Text(
-                      'textotexto textotexto ttextotext otextotex textotex totextote xtott extote xt o textot extextotex totextote xtott extotextotextotex',
-                      overflow: TextOverflow.ellipsis,
-                      maxLines: 4,
-                      softWrap: false,
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-        Container(
-          height: 15,
-          width: 90,
-          margin: const EdgeInsets.only(top: 20),
-          child: const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Column(
-                children: [
-                  Icon(
-                    Icons.lens,
-                    size: 15,
-                    color: Colors.blue,
-                  )
-                ],
-              ),
-              Column(
-                children: [
-                  Icon(
-                    Icons.lens,
-                    size: 15,
-                    color: Color.fromARGB(237, 137, 126, 126),
-                  )
-                ],
-              ),
-              Column(
-                children: [
-                  Icon(
-                    Icons.lens,
-                    size: 15,
-                    color: Color.fromARGB(237, 137, 126, 126),
-                  )
-                ],
-              ),
-              Column(
-                children: [
-                  Icon(
-                    Icons.lens,
-                    size: 15,
-                    color: Color.fromARGB(237, 137, 126, 126),
-                  )
-                ],
-              ),
-            ],
-          ),
-        ),
-        Container(
-          margin: const EdgeInsets.only(top: 20),
-          child: const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Column(
-                children: [
-                  Text(
-                    "All sintomas",
-                    style: TextStyle(
-                      fontSize: 19.5,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.black,
-                    ),
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  Text(
-                    "Ver mais",
-                    style: TextStyle(
-                      fontSize: 17,
-                      fontWeight: FontWeight.w400,
-                      color: Colors.black,
-                    ),
-                  ),
-                ],
-              ),
-            ],
+        ),const SizedBox(height: 120,),
+        const SizedBox(
+          width: 346,
+          child: Text(
+            'Escolha o atendimento deseja?',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Color(0xFF009FE3),
+              fontSize: 30,
+              fontFamily: 'Urbanist',
+              fontWeight: FontWeight.w800,
+              height: 0.9,
+              letterSpacing: -0.60,
+            ),
           ),
         ),
         Container(
@@ -312,74 +210,7 @@ class Home1 extends StatelessWidget {
             ],
           ),
         ),
-        Container(
-          width: 350,
-          height: 140,
-          margin: const EdgeInsets.only(top: 30, bottom: 30),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              GestureDetector(
-                onTap: () {
-                  _navigateToSintomas(context, "Dor de ouvido");
-                },
-                child: Container(
-                  width: 150,
-                  height: 140,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    image: const DecorationImage(
-                      image: AssetImage('assets/images/Dor_de_Ouvido.png'),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  child: const Column(
-                    children: [
-                      SizedBox(height: 110),
-                      Text(
-                        "Dor de ouvido",
-                        style: TextStyle(
-                          fontSize: 19.5,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              GestureDetector(
-                onTap: () {
-                  _navigateToSintomas(context, "Dor de Cabeça");
-                },
-                child: Container(
-                  width: 150,
-                  height: 140,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),                    
-                    image: const DecorationImage(
-                      image: AssetImage('assets/images/Dor_de_Cabeça.png'),
-                      fit: BoxFit.cover,
-                    ),
-                  ),                  
-                  child: const Column(
-                    children: [
-                      SizedBox(height: 110),
-                      Text(
-                        "Dor de Cabeça",
-                        style: TextStyle(
-                          fontSize: 19.5,
-                          fontWeight: FontWeight.w400,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              )
-            ],
-          ),
-        ),
+        
       ],
     );
   }
