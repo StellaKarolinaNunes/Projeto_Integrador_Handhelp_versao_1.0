@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:projeto_integrador/home.dart';
 
 void main() {
@@ -123,3 +124,10 @@ class Tela1 extends StatelessWidget {
     );
   }
 }
+=======
+import 'screens/MeuApp.dart';
+
+void main() {
+  runApp(MeuApp());
+}
+>>>>>>> origin/main

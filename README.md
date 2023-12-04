@@ -1,52 +1,38 @@
 # HandHelp
 
-HandHelp é um aplicativo desenvolvido para facilitar a triagem médica e melhorar a comunicação entre os pacientes e profissionais de saúde. Com uma interface intuitiva e recursos inovadores, o HandHelp permite que os usuários forneçam informações médicas importantes, recebam orientações personalizadas e sejam encaminhados para os profissionais de saúde adequados.
+[![licence mit](https://img.shields.io/badge/licence-MIT-blue.svg)](./License)
 
-## Funcionalidades Principais
+O projeto Integrador dos alunos IFPA, ciencia da computação tem como criação do HandHelp  com o objetivo proporcionar uma experiência inclusiva e acessível para pessoas surdas durante o processo de triagem em unidades básicas de saúde em Tucuruí, Pará. Nosso compromisso é desenvolver ferramentas para facilitar o processo de atendimento e triagem nas unidades básicas de saúde em Tucuruí, Pará, para garantir que pessoas surdas tenham acesso adequado aos serviços de saúde, promovendo a inclusão e contribuindo para a capacitação no uso das tecnologias de assistência. O HandHelp está comprometido em criar um ambiente de saúde mais acessível, proporcionando uma experiência positiva e informativa para todos, independentemente das barreiras linguísticas.
 
-- **Inserção de Dados Médicos:** 
+<p style="text-align: center;">
+  <img src="assets/images/Librasbanner.png" width="800" />
+</p>
 
-- **Assistente Inteligente:** 
+# FAQ/Perguntas Frequentes
 
-- **Intensidade da Dor:** 
+## Posso gerar meu próprio guia usando esse repositório?
+> **R:** Sim! Só pedimos que você faça um link para [Link do HandHelp](https://github.com/StellaKarolinaNunes/Projeto_Integrador)  😁 e respeite a licença de uso. 
 
-- **Resultado da Triagem:**
+## Posso sugerir novas funcionalidades?
+> **R:** Sim! Use o mecanismo de contribuição do Github. Nesse momento estamos focados em corrigir erros e melhorar as funcionalidade existentes.
 
-- **Adicional do Médico:**
+# About the Project/Sobre o Projeto
 
-- **Comunicação em Libras:**
+## Contributing/Contribuir
 
-- **Definir Triagem:** 
-
-- **Triagem Concluída:** 
-
-- **Fim da Triagem:** 
-
-## Como Usar
-
-1. **Página Inicial:** Toque na imagem para iniciar a inserção de dados médicos.
-
-2. **Inserção de Dados Médicos:** Preencha as informações solicitadas e clique em "Concluir".
-
-3. **Assistente:** Escolha entre "Rotina" e "Dor" para receber orientações específicas.
-
-4. **Intensidade da Dor:** Deslize para ajustar a intensidade da dor e prossiga para a próxima etapa.
-
-5. **Resultado da Triagem:** Visualize e ouça o médico descrever os sintomas selecionados, a intensidade da dor e as recomendações.
-
-6. **Adicional do Médico:** Leia as informações adicionais fornecidas pelo médico e veja os dados da Inserção de Dados Médicos.
-
-7. **Comunicação em Libras:** Utilize a funcionalidade de Libras para comunicação e veja o médico se comunicar com pacientes surdos.
-
-8. **Definir Triagem:** Adicione informações adicionais à triagem, se necessário.
-
-9. **Triagem Concluída:** Após receber as recomendações, avance até a triagem estar concluída.
-
-10. **Fim da Triagem:** Visualize a confirmação e, se necessário, volte à primeira página.
+### O que devo ter em mente antes de abrir um PullRequest?
+- Esse é um projeto handhelp feito pela Equipe Help Five para a comunidade e contribuições são bem vindas.
+- Para aumentar a chance de a sua contribuição ser aprovada, escolha um título legal, simples e explicativo para os itens, e siga a formatação correta dos arquivos.
+- Mais interessante seria ajudar com o código e projeto em si
+- 🇧🇷:  :purple_heart: Como Contribuir com o projeto? [Confira o passo a passo](./Contribuindo.md)
 
 
+## History/Histórico
+- 🇧🇷: Da uma olhada na aba [Releases](./Releases.md) pra acompanhar as alterações feitas no projeto.
 
-## Contribuições
+## License/Licença do Projeto
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas, propor novos recursos ou enviar pull requests.
+- [MIT](./License)
 
+## Equipe handhelp 
+> Aos contribuidores Stella Karolina Nunes Peixoto,Igor Wenceslau Machado Conceição,João Gabriel Peres De Castro, Jhonefer Vinicius Lima Da Silva e  Aline Cély Araújo da Silva.

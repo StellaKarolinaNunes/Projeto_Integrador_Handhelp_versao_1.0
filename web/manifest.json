@@ -1,6 +1,6 @@
 {
-    "name": "projeto_integrador",
-    "short_name": "projeto_integrador",
+    "name": "handhelp",
+    "short_name": "handhelp",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
