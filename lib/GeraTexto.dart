@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_integrador/Triagem_real.dart';
 
-void main() {
-  runApp(GeraText());
-}
+// void main() {
+//   runApp(GeraText());
+// }
 
 class GeraText extends StatelessWidget {
   @override
@@ -12,7 +13,7 @@ class GeraText extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: const Color.fromARGB(255, 255, 255, 255),
       ),
-      home: G_Text(),
+      home: const G_Text(),
     );
   }
 }
@@ -39,33 +40,11 @@ class G_Text extends StatelessWidget {
                 // Navegar para a nova tela quando o botão for pressionado
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => NovaTela()),
+                  MaterialPageRoute(builder: (context) => const Triagem_real()),
                 );
               },
-              child: Text('Ir para Nova Tela'),
+              child: const Text('Ir para Nova Tela'),
             ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-class NovaTela extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Nova Tela'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Esta é a Nova Tela!',
-              style: TextStyle(fontSize: 24),
-            ),
-            // Adicione widgets conforme necessário para a nova tela
           ],
         ),
       ),
