@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_integrador/Triagem_real.dart';
+import 'Triagem_real.dart';
 
 // void main() {
 //   runApp(GeraText());

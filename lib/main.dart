@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
-import 'package:projeto_integrador/home.dart';
+import 'home.dart';
 
-void main() {
-  runApp(const FigmaToCodeApp());
-}
+// void main() {
+//   runApp(const FigmaToCodeApp());
+// }
 
 class FigmaToCodeApp extends StatelessWidget {
   const FigmaToCodeApp({Key? key}) : super(key: key);
@@ -124,10 +123,3 @@ class Tela1 extends StatelessWidget {
     );
   }
 }
-=======
-import 'screens/MeuApp.dart';
-
-void main() {
-  runApp(MeuApp());
-}
->>>>>>> origin/main

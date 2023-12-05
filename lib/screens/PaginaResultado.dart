@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
-import 'package:handhelp/screens/PaginaTriagemConcluida.dart';
+import 'package:projeto_integrador/screens/PaginaTriagemConcluida.dart';
 
 import 'PaginaIntensidadeDor.dart';
 

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_integrador/EscolhaAtendi.dart';
-import 'package:projeto_integrador/PaginaLogo.dart';
+import 'package:projeto_integrador/PaginaInt.dart';
+import 'EscolhaAtendi.dart';
+import 'PaginaLogo.dart';
 
 // void main() {
 //   runApp(const Rotina("Rotina"));
@@ -162,7 +163,7 @@ class Home2 extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const PaginaLogo()),
+                              builder: (context) => const TelaNova()),
                         );
                       },
                       child: Container(

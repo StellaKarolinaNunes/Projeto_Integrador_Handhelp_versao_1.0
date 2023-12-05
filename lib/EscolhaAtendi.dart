@@ -1,8 +1,7 @@
 // ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
-import 'package:projeto_integrador/Rotina.dart';
-import 'package:projeto_integrador/PaginaLogo.dart';
+import 'Rotina.dart';
+import 'PaginaLogo.dart';
 import 'PaginaSintomas.dart';
 
 // void main() {

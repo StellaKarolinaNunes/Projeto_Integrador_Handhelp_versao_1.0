@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_integrador/GeraTexto.dart';
-import 'package:projeto_integrador/PaginaSintomas.dart';
+import 'GeraTexto.dart';
+import 'PaginaSintomas.dart';
 
 // void main() {
 //   runApp(const IntensityPage(

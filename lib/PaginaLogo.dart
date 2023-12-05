@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_integrador/EscolhaAtendi.dart';
+import 'EscolhaAtendi.dart';
 
 void main() {
   runApp(const PaginaLogo());
@@ -62,7 +62,7 @@ class Tela1 extends StatelessWidget {
                     height: 209,
                     decoration: const BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage('assets/images/logo_transpa.png'),
+                        image: AssetImage('assets/images/1.png'),
                         fit: BoxFit.cover,
                       ),
                     ),

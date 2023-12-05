@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_integrador/main.dart';
-import 'package:projeto_integrador/sintomas.dart';
+// import 'package:projeto_integradormain.dart';
+// import 'package:projeto_integrador/sintomas.dart';
 
-void main() {
-  runApp(const CodeApp());
-}
+// void main() {
+//   runApp(const CodeApp());
+// }
 
 class CodeApp extends StatelessWidget {
   const CodeApp({super.key, Key? Key});
@@ -49,12 +49,12 @@ class Home1 extends StatelessWidget {
                     height: 95.0,
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const FigmaToCodeApp(),
-                          ),
-                        );
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(
+                        //     // builder: (context) => const FigmaToCodeApp(),
+                        //   ),
+                        // );
                       },
                       child: const Icon(
                         Icons.keyboard_arrow_left_rounded,
@@ -216,9 +216,9 @@ class Home1 extends StatelessWidget {
   }
 
   void _navigateToSintomas(BuildContext context, tipoSaude) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => Sintomas(tipoSaude)),
-    );
+    // Navigator.push(
+    //   context,
+    //   MaterialPageRoute(builder: (context) => Sintomas(tipoSaude)),
+    // );
   }
 }

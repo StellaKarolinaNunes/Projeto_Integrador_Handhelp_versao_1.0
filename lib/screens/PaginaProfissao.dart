@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:handhelp/screens/PaginaTriagemConcluida.dart';
+import 'package:projeto_integrador/screens/PaginaTriagemConcluida.dart';
 
 class PaginaProfissao extends StatelessWidget {
   final String profissao;
