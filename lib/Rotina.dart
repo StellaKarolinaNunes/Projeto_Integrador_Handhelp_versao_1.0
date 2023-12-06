@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_integrador/PaginaInt.dart';
 import 'EscolhaAtendi.dart';
-import 'PaginaLogo.dart';
 
-// void main() {
-//   runApp(const Rotina("Rotina"));
-// }
+
+void main() {
+  runApp(const Rotina("Rotina"));
+}
 
 class Rotina extends StatelessWidget {
   final String tipoSaude;
@@ -160,11 +160,7 @@ class Home2 extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const TelaNova()),
-                        );
+                        _navigateToSintomas(context, "Nutricionista");
                       },
                       child: Container(
                         width: 150,
@@ -240,11 +236,7 @@ class Home2 extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const PaginaLogo()),
-                        );
+                        _navigateToSintomas(context, "Fisioterapeuta");
                       },
                       child: Container(
                         width: 150,
@@ -286,7 +278,7 @@ class Home2 extends StatelessWidget {
             )
           ],
         ),
-
+        const SizedBox(height: 40.5),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -325,11 +317,7 @@ class Home2 extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const PaginaLogo()),
-                        );
+                        _navigateToSintomas(context, "Psicólogo");
                       },
                       child: Container(
                         width: 110,
@@ -405,11 +393,7 @@ class Home2 extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const PaginaLogo()),
-                        );
+                        _navigateToSintomas(context, 'Dentista');
                       },
                       child: Container(
                         width: 100,
@@ -451,7 +435,7 @@ class Home2 extends StatelessWidget {
             )
           ],
         ),
-
+        const SizedBox(height: 40.5),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -490,18 +474,14 @@ class Home2 extends StatelessWidget {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const PaginaLogo()),
-                        );
+                        _navigateToSintomas(context, 'Serviços\nSociais');
                       },
                       child: Container(
-                        width: 100,
-                        height: 55,
+                        width: 125,
+                        height: 35,
                         padding: const EdgeInsets.symmetric(
                             horizontal: 12, vertical: 8),
-                        margin: const EdgeInsets.only(top: 180, left: 36),
+                        margin: const EdgeInsets.only(top: 180, left: 20),
                         clipBehavior: Clip.antiAlias,
                         decoration: ShapeDecoration(
                           color: const Color(0xFF0B8FAC),
@@ -515,7 +495,7 @@ class Home2 extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
-                              'Serviços\nSociais',
+                              'Serviços Sociais',
                               textAlign: TextAlign.center,
                               style: TextStyle(
                                 color: Colors.white,
@@ -569,19 +549,15 @@ class Home2 extends StatelessWidget {
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const PaginaLogo()),
-                        );
+                      onTap: () {                        
+                        _navigateToSintomas(context, 'pre natal');                      
                       },
                       child: Container(
                         width: 110,
                         height: 35,
                         padding: const EdgeInsets.symmetric(
                             horizontal: 12, vertical: 8),
-                        margin: const EdgeInsets.only(top: 180, left:36),
+                        margin: const EdgeInsets.only(top: 180, left:32),
                         clipBehavior: Clip.antiAlias,
                         decoration: ShapeDecoration(
                           color: const Color(0xFF0B8FAC),
@@ -620,3 +596,9 @@ class Home2 extends StatelessWidget {
     );
   }
 }
+ void _navigateToSintomas(BuildContext context, String tipoSaude) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => TelaNova(tipoSaude)),
+    );
+  }

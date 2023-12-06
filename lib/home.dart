@@ -29,7 +29,7 @@ class Home1 extends StatelessWidget {
   const Home1({super.key, Key? Key});
 
   // ignore: non_constant_identifier_names
-  final String TipoSaude = "Bronquite";
+  // final String TipoSaude = "Bronquite";
 
   @override
   Widget build(BuildContext context) {
@@ -152,7 +152,7 @@ class Home1 extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () {
-                  _navigateToSintomas(context, TipoSaude);
+                  _navigateToSintomas(context, 'Bronquite');
                 },
                 child: Container(
                   width: 150, // Defina a largura aqui
@@ -164,12 +164,12 @@ class Home1 extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  child: Column(
+                  child: const Column(
                     children: [
-                      const SizedBox(height: 110),
+                      SizedBox(height: 110),
                       Text(
-                        TipoSaude,
-                        style: const TextStyle(
+                        'Bronquite',
+                        style: TextStyle(
                           fontSize: 19.5,
                           fontWeight: FontWeight.w400,
                           color: Colors.black,
@@ -217,8 +217,8 @@ class Home1 extends StatelessWidget {
 
   void _navigateToSintomas(BuildContext context, tipoSaude) {
     // Navigator.push(
-    //   context,
-    //   MaterialPageRoute(builder: (context) => Sintomas(tipoSaude)),
-    // );
+      // context,
+      // MaterialPageRoute(builder: (context) => Sintomas(tipoSaude)),
+    // )
   }
 }

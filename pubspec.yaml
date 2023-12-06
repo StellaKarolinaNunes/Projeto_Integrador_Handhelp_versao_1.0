@@ -98,6 +98,11 @@ flutter:
     - assets/images/CorpoM.png
     - assets/Vlibras/vlibras.html
 
+linter:
+  rules:
+    - file_names
+    - prefer_const_constructors
+
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.

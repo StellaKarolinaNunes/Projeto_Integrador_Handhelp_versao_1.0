@@ -202,7 +202,7 @@ class Home1 extends StatelessWidget {
                 onTap: () {
                   Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Rotina("Rotina")),
+                      MaterialPageRoute(builder: (context) => Rotina('')),
                     );
                 },
                 child: Container(
