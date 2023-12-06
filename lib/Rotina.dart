@@ -72,7 +72,7 @@ class Home2 extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    tipoSaude,
+                    "Rotina",
                     style: const TextStyle(
                       color: Colors.blue,
                       fontSize: 17.0,
@@ -303,7 +303,7 @@ class Home2 extends StatelessWidget {
                       height: 150,
                       color: Colors.black26,
                       child: const VideoPlayerScreen(
-                        videoUrl: 'assets/videos/psicólogo.mp4',
+                        videoUrl: 'assets/videos/psicologo.mp4',
                       ),
                     ),
                     GestureDetector(
@@ -454,7 +454,7 @@ class Home2 extends StatelessWidget {
                       height: 150,
                       color: Colors.black26,
                       child: const VideoPlayerScreen(
-                        videoUrl: 'assets/videos/serviço_social.mp4',
+                        videoUrl: 'assets/videos/servico_social.mp4',
                       ),
                     ),
                     GestureDetector(
@@ -527,12 +527,12 @@ class Home2 extends StatelessWidget {
                       height: 150,
                       color: Colors.black26,
                       child: const VideoPlayerScreen(
-                        videoUrl: 'assets/videos/pré_natal.mp4',
+                        videoUrl: 'assets/videos/pre_natal.mp4',
                       ),
                     ),
                     GestureDetector(
                       onTap: () {
-                        _navigateToSintomas(context, 'pre natal');
+                        _navigateToSintomas(context, 'pré natal');
                       },
                       child: Container(
                         width: 110,

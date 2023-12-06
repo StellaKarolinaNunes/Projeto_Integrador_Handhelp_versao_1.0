@@ -9,6 +9,7 @@ import 'PaginaSintomas.dart';
 // }
 
 class IntensityPage extends StatefulWidget {
+  
   final List<String> escolhasAnteriores;
   // final Key? key;
 
@@ -21,6 +22,7 @@ class IntensityPage extends StatefulWidget {
 }
 
 class _IntensityPageState extends State<IntensityPage> {
+  
   double intensidade = 5.0;
 
   // Função para obter a cor com base na intensidade
@@ -41,6 +43,7 @@ class _IntensityPageState extends State<IntensityPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Column(
           children: [
