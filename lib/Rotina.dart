@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_integrador/ColocarVideos.dart';
 import 'package:projeto_integrador/PaginaInt.dart';
 import 'EscolhaAtendi.dart';
-
 
 void main() {
   runApp(const Rotina("Rotina"));
@@ -122,7 +122,7 @@ class Home2 extends StatelessWidget {
 
         //Aqui é usar vídeos de libras ou Api de libras
 
-        Row(          
+        Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Column(
@@ -150,12 +150,9 @@ class Home2 extends StatelessWidget {
                     Container(
                       width: 170,
                       height: 150,
-                      padding: const EdgeInsets.all(16),
-                      decoration: ShapeDecoration(
-                        color: Colors.black26,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
+                      color: Colors.black26,
+                      child: const VideoPlayerScreen(
+                        videoUrl: 'assets/videos/nutricionista.mp4',
                       ),
                     ),
                     GestureDetector(
@@ -226,12 +223,9 @@ class Home2 extends StatelessWidget {
                     Container(
                       width: 170,
                       height: 150,
-                      padding: const EdgeInsets.all(16),
-                      decoration: ShapeDecoration(
-                        color: Colors.black26,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
+                      color: Colors.black26,
+                      child: const VideoPlayerScreen(
+                        videoUrl: 'assets/videos/fisioterapeuta.mp4',
                       ),
                     ),
                     GestureDetector(
@@ -307,12 +301,9 @@ class Home2 extends StatelessWidget {
                     Container(
                       width: 170,
                       height: 150,
-                      padding: const EdgeInsets.all(16),
-                      decoration: ShapeDecoration(
-                        color: Colors.black26,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
+                      color: Colors.black26,
+                      child: const VideoPlayerScreen(
+                        videoUrl: 'assets/videos/psicólogo.mp4',
                       ),
                     ),
                     GestureDetector(
@@ -383,12 +374,9 @@ class Home2 extends StatelessWidget {
                     Container(
                       width: 170,
                       height: 150,
-                      padding: const EdgeInsets.all(16),
-                      decoration: ShapeDecoration(
-                        color: Colors.black26,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
+                      color: Colors.black26,
+                      child: const VideoPlayerScreen(
+                        videoUrl: 'assets/videos/dentista.mp4',
                       ),
                     ),
                     GestureDetector(
@@ -464,12 +452,9 @@ class Home2 extends StatelessWidget {
                     Container(
                       width: 170,
                       height: 150,
-                      padding: const EdgeInsets.all(16),
-                      decoration: ShapeDecoration(
-                        color: Colors.black26,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
+                      color: Colors.black26,
+                      child: const VideoPlayerScreen(
+                        videoUrl: 'assets/videos/serviço_social.mp4',
                       ),
                     ),
                     GestureDetector(
@@ -540,24 +525,21 @@ class Home2 extends StatelessWidget {
                     Container(
                       width: 170,
                       height: 150,
-                      padding: const EdgeInsets.all(16),
-                      decoration: ShapeDecoration(
-                        color: Colors.black26,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(20),
-                        ),
+                      color: Colors.black26,
+                      child: const VideoPlayerScreen(
+                        videoUrl: 'assets/videos/pré_natal.mp4',
                       ),
                     ),
                     GestureDetector(
-                      onTap: () {                        
-                        _navigateToSintomas(context, 'pre natal');                      
+                      onTap: () {
+                        _navigateToSintomas(context, 'pre natal');
                       },
                       child: Container(
                         width: 110,
                         height: 35,
                         padding: const EdgeInsets.symmetric(
                             horizontal: 12, vertical: 8),
-                        margin: const EdgeInsets.only(top: 180, left:32),
+                        margin: const EdgeInsets.only(top: 180, left: 32),
                         clipBehavior: Clip.antiAlias,
                         decoration: ShapeDecoration(
                           color: const Color(0xFF0B8FAC),
@@ -596,9 +578,10 @@ class Home2 extends StatelessWidget {
     );
   }
 }
- void _navigateToSintomas(BuildContext context, String tipoSaude) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(builder: (context) => TelaNova(tipoSaude)),
-    );
-  }
+
+void _navigateToSintomas(BuildContext context, String tipoSaude) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => TelaNova(tipoSaude)),
+  );
+}

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(PaginaSintomas());
-}
+// void main() {
+//   runApp(PaginaSintomas());
+// }
 
 class PaginaSintomas extends StatefulWidget {
   @override

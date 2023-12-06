@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
+import 'ColocarVideos.dart';
 import 'Rotina.dart';
 import 'PaginaLogo.dart';
 import 'PaginaSintomas.dart';
@@ -117,13 +118,15 @@ class Home1 extends StatelessWidget {
             ],
           ),
         ),
-        Container(
-          margin: const EdgeInsets.only(top: 20),
-          width: 258,
-          height: 258,
-          decoration: BoxDecoration(          
-            borderRadius: BorderRadius.circular(1234),
-            color: const Color(0xFF7BC1B7),
+        SizedBox(
+          width: 260,
+          height: 260,
+          child: Stack(
+            children: const [
+              VideoPlayerScreen(
+                videoUrl: 'assets/videos/qual_atendimento_vc_deseja.mp4',
+              ),
+            ],
           ),
         ),
         const SizedBox(
@@ -201,9 +204,9 @@ class Home1 extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Rotina('')),
-                    );
+                    context,
+                    MaterialPageRoute(builder: (context) => Rotina('')),
+                  );
                 },
                 child: Container(
                   width: 164,

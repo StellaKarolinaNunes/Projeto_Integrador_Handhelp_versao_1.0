@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'ColocarVideos.dart';
 import 'GeraTexto.dart';
 import 'EscolhaAtendi.dart';
 
@@ -117,13 +118,15 @@ class Triagem extends StatelessWidget {
             ],
           ),
         ),
-        Container(
-          margin: const EdgeInsets.only(top: 20),
-          width: 258,
-          height: 258,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(1234),
-            color: const Color(0xFF7BC1B7),
+        const SizedBox(
+          width: 260,
+          height: 260,
+          child: Stack(
+            children: [
+              VideoPlayerScreen(
+                videoUrl: 'assets/videos/triagem_realizada.mp4',
+              ),
+            ],
           ),
         ),
         const SizedBox(
