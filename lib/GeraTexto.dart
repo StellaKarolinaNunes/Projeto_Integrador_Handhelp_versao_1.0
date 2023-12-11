@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_integrador/intensidade_dor.dart';
 import 'Triagem_real.dart';
+import 'values.dart';
 
 void main() {
   runApp(const GeraText());
@@ -139,7 +140,7 @@ class G_Text extends StatelessWidget {
                   )
                 ],
               ),
-              child: const Stack(
+              child: Stack(
                 children: [
                   Positioned(
                     left: 28,
@@ -149,8 +150,8 @@ class G_Text extends StatelessWidget {
                       child: Text.rich(
                         TextSpan(
                           children: [
-                            TextSpan(
-                              text: 'variavel  ',
+                            const TextSpan(
+                              text: 'Sintomas: ',
                               style: TextStyle(
                                 color: Color(0xFF198EB6),
                                 fontSize: 30,
@@ -161,9 +162,11 @@ class G_Text extends StatelessWidget {
                               ),
                             ),
                             TextSpan(
-                              text:
-                                  '(variavel sintomas selecionado e intensidade da dor)',
-                              style: TextStyle(
+                              text: sintomasSeleccionados
+                                  .toString()
+                                  .replaceAll('[', '')
+                                  .replaceAll(']', ''),
+                              style: const TextStyle(
                                 color: Color(0xFF198EB6),
                                 fontSize: 15,
                                 fontFamily: 'Urbanist',
@@ -172,8 +175,8 @@ class G_Text extends StatelessWidget {
                                 letterSpacing: -0.30,
                               ),
                             ),
-                            TextSpan(
-                              text: ' ',
+                            const TextSpan(
+                              text: 'Intensidade: ',
                               style: TextStyle(
                                 color: Color(0xFF198EB6),
                                 fontSize: 30,
@@ -181,6 +184,17 @@ class G_Text extends StatelessWidget {
                                 fontWeight: FontWeight.w500,
                                 height: 0.04,
                                 letterSpacing: -0.60,
+                              ),
+                            ),
+                            TextSpan(
+                              text: intensidadeSelecionada.round().toString(),
+                              style: const TextStyle(
+                                color: Color(0xFF198EB6),
+                                fontSize: 15,
+                                fontFamily: 'Urbanist',
+                                fontWeight: FontWeight.w500,
+                                height: 1.0,
+                                letterSpacing: -0.30,
                               ),
                             ),
                           ],
@@ -250,11 +264,12 @@ class G_Text extends StatelessWidget {
                       const SizedBox(height: 40),
                       GestureDetector(
                         onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const Triagem_real()),
-                  );
-                },
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Triagem_real()),
+                          );
+                        },
                         child: Container(
                           width: 343,
                           height: 56,
