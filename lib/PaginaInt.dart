@@ -1,4 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:Projeto_Integrador/ColocarVideos.dart';
 import 'Rotina.dart';
 
 // void main() {
@@ -7,8 +9,11 @@ import 'Rotina.dart';
 
 class TelaNova extends StatelessWidget {
   // ignore: non_constant_identifier_names
-  final String tipoSaude;
-  const TelaNova(this.tipoSaude, {Key? key}) : super(key: key);
+  final String profissao;
+  final String videoFinal;
+  // const TelaNova(this.profissao, String videoFinal, {super.key, required this.videoFinal});
+  const TelaNova(this.profissao, {Key? key, required this.videoFinal})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -51,7 +56,7 @@ class TelaNova extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(width: 140.0),
-                  //Segundo Column - Ícone de elemento
+                  //Segundo Column - Bolinho de elemento
                   SizedBox(
                     width: 84,
                     height: 12,
@@ -105,43 +110,22 @@ class TelaNova extends StatelessWidget {
                         ),
                       ],
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
-            Container(
-              width: 343,
-              height: 270,
-              clipBehavior: Clip.antiAlias,
-              decoration: ShapeDecoration(
-                color: Colors.white,
-                shape: RoundedRectangleBorder(
-                  side: const BorderSide(
-                    width: 1,
-                    strokeAlign: BorderSide.strokeAlignCenter,
-                    color: Color(0xFF2294BB),
-                  ),
-                  borderRadius: BorderRadius.circular(24),
+// ----------------------------
+            Stack(
+              children: [
+                Container(
+                  width: 270,
+                  height: 270,
+                  // color: Colors.black26,
+                  child: VideoPlayerScreen(videoUrl: videoFinal),                  
                 ),
-                shadows: const [
-                  BoxShadow(
-                    color: Color(0xFF198EB6),
-                    blurRadius: 0,
-                    offset: Offset(0, 0),
-                    spreadRadius: 4,
-                  )
-                ],
-              ),
-              child: Stack(
-                children: [
-                  Positioned(
-                    left: 159.50,
-                    top: 193,
-                    child: Container(),
-                  ),
-                ],
-              ),
+              ],
             ),
+// -------------------------------
             const SizedBox(height: 120),
             SizedBox(
               width: 343,
@@ -187,7 +171,7 @@ class TelaNova extends StatelessWidget {
                       const SizedBox(
                         height: 24,
                       ),
-                       SizedBox(
+                      SizedBox(
                         child: Text.rich(
                           TextSpan(
                             children: [
@@ -202,8 +186,8 @@ class TelaNova extends StatelessWidget {
                                   letterSpacing: -0.60,
                                 ),
                               ),
-                              TextSpan(                                
-                                text: tipoSaude,
+                              TextSpan(
+                                text: profissao,
                                 style: const TextStyle(
                                   color: Color(0xFF7BC1B7),
                                   fontSize: 30,
@@ -265,5 +249,11 @@ class TelaNova extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(StringProperty('videoUrl', videoFinal));
   }
 }
