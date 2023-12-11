@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_integrador/values.dart';
 import 'GeraTexto.dart';
 import 'PaginaSintomas.dart';
 
@@ -9,7 +10,6 @@ import 'PaginaSintomas.dart';
 // }
 
 class IntensityPage extends StatefulWidget {
-  
   final List<String> escolhasAnteriores;
   // final Key? key;
 
@@ -22,7 +22,6 @@ class IntensityPage extends StatefulWidget {
 }
 
 class _IntensityPageState extends State<IntensityPage> {
-  
   double intensidade = 5.0;
 
   // Função para obter a cor com base na intensidade
@@ -176,7 +175,7 @@ class _IntensityPageState extends State<IntensityPage> {
                             ),
                           ],
                         ),
-                      ),                    
+                      ),
                       SizedBox(
                         width: 97,
                         height: 46,
@@ -185,7 +184,7 @@ class _IntensityPageState extends State<IntensityPage> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const SizedBox(                            
+                            const SizedBox(
                               width: double.infinity,
                               child: Text(
                                 'Alto',
@@ -340,7 +339,7 @@ class _IntensityPageState extends State<IntensityPage> {
                     ],
                   ),
                   Column(
-                     mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       // const SizedBox(height: 220),
                       SliderTheme(
@@ -358,16 +357,16 @@ class _IntensityPageState extends State<IntensityPage> {
                             width: 192.0,
                             height: 350.0,
                             child: Slider(
-                              value: intensidade,
+                              value: intensidadeSelecionada,
                               onChanged: (value) {
                                 setState(() {
-                                  intensidade = value;
+                                  intensidadeSelecionada = value;
                                 });
                               },
                               min: 1,
                               max: 10,
                               divisions: 4,
-                              label: intensidade.round().toString(),
+                              label: intensidadeSelecionada.round().toString(),
                               activeColor: getColor(intensidade),
                               inactiveColor:
                                   Colors.grey, // Cor da parte inativa do Slider

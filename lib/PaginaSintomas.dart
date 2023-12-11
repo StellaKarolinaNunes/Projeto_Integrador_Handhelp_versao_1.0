@@ -1,5 +1,6 @@
 // ignore_for_file: file_names
 import 'package:flutter/material.dart';
+import 'package:projeto_integrador/values.dart';
 import 'EscolhaAtendi.dart';
 import 'intensidade_dor.dart';
 
@@ -358,7 +359,9 @@ class Sintomas extends StatelessWidget {
   void _navigateToSintomas(BuildContext context, tipoSaude) {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => const IntensityPage(escolhasAnteriores: <String>[])),
+      MaterialPageRoute(
+          builder: (context) =>
+              const IntensityPage(escolhasAnteriores: <String>[])),
     );
   }
 
@@ -378,7 +381,8 @@ class Sintomas extends StatelessWidget {
                     .map(
                       (sintoma) => ElevatedButton(
                         onPressed: () {
-                          sintomasSelecionadosTemp.add(sintoma);
+                          if (!sintomasSeleccionados.contains(sintoma))
+                            sintomasSeleccionados.add(sintoma);
                           print(sintoma);
                         },
                         style: ElevatedButton.styleFrom(
