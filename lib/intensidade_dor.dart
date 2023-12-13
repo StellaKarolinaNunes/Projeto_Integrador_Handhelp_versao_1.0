@@ -130,11 +130,11 @@ class _IntensityPageState extends State<IntensityPage> {
                 ],
               ),
             ),
-
+            const SizedBox(height: 70.0),
             SizedBox(
               height: 360.0,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -382,27 +382,27 @@ class _IntensityPageState extends State<IntensityPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Image.network(
+                      Image.asset(
                         'assets/images/Deprimido.png',
                         width: 48, // Ajuste conforme necessário
                         height: 48, // Ajuste conforme necessário
                       ),
-                      Image.network(
+                      Image.asset(
                         'assets/images/Triste.png',
                         width: 48,
                         height: 48,
                       ),
-                      Image.network(
+                      Image.asset(
                         'assets/images/Muito_Feliz.png',
                         width: 48,
                         height: 48,
                       ),
-                      Image.network(
+                      Image.asset(
                         'assets/images/Feliz.png',
                         width: 48,
                         height: 48,
                       ),
-                      Image.network(
+                      Image.asset(
                         'assets/images/Neutro.png',
                         width: 48,
                         height: 48,
@@ -412,7 +412,7 @@ class _IntensityPageState extends State<IntensityPage> {
                 ],
               ),
             ),
-            const SizedBox(height: 100),
+            const SizedBox(height: 140),
             // const SizedBox(height: 290),
             Container(
               width: 350,

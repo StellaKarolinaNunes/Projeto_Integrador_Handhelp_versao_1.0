@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:Projeto_Integrador/ColocarVideos.dart';
+import 'package:projeto_integrador/ColocarVideos.dart';
 import 'Rotina.dart';
 
 // void main() {
@@ -55,62 +55,8 @@ class TelaNova extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(width: 140.0),
-                  //Segundo Column - Bolinho de elemento
-                  SizedBox(
-                    width: 84,
-                    height: 12,
-                    child: Row(
-                      // mainAxisSize: MainAxisSize.min,
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      // crossAxisAlignment: CrossAxisAlignment.s,
-                      children: [
-                        Container(
-                          width: 12,
-                          height: 12,
-                          decoration: ShapeDecoration(
-                            color: const Color(0xFF0B8FAC),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(1234),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: 12,
-                          height: 12,
-                          decoration: ShapeDecoration(
-                            shape: RoundedRectangleBorder(
-                              side: const BorderSide(
-                                  width: 1, color: Color(0xFF0B8FAC)),
-                              borderRadius: BorderRadius.circular(1234),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: 12,
-                          height: 12,
-                          decoration: ShapeDecoration(
-                            shape: RoundedRectangleBorder(
-                              side: const BorderSide(
-                                  width: 1, color: Color(0xFF0B8FAC)),
-                              borderRadius: BorderRadius.circular(1234),
-                            ),
-                          ),
-                        ),
-                        Container(
-                          width: 12,
-                          height: 12,
-                          decoration: ShapeDecoration(
-                            shape: RoundedRectangleBorder(
-                              side: const BorderSide(
-                                  width: 1, color: Color(0xFF0B8FAC)),
-                              borderRadius: BorderRadius.circular(1234),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
+                  
+                  
                 ],
               ),
             ),

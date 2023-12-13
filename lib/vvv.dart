@@ -186,14 +186,47 @@ class GeraText extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Column(
-                      children: [
-                        Image.network(
-                          'assets/images/icons_de_som.png',
-                          width: 24,
-                          height: 24,
-                        ),
-                      ],
+                    Container(
+                      width: 24,
+                      height: 24,
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            left: 6,
+                            top: 6,
+                            child: Container(
+                              width: 12,
+                              height: 12,
+                              decoration: const ShapeDecoration(
+                                shape: CircleBorder(
+                                  side: BorderSide(
+                                    width: 2,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                          Positioned(
+                            left: 9,
+                            top: 3,
+                            child: Container(
+                              width: 6,
+                              height: 12,
+                              decoration: const ShapeDecoration(
+                                shape: RoundedRectangleBorder(
+                                  side: BorderSide(
+                                    width: 2,
+                                    color: Colors.white,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(1234)),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                     const SizedBox(width: 8),
                     Text(

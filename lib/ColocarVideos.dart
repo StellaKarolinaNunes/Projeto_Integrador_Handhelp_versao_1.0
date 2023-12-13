@@ -17,8 +17,15 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
 
   @override
   void initState() {
-    _controller = VideoPlayerController.network(widget.videoUrl);
-    _initializeVideoPlayerFuture = _controller.initialize();
+    _controller = VideoPlayerController.asset(widget.videoUrl);
+    _initializeVideoPlayerFuture = _controller.initialize().then((_) {
+      _controller.addListener(() {
+        if (_controller.value.hasError) {
+          print('Erro durante a reprodução: ${_controller.value.errorDescription}');
+          // print('Stack trace: ${_controller.value.stackTrace}');
+        }
+      });
+    });
     super.initState();
   }
 
@@ -30,7 +37,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(      
+    return Scaffold(
       body: FutureBuilder(
         future: _initializeVideoPlayerFuture,
         builder: (context, snapshot) {
@@ -46,8 +53,6 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
           }
         },
       ),
-
-      
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           setState(() {

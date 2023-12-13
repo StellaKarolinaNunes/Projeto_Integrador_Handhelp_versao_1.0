@@ -80,7 +80,7 @@ class Home1 extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(width: 22.0),
+              const SizedBox(width: 90.0),
               // Terceira Column - Ícone de elemento
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -148,7 +148,7 @@ class Home1 extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 120,
+          height: 150,
         ),
         Container(
           width: 350,

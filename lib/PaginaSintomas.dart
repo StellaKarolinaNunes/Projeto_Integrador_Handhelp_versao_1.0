@@ -120,180 +120,183 @@ class Sintomas extends StatelessWidget {
             ],
           ),
         ),
-        Stack(
-          children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(40),
-              child: Image.asset(
-                'assets/images/CorpoM.png',
-                width: 300,
-                height: 300,
+        InteractiveViewer(
+          maxScale: 5.0,
+          child: Stack(
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(40),
+                child: Image.asset(
+                  'assets/images/CorpoM.png',
+                  width: 300,
+                  height: 300,
+                ),
               ),
-            ),
-            Positioned(
-              top: 12.0,
-              left: 75.5,
-              child: Column(
-                children: [
-                  MaterialButton(
-                    minWidth: 32,
-                    height: 20,
-                    // color: Colors.blue,
-                    onPressed: () {
-                      _mostrarSintomas(
-                        context,
-                        'Dor no Cabeça!',
-                        ['Symptom 1', 'Symptom 2'],
-                      );
-                    },
-                  ),
-                ],
+              Positioned(
+                top: 12.0,
+                left: 75.5,
+                child: Column(
+                  children: [
+                    MaterialButton(
+                      minWidth: 32,
+                      height: 20,
+                      // color: Colors.blue,
+                      onPressed: () {
+                        _mostrarSintomas(
+                          context,
+                          'Dor no Cabeça!',
+                          ['Symptom 1', 'Symptom 2'],
+                        );
+                      },
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Positioned(
-              top: 27.0,
-              left: 65.0,
-              child: Column(
-                children: [
-                  MaterialButton(
-                    minWidth: 0.90,
-                    height: 16,
-                    // color: Colors.blue,
-                    onPressed: () {
-                      _mostrarSintomas(context, 'Dor no Ouvido!',
-                          ['Symptom 1', 'Symptom 2']);
-                    },
-                  ),
-                ],
+              Positioned(
+                top: 27.0,
+                left: 65.0,
+                child: Column(
+                  children: [
+                    MaterialButton(
+                      minWidth: 0.90,
+                      height: 16,
+                      // color: Colors.blue,
+                      onPressed: () {
+                        _mostrarSintomas(context, 'Dor no Ouvido!',
+                            ['Symptom 1', 'Symptom 2']);
+                      },
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Positioned(
-              top: 28.3,
-              left: 83.9,
-              child: Column(
-                children: [
-                  MaterialButton(
-                    minWidth: 0.90,
-                    height: 13,
-                    // color: Colors.blue,
-                    onPressed: () {
-                      _mostrarSintomas(
-                          context, 'Dor no Olho!', ['Symptom 1', 'Symptom 2']);
-                    },
-                    // Other properties...
-                  ),
-                ],
+              Positioned(
+                top: 28.3,
+                left: 83.9,
+                child: Column(
+                  children: [
+                    MaterialButton(
+                      minWidth: 0.90,
+                      height: 13,
+                      // color: Colors.blue,
+                      onPressed: () {
+                        _mostrarSintomas(
+                            context, 'Dor no Olho!', ['Symptom 1', 'Symptom 2']);
+                      },
+                      // Other properties...
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Positioned(
-              top: 63.0,
-              left: 66.5,
-              child: Column(
-                children: [
-                  MaterialButton(
-                    minWidth: 50.1,
-                    height: 30,
-                    // color: Colors.blue,
-                    onPressed: () {
-                      _mostrarSintomas(context, 'Dor no Peito!',
-                          ['Tosse', 'Falta de ar', 'Chiado no peito']);
-                    },
-                    // Other properties...
-                  ),
-                ],
+              Positioned(
+                top: 63.0,
+                left: 66.5,
+                child: Column(
+                  children: [
+                    MaterialButton(
+                      minWidth: 50.1,
+                      height: 30,
+                      // color: Colors.blue,
+                      onPressed: () {
+                        _mostrarSintomas(context, 'Dor no Peito!',
+                            ['Tosse', 'Falta de ar', 'Chiado no peito']);
+                      },
+                      // Other properties...
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Positioned(
-              top: 63.0,
-              left: 195.5,
-              child: Column(
-                children: [
-                  MaterialButton(
-                    minWidth: 50.1,
-                    height: 45,
-                    // color: Colors.blue,
-                    onPressed: () {
-                      _mostrarSintomas(
-                          context, 'Dor no Costa!', ['Symptom 1', 'Symptom 2']);
-                    },
-                    // Other properties...
-                  ),
-                ],
+              Positioned(
+                top: 63.0,
+                left: 195.5,
+                child: Column(
+                  children: [
+                    MaterialButton(
+                      minWidth: 50.1,
+                      height: 45,
+                      // color: Colors.blue,
+                      onPressed: () {
+                        _mostrarSintomas(
+                            context, 'Dor no Costa!', ['Symptom 1', 'Symptom 2']);
+                      },
+                      // Other properties...
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Positioned(
-              top: 148.0,
-              left: 41,
-              child: Column(
-                children: [
-                  MaterialButton(
-                    minWidth: 10.1,
-                    height: 29,
-                    // color: Colors.blue,
-                    onPressed: () {
-                      _mostrarSintomas(
-                          context, 'Dor no Mão!', ['Symptom 1', 'Symptom 2']);
-                    },
-                    // Other properties...
-                  ),
-                ],
+              Positioned(
+                top: 148.0,
+                left: 41,
+                child: Column(
+                  children: [
+                    MaterialButton(
+                      minWidth: 10.1,
+                      height: 29,
+                      // color: Colors.blue,
+                      onPressed: () {
+                        _mostrarSintomas(
+                            context, 'Dor no Mão!', ['Symptom 1', 'Symptom 2']);
+                      },
+                      // Other properties...
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Positioned(
-              top: 97,
-              left: 74.5,
-              child: Column(
-                children: [
-                  MaterialButton(
-                    minWidth: 40.1,
-                    height: 42,
-                    // color: Colors.blue,
-                    onPressed: () {
-                      _mostrarSintomas(context, 'Dor no barrigo!',
-                          ['Symptom 1', 'Symptom 2']);
-                    },
-                    // Other properties...
-                  ),
-                ],
+              Positioned(
+                top: 97,
+                left: 74.5,
+                child: Column(
+                  children: [
+                    MaterialButton(
+                      minWidth: 40.1,
+                      height: 42,
+                      // color: Colors.blue,
+                      onPressed: () {
+                        _mostrarSintomas(context, 'Dor no barrigo!',
+                            ['Symptom 1', 'Symptom 2']);
+                      },
+                      // Other properties...
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Positioned(
-              top: 220,
-              left: 186,
-              child: Column(
-                children: [
-                  MaterialButton(
-                    minWidth: 28,
-                    height: 40,
-                    // color: Colors.blue,
-                    onPressed: () {
-                      _mostrarSintomas(context, 'Dor no pantruilho!',
-                          ['Symptom 1', 'Symptom 2']);
-                    },
-                    // Other properties...
-                  ),
-                ],
+              Positioned(
+                top: 220,
+                left: 186,
+                child: Column(
+                  children: [
+                    MaterialButton(
+                      minWidth: 28,
+                      height: 40,
+                      // color: Colors.blue,
+                      onPressed: () {
+                        _mostrarSintomas(context, 'Dor no pantruilho!',
+                            ['Symptom 1', 'Symptom 2']);
+                      },
+                      // Other properties...
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Positioned(
-              top: 110,
-              left: 201.9,
-              child: Column(
-                children: [
-                  MaterialButton(
-                    minWidth: 30,
-                    height: 22,
-                    // color: Colors.blue,
-                    onPressed: () {
-                      _mostrarSintomas(context, 'Dor no Coluna!',
-                          ['Symptom 1', 'Symptom 2']);
-                    },
-                    // Other properties...
-                  ),
-                ],
+              Positioned(
+                top: 110,
+                left: 201.9,
+                child: Column(
+                  children: [
+                    MaterialButton(
+                      minWidth: 30,
+                      height: 22,
+                      // color: Colors.blue,
+                      onPressed: () {
+                        _mostrarSintomas(context, 'Dor no Coluna!',
+                            ['Symptom 1', 'Symptom 2']);
+                      },
+                      // Other properties...
+                    ),
+                  ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
         const SizedBox(height: 240),
         Container(

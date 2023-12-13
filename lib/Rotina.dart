@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:Projeto_Integrador/ColocarVideos.dart';
-import 'package:Projeto_Integrador/PaginaInt.dart';
+import 'package:projeto_integrador/ColocarVideos.dart';
+import 'package:projeto_integrador/PaginaInt.dart';
 import 'EscolhaAtendi.dart';
 
 void main() {

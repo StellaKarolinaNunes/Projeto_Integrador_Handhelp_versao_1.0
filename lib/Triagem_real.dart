@@ -80,7 +80,7 @@ class Triagem extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(width: 22.0),
+              const SizedBox(width: 102.0),
               // Terceira Column - Ícone de elemento
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
