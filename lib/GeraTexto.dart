@@ -1,42 +1,40 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_integrador/intensidade_dor.dart';
-import 'Triagem_real.dart';
+import 'package:flutter_tts/flutter_tts.dart';
+import 'intensidade_dor.dart';
+import 'triagem_real.dart';
 import 'values.dart';
 
-void main() {
-  runApp(const GeraText());
-}
+FlutterTts flutterTts = FlutterTts()
+  ..setLanguage('pt-BR')
+  ..setSpeechRate(1.0)
+  ..setVolume(1.0)
+  ..setPitch(1.0);
 
 class GeraText extends StatelessWidget {
-  const GeraText({super.key});
+  GeraText({Key? key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: const Color.fromARGB(255, 255, 255, 255),
-      ),
-      home: const G_Text(),
-    );
-  }
-}
+    String textogerado =
+        'Sintomas: ${sintomasSeleccionados.toString().replaceAll('[', '').replaceAll(']', '')}\n\nIntensidade: ${intensidadeSelecionada.round().toString()}';
 
-class G_Text extends StatelessWidget {
-  const G_Text({Key? key});
+    Future<void> falarTexto(String textogerado) async {
+      var result = await flutterTts.speak(textogerado);
+      if (result == 1) {
+        // A fala foi iniciada com sucesso
+      } else {
+        // Houve algum erro na fala
+      }
+    }
 
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Column(
-          // mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               margin: const EdgeInsets.only(top: 20),
               child: Row(
                 children: [
-                  // Primeira Column - icons de votla
                   const SizedBox(width: 5.0),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -49,8 +47,10 @@ class G_Text extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const IntensityPage(
-                                      escolhasAnteriores: <String>[])),
+                                builder: (context) => const IntensityPage(
+                                  escolhasAnteriores: <String>[],
+                                ),
+                              ),
                             );
                           },
                           child: const Icon(
@@ -63,12 +63,11 @@ class G_Text extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(width: 0.20),
-                  // Segunda Column - Texto
                   const Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Text(
-                        'Falar texto medico',
+                        'Falar texto médico',
                         style: TextStyle(
                           color: Colors.blue,
                           fontSize: 17,
@@ -79,13 +78,14 @@ class G_Text extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(width: 158.0),
-                  // Terceira Column - Ícone de elemento
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Container(
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 12, vertical: 8),
+                          horizontal: 12,
+                          vertical: 8,
+                        ),
                         clipBehavior: Clip.antiAlias,
                         decoration: ShapeDecoration(
                           color: const Color(0xFF0B8FAC),
@@ -150,51 +150,12 @@ class G_Text extends StatelessWidget {
                       child: Text.rich(
                         TextSpan(
                           children: [
-                            const TextSpan(
-                              text: 'Sintomas: ',
-                              style: TextStyle(
-                                color: Color(0xFF198EB6),
-                                fontSize: 30,
-                                fontFamily: 'Urbanist',
-                                fontWeight: FontWeight.w500,
-                                height: 1.0,
-                                letterSpacing: -0.60,
-                              ),
-                            ),
                             TextSpan(
-                              text: sintomasSeleccionados
-                                  .toString()
-                                  .replaceAll('[', '')
-                                  .replaceAll(']', ''),
+                              text: textogerado,
                               style: const TextStyle(
                                 color: Color(0xFF198EB6),
                                 fontSize: 15,
                                 fontFamily: 'Urbanist',
-                                fontWeight: FontWeight.w500,
-                                height: 1.0,
-                                letterSpacing: -0.30,
-                              ),
-                            ),
-                            const TextSpan(
-                              text: 'Intensidade: ',
-                              style: TextStyle(
-                                color: Color(0xFF198EB6),
-                                fontSize: 30,
-                                fontFamily: 'Urbanist',
-                                fontWeight: FontWeight.w500,
-                                height: 0.04,
-                                letterSpacing: -0.60,
-                              ),
-                            ),
-                            TextSpan(
-                              text: intensidadeSelecionada.round().toString(),
-                              style: const TextStyle(
-                                color: Color(0xFF198EB6),
-                                fontSize: 15,
-                                fontFamily: 'Urbanist',
-                                fontWeight: FontWeight.w500,
-                                height: 1.0,
-                                letterSpacing: -0.30,
                               ),
                             ),
                           ],
@@ -206,111 +167,130 @@ class G_Text extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 40),
-            SizedBox(
-              width: 343,
-              child: Stack(
-                children: [
-                  Column(
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
+            GestureDetector(
+              onTap: () {
+                falarTexto(textogerado);
+                // Adicione a ação desejada ao pressionar o botão
+              },
+              child: Container(
+                width: 187,
+                height: 40,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                decoration: ShapeDecoration(
+                  color: const Color(0xFF7BC1B7),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(1234),
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      width: 24,
+                      height: 24,
+                      child: Stack(
                         children: [
-                          Container(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 12, vertical: 8),
-                            clipBehavior: Clip.antiAlias,
-                            decoration: ShapeDecoration(
-                              color: const Color(0xFF7BC1B7),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(100),
+                          Positioned(
+                            left: 6,
+                            top: 6,
+                            child: Container(
+                              width: 12,
+                              height: 12,
+                              decoration: const ShapeDecoration(
+                                shape: CircleBorder(
+                                  side: BorderSide(
+                                    width: 2,
+                                    color: Colors.white,
+                                  ),
+                                ),
                               ),
                             ),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Column(
-                                  children: [
-                                    Image.network(
-                                      'assets/images/Logo_VOZ.png',
-                                      width: 24,
-                                      height: 24,
-                                    ),
-                                  ],
+                          ),
+                          Positioned(
+                            left: 9,
+                            top: 3,
+                            child: Container(
+                              width: 6,
+                              height: 12,
+                              decoration: const ShapeDecoration(
+                                shape: RoundedRectangleBorder(
+                                  side: BorderSide(
+                                    width: 2,
+                                    color: Colors.white,
+                                  ),
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(1234)),
                                 ),
-                                const SizedBox(width: 4),
-                                const Column(
-                                  children: [
-                                    Text(
-                                      'Use voz',
-                                      textAlign: TextAlign.center,
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 12,
-                                        fontFamily: 'Urbanist',
-                                        fontWeight: FontWeight.w800,
-                                        height: 0,
-                                        letterSpacing: 1.20,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
+                              ),
                             ),
                           ),
                         ],
                       ),
-                      const SizedBox(height: 40),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => const Triagem_real()),
-                          );
-                        },
-                        child: Container(
-                          width: 343,
-                          height: 56,
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 24, vertical: 16),
-                          decoration: ShapeDecoration(
-                            color: const Color(0xFF0B8FAC),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(1000),
-                            ),
-                          ),
-                          child: const Row(
-                            mainAxisSize: MainAxisSize.min,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Row(
-                                mainAxisSize: MainAxisSize.min,
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'Continue',
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 18,
-                                      fontFamily: 'Urbanist',
-                                      fontWeight: FontWeight.w800,
-                                      height: 0,
-                                      letterSpacing: -0.18,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ],
+                    ),
+                    const SizedBox(width: 8),
+                    Text(
+                      'Aperte para falar',
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                        fontFamily: 'Urbanist',
+                        fontWeight: FontWeight.w600,
+                        height: 0,
+                        letterSpacing: -0.16,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 40),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) =>
+                        const Triagem_real(), // Corrigi o nome da classe
+                  ),
+                );
+              },
+              child: Container(
+                width: 343,
+                height: 56,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+                decoration: ShapeDecoration(
+                  color: const Color(0xFF0B8FAC),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(1000),
+                  ),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Row(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Continue',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontFamily: 'Urbanist',
+                            fontWeight: FontWeight.w800,
+                            height: 0,
+                            letterSpacing: -0.18,
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                ],
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ],

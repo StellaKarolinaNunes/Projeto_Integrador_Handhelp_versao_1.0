@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'EscolhaAtendi.dart';
 
-void main() {
-  runApp(const PaginaLogo());
-}
-
 class PaginaLogo extends StatelessWidget {
   const PaginaLogo({Key? key}) : super(key: key);
 

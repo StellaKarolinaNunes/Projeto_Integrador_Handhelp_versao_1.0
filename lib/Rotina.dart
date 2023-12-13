@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:Projeto_Integrador/ColocarVideos.dart';
-import 'package:Projeto_Integrador/PaginaInt.dart';
-import 'EscolhaAtendi.dart';
 
-void main() {
-  runApp(const Rotina("Rotina"));
-}
+import 'ColocarVideos.dart';
+import 'EscolhaAtendi.dart';
+import 'PaginaInt.dart';
+
+// void main() {
+//   runApp(const Rotina("Rotina"));
+// }
 
 class Rotina extends StatelessWidget {
   final String tipoSaude;
@@ -271,7 +272,8 @@ class Home2 extends StatelessWidget {
   }
 }
 
-void _navigateToSintomas(BuildContext context, String profissao, String videoFinal) {
+void _navigateToSintomas(
+    BuildContext context, String profissao, String videoFinal) {
   Navigator.push(
     context,
     MaterialPageRoute(
