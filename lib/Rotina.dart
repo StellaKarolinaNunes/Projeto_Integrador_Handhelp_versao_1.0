@@ -3,9 +3,13 @@ import 'package:projeto_integrador/ColocarVideos.dart';
 import 'package:projeto_integrador/PaginaInt.dart';
 import 'EscolhaAtendi.dart';
 
-void main() {
-  runApp(const Rotina("Rotina"));
-}
+// import 'ColocarVideos.dart';
+// import 'EscolhaAtendi.dart';
+// import 'PaginaInt.dart';
+
+// void main() {
+//   runApp(const Rotina("Rotina"));
+// }
 
 class Rotina extends StatelessWidget {
   final String tipoSaude;
@@ -271,7 +275,8 @@ class Home2 extends StatelessWidget {
   }
 }
 
-void _navigateToSintomas(BuildContext context, String profissao, String videoFinal) {
+void _navigateToSintomas(
+    BuildContext context, String profissao, String videoFinal) {
   Navigator.push(
     context,
     MaterialPageRoute(

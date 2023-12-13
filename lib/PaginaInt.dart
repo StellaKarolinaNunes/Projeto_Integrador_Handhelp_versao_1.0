@@ -67,7 +67,7 @@ class TelaNova extends StatelessWidget {
                   width: 270,
                   height: 270,
                   // color: Colors.black26,
-                  child: VideoPlayerScreen(videoUrl: videoFinal),                  
+                  child: VideoPlayerScreen(videoUrl: videoFinal),
                 ),
               ],
             ),
@@ -149,39 +149,64 @@ class TelaNova extends StatelessWidget {
                         ),
                       ),
                       const SizedBox(height: 40),
+                      const SizedBox(
+                        height: 80,
+                      ),
                       Container(
-                        width: 343,
+                        width: 350,
                         height: 56,
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 24, vertical: 16),
-                        decoration: ShapeDecoration(
-                          color: const Color(0xFF0B8FAC),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(1000),
-                          ),
-                        ),
-                        child: const Row(
-                          mainAxisSize: MainAxisSize.min,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
+                        margin: const EdgeInsets.only(top: 26),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [
-                            Row(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Text(
-                                  'Fim triagem',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontFamily: 'Urbanist',
-                                    fontWeight: FontWeight.w800,
-                                    height: 0,
-                                    letterSpacing: -0.18,
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const Rotina(''),
                                   ),
+                                );
+                              },
+                              child: Container(
+                                width: 164,
+                                height: 56,
+                                padding: const EdgeInsets.symmetric(
+                                    horizontal: 24, vertical: 16),
+                                clipBehavior: Clip.antiAlias,
+                                decoration: ShapeDecoration(
+                                  color: const Color(0xFF0B8FAC),
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(1000),
+                                  ),
+                                  shadows: const [
+                                    BoxShadow(
+                                      color: Color(0xFF7BC1B7),
+                                      blurRadius: 0,
+                                      offset: Offset(0, 0),
+                                      spreadRadius: 4,
+                                    )
+                                  ],
                                 ),
-                              ],
+                                child: const Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      'Voltar Início',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 13,
+                                        fontFamily: 'Urbanist',
+                                        fontWeight: FontWeight.w800,
+                                        height: 0,
+                                        letterSpacing: -0.18,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ),
                           ],
                         ),
