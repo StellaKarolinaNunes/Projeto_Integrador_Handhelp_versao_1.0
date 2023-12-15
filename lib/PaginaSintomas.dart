@@ -125,7 +125,6 @@ class Sintomas extends StatelessWidget {
           child: Stack(
             children: [
               ClipRRect(
-                borderRadius: BorderRadius.circular(40),
                 child: Image.asset(
                   'assets/images/CorpoM.png',
                   width: 300,
@@ -145,7 +144,7 @@ class Sintomas extends StatelessWidget {
                         _mostrarSintomas(
                           context,
                           'Dor no Cabeça!',
-                          ['Symptom 1', 'Symptom 2'],
+                          ['Enxaqueca', 'Tontura'],
                         );
                       },
                     ),
@@ -163,7 +162,7 @@ class Sintomas extends StatelessWidget {
                       // color: Colors.blue,
                       onPressed: () {
                         _mostrarSintomas(context, 'Dor no Ouvido!',
-                            ['Symptom 1', 'Symptom 2']);
+                            ['Zumbido', 'Secreção do Ouvido','Sensação de pressão ou inchaço no ouvido ']);
                       },
                     ),
                   ],
@@ -180,7 +179,9 @@ class Sintomas extends StatelessWidget {
                       // color: Colors.blue,
                       onPressed: () {
                         _mostrarSintomas(
-                            context, 'Dor no Olho!', ['Symptom 1', 'Symptom 2']);
+                            context, 'Dor no Olho!', ['Visão turva', 'Irritação nos olhos',
+                            'Dificuldade para enxergar de perto ou longe','Perda repentina da visão',
+                            'Manchas ou moscas volantes']);
                       },
                       // Other properties...
                     ),
@@ -198,7 +199,8 @@ class Sintomas extends StatelessWidget {
                       // color: Colors.blue,
                       onPressed: () {
                         _mostrarSintomas(context, 'Dor no Peito!',
-                            ['Tosse', 'Falta de ar', 'Chiado no peito']);
+                            ['Tosse', 'Falta de ar', 'Chiado no peito','Sensibilidade ou inchaço nos peitos',
+                            'Secreção nos seis']);
                       },
                       // Other properties...
                     ),
@@ -216,7 +218,7 @@ class Sintomas extends StatelessWidget {
                       // color: Colors.blue,
                       onPressed: () {
                         _mostrarSintomas(
-                            context, 'Dor no Costa!', ['Symptom 1', 'Symptom 2']);
+                            context, 'Dor no Costa!', ['Dificuldade para se mover', 'Formigamento ou dormência']);
                       },
                       // Other properties...
                     ),
@@ -234,7 +236,8 @@ class Sintomas extends StatelessWidget {
                       // color: Colors.blue,
                       onPressed: () {
                         _mostrarSintomas(
-                            context, 'Dor no Mão!', ['Symptom 1', 'Symptom 2']);
+                            context, 'Dor no Mão!', ['Formigamento ou dormência nas mãos', 'Lesôes nas mãos',
+                            'Dificuldade para usar as mãos']);
                       },
                       // Other properties...
                     ),
@@ -252,7 +255,7 @@ class Sintomas extends StatelessWidget {
                       // color: Colors.blue,
                       onPressed: () {
                         _mostrarSintomas(context, 'Dor no barrigo!',
-                            ['Symptom 1', 'Symptom 2']);
+                            ['Dor abdominal', 'Diarreia','Náuseas e vômitos','gases','Aumento do volume abdominal']);
                       },
                       // Other properties...
                     ),
@@ -270,7 +273,7 @@ class Sintomas extends StatelessWidget {
                       // color: Colors.blue,
                       onPressed: () {
                         _mostrarSintomas(context, 'Dor no pantruilho!',
-                            ['Symptom 1', 'Symptom 2']);
+                            ['Dificuldade para andar ou subir escadas ', 'Inchaço na panturrilha','Infecções']);
                       },
                       // Other properties...
                     ),
@@ -288,7 +291,8 @@ class Sintomas extends StatelessWidget {
                       // color: Colors.blue,
                       onPressed: () {
                         _mostrarSintomas(context, 'Dor no Coluna!',
-                            ['Symptom 1', 'Symptom 2']);
+                            ['Dificuldade para se mover', 'Fraqueza','Formigamento ou dormência'
+                            ,'Alterações na sensibilidade']);
                       },
                       // Other properties...
                     ),

@@ -16,7 +16,7 @@ class GeraText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String textogerado =
-        'Sintomas: ${sintomasSeleccionados.toString().replaceAll('[', '').replaceAll(']', '')}\n\nIntensidade: ${intensidadeSelecionada.round().toString()}';
+        'Sintomas: ${sintomasSeleccionados.toString().replaceAll('[', '').replaceAll(']', '')}\n\nIntensidade: ${tlabel.toString()}';
 
     Future<void> falarTexto(String textogerado) async {
       var result = await flutterTts.speak(textogerado);

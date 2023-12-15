@@ -23,6 +23,7 @@ class IntensityPage extends StatefulWidget {
 
 class _IntensityPageState extends State<IntensityPage> {
   double intensidade = 5.0;
+  String tlabel = getColorLabel(intensidadeSelecionada);
 
   // Função para obter a cor com base na intensidade
   Color getColor(double value) {
@@ -366,8 +367,8 @@ class _IntensityPageState extends State<IntensityPage> {
                               min: 1,
                               max: 10,
                               divisions: 4,
-                              label: intensidadeSelecionada.round().toString(),
-                              activeColor: getColor(intensidade),
+                              // label: tlabel.toString(),
+                              activeColor: getColor(intensidadeSelecionada),
                               inactiveColor:
                                   Colors.grey, // Cor da parte inativa do Slider
                               // Define a orientação vertical
