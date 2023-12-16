@@ -164,7 +164,7 @@ class _IntensityPageState extends State<IntensityPage> {
                             ),
                             SizedBox(height: 6),
                             Text(
-                              'TEXTO',
+                              '',
                               style: TextStyle(
                                 color: Color(0xFF0B8FAC),
                                 fontSize: 12,
@@ -203,7 +203,7 @@ class _IntensityPageState extends State<IntensityPage> {
                             Container(
                               width: double.infinity,
                               child: const Text(
-                                'TEXTO',
+                                '',
                                 style: TextStyle(
                                   color: Color(0xFF0B8FAC),
                                   fontSize: 12,
@@ -243,7 +243,7 @@ class _IntensityPageState extends State<IntensityPage> {
                             Container(
                               width: double.infinity,
                               child: const Text(
-                                'TEXTO',
+                                '',
                                 style: TextStyle(
                                   color: Color(0xFF0B8FAC),
                                   fontSize: 12,
@@ -283,7 +283,7 @@ class _IntensityPageState extends State<IntensityPage> {
                             Container(
                               width: double.infinity,
                               child: const Text(
-                                'TEXTO',
+                                '',
                                 style: TextStyle(
                                   color: Color(0xFF0B8FAC),
                                   fontSize: 12,
@@ -323,7 +323,7 @@ class _IntensityPageState extends State<IntensityPage> {
                             Container(
                               width: double.infinity,
                               child: const Text(
-                                'TEXTO',
+                                '',
                                 style: TextStyle(
                                   color: Color(0xFF0B8FAC),
                                   fontSize: 12,

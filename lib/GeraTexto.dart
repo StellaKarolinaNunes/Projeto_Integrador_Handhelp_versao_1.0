@@ -188,7 +188,7 @@ class GeraText extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        Image.network(
+                        Image.asset(
                           'assets/images/icons_de_som.png',
                           width: 24,
                           height: 24,
