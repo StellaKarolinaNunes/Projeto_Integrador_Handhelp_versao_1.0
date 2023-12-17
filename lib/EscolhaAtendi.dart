@@ -5,9 +5,7 @@ import 'Rotina.dart';
 import 'PaginaLogo.dart';
 import 'PaginaSintomas.dart';
 
-// void main() {
-//   runApp(const EscolhaAtendi());
-// }
+
 
 class EscolhaAtendi extends StatelessWidget {
   const EscolhaAtendi({super.key, Key? Key});
@@ -21,6 +19,7 @@ class EscolhaAtendi extends StatelessWidget {
       ),
       home: Scaffold(
         body: ListView(children: const [
+          
           Home1(),
         ]),
       ),
@@ -35,7 +34,7 @@ class Home1 extends StatelessWidget {
     return Column(
       children: [
         Container(
-          margin: const EdgeInsets.only(top: 20),
+          margin: const EdgeInsets.only(top: 10), // Ajuste na margem superior
           child: Row(
             children: [
               // Primeira Column - icons de votla
@@ -118,6 +117,7 @@ class Home1 extends StatelessWidget {
             ],
           ),
         ),
+        const SizedBox(height: 20), // Ajuste na distância da frase anterior
         SizedBox(
           width: 260,
           height: 260,
@@ -135,7 +135,7 @@ class Home1 extends StatelessWidget {
         const SizedBox(
           width: 346,
           child: Text(
-            'Escolha o atendimento deseja?',
+            'Escolha o atendimento desejado?',
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Color(0xFF009FE3),
@@ -148,12 +148,10 @@ class Home1 extends StatelessWidget {
           ),
         ),
         const SizedBox(
-          height: 150,
-        ),
+          height: 50), // Ajuste na distância entre a frase e os botões
         Container(
           width: 350,
           height: 56,
-          margin: const EdgeInsets.only(top: 26),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [

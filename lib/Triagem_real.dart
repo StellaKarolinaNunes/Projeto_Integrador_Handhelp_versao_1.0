@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:projeto_integrador/GeraTexto.dart';
 import 'ColocarVideos.dart';
-import 'GeraTexto.dart';
 import 'EscolhaAtendi.dart';
 
 

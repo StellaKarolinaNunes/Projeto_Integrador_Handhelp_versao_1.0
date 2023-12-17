@@ -50,7 +50,8 @@ class Tela1 extends StatelessWidget {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => const EscolhaAtendi()),
+                      MaterialPageRoute(
+                          builder: (context) => const EscolhaAtendi()),
                     );
                   },
                   child: Container(
@@ -64,7 +65,7 @@ class Tela1 extends StatelessWidget {
                     ),
                   ),
                 ),
-              ),              
+              ),
               const Positioned(
                 left: 80.50,
                 top: 459.94,
@@ -92,7 +93,7 @@ class Tela1 extends StatelessWidget {
                     fontSize: 12,
                     fontFamily: 'Averia One',
                     fontWeight: FontWeight.w400,
-                    height: 0,                    
+                    height: 0,
                   ),
                 ),
               ),

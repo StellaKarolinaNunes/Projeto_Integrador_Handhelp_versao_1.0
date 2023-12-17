@@ -1,15 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_integrador/ColocarVideos.dart';
-import 'package:projeto_integrador/PaginaInt.dart';
+import 'package:projeto_integrador/TelaNova.dart';
 import 'EscolhaAtendi.dart';
 
-// import 'ColocarVideos.dart';
-// import 'EscolhaAtendi.dart';
-// import 'PaginaInt.dart';
-
-// void main() {
-//   runApp(const Rotina("Rotina"));
-// }
 
 class Rotina extends StatelessWidget {
   final String tipoSaude;
@@ -50,8 +43,8 @@ class Home2 extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(
-                    width: 40.0,
-                    height: 95.0,
+                    width: 30.0,
+                    height: 90.0,
                     child: GestureDetector(
                       onTap: () {
                         Navigator.push(
@@ -85,41 +78,6 @@ class Home2 extends StatelessWidget {
                   ),
                 ],
               ),
-              // const SizedBox(width: 200.0),
-              // // Terceira Column - Ícone de elemento
-              // Column(
-              //   crossAxisAlignment: CrossAxisAlignment.end,
-              //   children: [
-              //     Container(
-              //       padding:
-              //           const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-              //       clipBehavior: Clip.antiAlias,
-              //       decoration: ShapeDecoration(
-              //         color: const Color(0xFF0B8FAC),
-              //         shape: RoundedRectangleBorder(
-              //           borderRadius: BorderRadius.circular(100),
-              //         ),
-              //       ),
-              //       child: const Row(
-              //         mainAxisSize: MainAxisSize.min,
-              //         mainAxisAlignment: MainAxisAlignment.end,
-              //         crossAxisAlignment: CrossAxisAlignment.center,
-              //         children: [
-              //           Text(
-              //             '5 a 6',
-              //             textAlign: TextAlign.center,
-              //             style: TextStyle(
-              //               color: Colors.white,
-              //               fontSize: 12,
-              //               fontFamily: 'Urbanist',
-              //               fontWeight: FontWeight.w800,
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //     ),
-              //   ],
-              // ),
             ],
           ),
         ),
@@ -225,8 +183,8 @@ class Home2 extends StatelessWidget {
               ),
             ),
             Container(
-              width: 170,
-              height: 150,
+              width: 160,
+              height: 130,
               child: VideoPlayerScreen(videoUrl: videoUrl),
             ),
             GestureDetector(

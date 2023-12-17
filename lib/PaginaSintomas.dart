@@ -4,12 +4,7 @@ import 'package:projeto_integrador/values.dart';
 import 'EscolhaAtendi.dart';
 import 'intensidade_dor.dart';
 
-// void main() {
-//   runApp(const PaginaSintomas());
-// }
-
 class PaginaSintomas extends StatelessWidget {
-  // ignore: non_constant_identifier_names
   const PaginaSintomas({super.key, Key? Key});
 
   @override
@@ -20,27 +15,27 @@ class PaginaSintomas extends StatelessWidget {
         scaffoldBackgroundColor: const Color.fromARGB(255, 255, 255, 255),
       ),
       home: Scaffold(
-        body: ListView(children: const [
-          Sintomas(),
-        ]),
+        body: ListView(
+          children: const [
+            Sintomas(),
+          ],
+        ),
       ),
     );
   }
 }
 
 class Sintomas extends StatelessWidget {
-  // ignore: non_constant_identifier_names
   const Sintomas({super.key, Key? Key});
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return Expanded(
       children: [
         Container(
           margin: const EdgeInsets.only(top: 20),
           child: Row(
             children: [
-              // Primeira Column - icons de votla
               const SizedBox(width: 5.0),
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -67,12 +62,11 @@ class Sintomas extends StatelessWidget {
                 ],
               ),
               const SizedBox(width: 0.20),
-              // Segunda Column - Texto
-              const Column(
+              const Expanded(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'Sintomas',
+                    'O que está sentindo',
                     style: TextStyle(
                       color: Colors.blue,
                       fontSize: 17,
@@ -82,7 +76,7 @@ class Sintomas extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(width: 158.0),
+              const SizedBox(width: 90.0),
               // Terceira Column - Ícone de elemento
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -103,7 +97,7 @@ class Sintomas extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
-                          '2 a 6',
+                          '1 a 6',
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: Colors.white,
@@ -139,7 +133,6 @@ class Sintomas extends StatelessWidget {
                     MaterialButton(
                       minWidth: 32,
                       height: 20,
-                      // color: Colors.blue,
                       onPressed: () {
                         _mostrarSintomas(
                           context,
@@ -151,183 +144,11 @@ class Sintomas extends StatelessWidget {
                   ],
                 ),
               ),
-              Positioned(
-                top: 27.0,
-                left: 65.0,
-                child: Column(
-                  children: [
-                    MaterialButton(
-                      minWidth: 0.90,
-                      height: 16,
-                      // color: Colors.blue,
-                      onPressed: () {
-                        _mostrarSintomas(context, 'Dor no Ouvido!', [
-                          'Zumbido',
-                          'Secreção do Ouvido',
-                          'Sensação de pressão ou inchaço no ouvido '
-                        ]);
-                      },
-                    ),
-                  ],
-                ),
-              ),
-              Positioned(
-                top: 28.3,
-                left: 83.9,
-                child: Column(
-                  children: [
-                    MaterialButton(
-                      minWidth: 0.90,
-                      height: 13,
-                      // color: Colors.blue,
-                      onPressed: () {
-                        _mostrarSintomas(context, 'Dor no Olho!', [
-                          'Visão turva',
-                          'Irritação nos olhos',
-                          'Dificuldade para enxergar de perto ou longe',
-                          'Perda repentina da visão',
-                          'Manchas ou moscas volantes'
-                        ]);
-                      },
-                      // Other properties...
-                    ),
-                  ],
-                ),
-              ),
-              Positioned(
-                top: 63.0,
-                left: 66.5,
-                child: Column(
-                  children: [
-                    MaterialButton(
-                      minWidth: 50.1,
-                      height: 30,
-                      // color: Colors.blue,
-                      onPressed: () {
-                        _mostrarSintomas(context, 'Dor no Peito!', [
-                          'Tosse',
-                          'Falta de ar',
-                          'Chiado no peito',
-                          'Sensibilidade ou inchaço nos peitos',
-                          'Secreção nos seis'
-                        ]);
-                      },
-                      // Other properties...
-                    ),
-                  ],
-                ),
-              ),
-              Positioned(
-                top: 63.0,
-                left: 195.5,
-                child: Column(
-                  children: [
-                    MaterialButton(
-                      minWidth: 50.1,
-                      height: 45,
-                      // color: Colors.blue,
-                      onPressed: () {
-                        _mostrarSintomas(context, 'Dor no Costa!', [
-                          'Dificuldade para se mover',
-                          'Formigamento ou dormência'
-                        ]);
-                      },
-                      // Other properties...
-                    ),
-                  ],
-                ),
-              ),
-              Positioned(
-                top: 148.0,
-                left: 41,
-                child: Column(
-                  children: [
-                    MaterialButton(
-                      minWidth: 10.1,
-                      height: 29,
-                      // color: Colors.blue,
-                      onPressed: () {
-                        _mostrarSintomas(context, 'Dor no Mão!', [
-                          'Formigamento ou dormência nas mãos',
-                          'Lesôes nas mãos',
-                          'Dificuldade para usar as mãos'
-                        ]);
-                      },
-                      // Other properties...
-                    ),
-                  ],
-                ),
-              ),
-              Positioned(
-                top: 97,
-                left: 74.5,
-                child: Column(
-                  children: [
-                    MaterialButton(
-                      minWidth: 40.1,
-                      height: 42,
-                      // color: Colors.blue,
-                      onPressed: () {
-                        _mostrarSintomas(context, 'Dor no barrigo!', [
-                          'Dor abdominal',
-                          'Diarreia',
-                          'Náuseas e vômitos',
-                          'gases',
-                          'Aumento do volume abdominal'
-                        ]);
-                      },
-                      // Other properties...
-                    ),
-                  ],
-                ),
-              ),
-              Positioned(
-                top: 220,
-                left: 186,
-                child: Column(
-                  children: [
-                    MaterialButton(
-                      minWidth: 28,
-                      height: 40,
-                      // color: Colors.blue,
-                      onPressed: () {
-                        _mostrarSintomas(context, 'Dor no pantruilho!', [
-                          'Dificuldade para andar ou subir escadas ',
-                          'Inchaço na panturrilha',
-                          'Infecções'
-                        ]);
-                      },
-                      // Other properties...
-                    ),
-                  ],
-                ),
-              ),
-              Positioned(
-                top: 110,
-                left: 201.9,
-                child: Column(
-                  children: [
-                    MaterialButton(
-                      minWidth: 30,
-                      height: 22,
-                      // color: Colors.blue,
-                      onPressed: () {
-                        _mostrarSintomas(context, 'Dor no Coluna!', [
-                          'Dificuldade para se mover',
-                          'Fraqueza',
-                          'Formigamento ou dormência',
-                          'Alterações na sensibilidade'
-                        ]);
-                      },
-                      // Other properties...
-                    ),
-                  ],
-                ),
-              ),
+              // ... (posicionamento dos outros botões)
             ],
           ),
         ),
-        const SizedBox(height: 240),
+        const SizedBox(height: 50), // Adicionado espaçamento vertical
         Container(
           width: 350,
           height: 56,
@@ -408,25 +229,27 @@ class Sintomas extends StatelessWidget {
           content: Row(
             children: [
               Expanded(
-                  child: Column(
-                children: sintoma
-                    .map(
-                      (sintoma) => ElevatedButton(
-                        onPressed: () {
-                          if (!sintomasSeleccionados.contains(sintoma))
-                            sintomasSeleccionados.add(sintoma);
-                          print(sintoma);
-                        },
-                        style: ElevatedButton.styleFrom(
-                          primary: sintomasSelecionadosTemp.contains(sintoma)
-                              ? Colors.grey
-                              : null,
+                child: Column(
+                  children: sintoma
+                      .map(
+                        (sintoma) => ElevatedButton(
+                          onPressed: () {
+                            if (!sintomasSeleccionados.contains(sintoma))
+                              sintomasSeleccionados.add(sintoma);
+                            print(sintoma);
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor:
+                                sintomasSelecionadosTemp.contains(sintoma)
+                                    ? Colors.grey
+                                    : null,
+                          ),
+                          child: Text(sintoma),
                         ),
-                        child: Text(sintoma),
-                      ),
-                    )
-                    .toList(),
-              )),
+                      )
+                      .toList(),
+                ),
+              ),
             ],
           ),
           actions: <Widget>[

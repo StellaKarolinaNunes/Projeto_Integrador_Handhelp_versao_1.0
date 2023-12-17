@@ -232,6 +232,14 @@ class GeraText extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(1000),
                   ),
+                  shadows: const [
+                    BoxShadow(
+                      color: Color(0xFF7BC1B7),
+                      blurRadius: 0,
+                      offset: Offset(0, 0),
+                      spreadRadius: 4,
+                    )
+                  ],
                 ),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
