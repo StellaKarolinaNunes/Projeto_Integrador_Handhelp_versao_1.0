@@ -16,6 +16,13 @@ O projeto Integrador dos alunos IFPA, ciencia da computação tem como criação
 ## Posso sugerir novas funcionalidades?
 > **R:** Sim! Use o mecanismo de contribuição do Github. Nesse momento estamos focados em corrigir erros e melhorar as funcionalidade existentes.
 
+# Screenshots
+
+> **TELAS**
+
+![Telas do handhelp](https://github.com/StellaKarolinaNunes/Projeto_Integrador_Handhelp/assets/118007989/07ff3430-8cb8-4de0-9d36-1cb3351e0df5)
+
+
 # About the Project/Sobre o Projeto
 
 ## Contributing/Contribuir
