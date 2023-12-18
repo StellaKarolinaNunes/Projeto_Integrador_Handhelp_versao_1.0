@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_integrador/ColocarVideos.dart';
+
 import 'package:projeto_integrador/TelaNova.dart';
+import 'ColocarVideos.dart';
+
 import 'EscolhaAtendi.dart';
 
 
