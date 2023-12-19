@@ -1,33 +1,32 @@
 ### Estrutura do projeto
 
-- `lib/` Contém o código-fonte principal do aplicativo.
+- `./lib` Contém o código-fonte principal do aplicativo.
 
-- `/main.dart` Ponto de entrada do aplicativo, onde o widget principal (MeuApp) é iniciado.
+- `./main.dart` Ponto de entrada do aplicativo, onde o widget principal (MeuApp) é iniciado.
 
-- `/screens` Telas principais do aplicativo.
-  - `/Libras.dart` Tela que exibe conteúdo relacionado à Libras.
-  - `/MeuApp.dart` Widget principal que define o tema e a tela inicial.
-  - `/pagina_inicial.dart` Tela inicial com um botão para navegar para os dados médicos.
-  - `/PaginaDadoMedicosLibras.dart` Tela para inserir dados médicos com suporte para Libras.
-  - `/PaginaDadosMedicos.dart` Tela para inserir dados médicos.
-  - `/PaginaDefinirAtendimento.dart` Tela para definir o atendimento.
-  - `/PaginaIntensidadeDor.dart` Tela para escolher a intensidade da dor.
-  - `/PaginaProfissao.dart` Tela que exibe a profissão escolhida.
-  - `/PaginaResultado.dart` Tela que exibe o resultado da triagem.
-  - `/PaginaRotina.dart` Tela para escolher a área de rotina.
-  - `/PaginaSintomas.dart` Tela para escolher sintomas e intensidade da dor.
-  - `/PaginaTriagemConcluida.dart` Tela exibida após a conclusão da triagem.
+- `./screens` Telas principais do aplicativo.
+  - `lib\ColocarVideos.dart`  Tela que reproduz um vídeo a partir de uma URL fornecida.
+  - `lib\EscolhaAtendi.dart` Tela para definir o atendimento (Rotina ou Sintomas).
+  - `lib\GeraTexto.dart` Tela que exibe o resultado da triagem (sintomas e intensidade).
+  - `lib\home.dart` exibe opções de atendimento, com um layout e afim.
+  - `lib\intensidade_dor.dart` Tela para escolher a intensidade da dor.
+  - `lib\PaginaLogo.dart` Tela mostra logo e nome do aplicativo (primeira tela).
+  - `lib\PaginaSintomas.dart` Tela para escolher sintomas.
+  - `lib\PagSin.dart` Exibe uma imagem do corpo humano em uma área interativa.
+  - `lib\Rotina.dart` Tela para escolher a área de rotina.
+  - `lib\sintomas.dart` tela de sintomas de saúde associada a um tipo específico de condição
+  - `lib\TelaNova.dart` A tela exibe um vídeo associado a uma profissão específica
+  - `lib\Triagem_real.dart` Tela exibida após a conclusão da triagem.]
+  - `lib\values.dart` armazena variaveis
+  - `lib\video.dart`  tela de gravação de vídeo usando a câmera do dispositivo
 
 - `/Widget`  Pasta que contém widgets reutilizáveis.
-  - `/CustomButton.dart` Widget de botão personalizado.
-  - `/EscolhaAtendimentoWidget.dart` Widget para a escolha entre "Rotina" e "Dor".
   - `/flutter_tts.dart` Configuração e função para falar texto usando o pacote flutter_tts.
 
 - `/assets/` Contém ativos estáticos.
   - `/assets/fonts/` Arquivos de fonte utilizados no aplicativo. Geralmente
-  - `assets/images/ ` Imagens usadas no aplicativo, como ícones, fundos e outros elementos visuais. 
-  - `/Vlibras/` Pasta contendo recursos relacionados à Vlibras.
-  - `/vlibras.html` Página HTML integrada para a funcionalidade Vlibras.
+  - `assets/images/ ` Imagens usadas no aplicativo, como ícones e outros elementos visuais.
+  - `assets\videos`  Arquivos em libras sobre as telas do app HandHelp
 
 ### Como me localizar no projeto?
 
@@ -35,22 +34,13 @@
   - Todos os `Widgets` que representam as páginas estão em `./lib\Widget`
     - Uma vez dentro de uma página você pode ir navegando pelos widget e telas para ir se encontrando e fazer a alteração que deseja
 
-### Como funciona a parte de Vlibras ?
-
-- Todo conteúdo Vlibra é alterado por meio da pasta `assets\Vlibras` & `web\index.html`
-
- -`web\index.html` &   `assets/Vlibras/vlibras.html`
-
-  - Este arquivo HTML é a página principal da aplicação Flutter para a web.
-  No final do corpo da página, há um trecho de código que carrega o script do VLibras: ```html <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>.```
-  Em seguida, há a inicialização do widget VLibras: ```html new window.VLibras.Widget('https://vlibras.gov.br/app');.```
-  Isso cria o botão do VLibras na página e configura a integração.
 
 ### Como funciona a parte de Flutter TTS ?
 
 -`lib/Widget/flutter_tts.dart`
 
   -Este arquivo importa a biblioteca `flutter_tts` e cria uma instância de FlutterTts chamada `flutterTts`.
+  
 A instância é configurada com alguns parâmetros, como idioma, taxa de fala, volume e altura do tom.
 Há uma função assíncrona chamada falarTexto que aceita um parâmetro de texto, usa a instância flutterTts para falar o texto e verifica se a fala foi iniciada com sucesso.
 Parte que chama para falar:
