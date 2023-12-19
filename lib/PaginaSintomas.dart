@@ -31,7 +31,7 @@ class Sintomas extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      children: [
+      child: [
         Container(
           margin: const EdgeInsets.only(top: 20),
           child: Row(

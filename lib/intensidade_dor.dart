@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_integrador/values.dart';
 import 'GeraTexto.dart';
 import 'PaginaSintomas.dart';
 
@@ -15,7 +14,6 @@ class IntensityPage extends StatefulWidget {
 
 class _IntensityPageState extends State<IntensityPage> {
   double intensidade = 5.0;
-  String tlabel = getColorLabel(intensidadeSelecionada);
 
   Color getColor(double value) {
     if (value < 3) {
@@ -31,412 +29,187 @@ class _IntensityPageState extends State<IntensityPage> {
     }
   }
 
+  Widget buildIntensityItem(String label, Color color) {
+    return Container(
+      width: 302,
+      padding: const EdgeInsets.symmetric(vertical: 24),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                width: double.infinity,
+                child: Text(
+                  label,
+                  style: TextStyle(
+                    color: Color(0xFF0B8FAC),
+                    fontSize: 18,
+                    fontFamily: 'Urbanist',
+                    fontWeight: FontWeight.w800,
+                    height: 0,
+                    letterSpacing: -0.18,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Container(
+            width: 48,
+            height: 48,
+            decoration: ShapeDecoration(
+              color: color,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(1234),
+              ),
+            ),
+            child: Stack(
+              children: [
+                Image.asset("assets/images/Neutro.png"),
+                Image.asset("assets/images/Feliz.png"),
+                Image.asset("assets/images/Muito_Feliz.png"),
+                Image.asset("assets/images/Triste.png"),
+                // Adicione aqui as imagens restantes conforme necessário.
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        body: SingleChildScrollView(
-          child: Container(
-            padding: EdgeInsets.all(16.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                Row(
+    return Scaffold(
+      appBar: AppBar(
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const PaginaSintomas(),
+              ),
+            );
+          },
+          child: Icon(
+            Icons.keyboard_arrow_left_rounded,
+            size: 40.0,
+            color: Colors.blue,
+          ),
+        ),
+        title: Text(
+          'Intensidade da dor',
+          style: TextStyle(
+            color: Colors.blue,
+            fontSize: 17,
+            fontFamily: 'Urbanist',
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        actions: [
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+            clipBehavior: Clip.antiAlias,
+            decoration: ShapeDecoration(
+              color: const Color(0xFF0B8FAC),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(100),
+              ),
+            ),
+            child: const Text(
+              '3 a 6',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 12,
+                fontFamily: 'Urbanist',
+                fontWeight: FontWeight.w800,
+              ),
+            ),
+          ),
+        ],
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+          padding: EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              const SizedBox(height: 70.0),
+              buildIntensityItem('Muito Baixo', const Color(0xFFBDA193)),
+              buildIntensityItem('Baixo', const Color(0xFFFFCE5C)),
+              buildIntensityItem('Normal', const Color(0xFF9BB068)),
+              buildIntensityItem('Alto', const Color(0xFFFE814B)),
+              buildIntensityItem('Muito Alto', const Color(0xFFA18FFF)),
+              const SizedBox(height: 30),
+              Container(
+                width: 350,
+                height: 56,
+                margin: const EdgeInsets.only(top: 26),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     GestureDetector(
                       onTap: () {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const PaginaSintomas(),
+                            builder: (context) => GeraText(),
                           ),
                         );
                       },
-                      child: Icon(
-                        Icons.keyboard_arrow_left_rounded,
-                        size: 40.0,
-                        color: Colors.blue,
-                      ),
-                    ),
-                    const SizedBox(width: 16.0),
-                    Expanded(
-                      child: Text(
-                        'Intensidade da dor',
-                        style: TextStyle(
-                          color: Colors.blue,
-                          fontSize: 17,
-                          fontFamily: 'Urbanist',
-                          fontWeight: FontWeight.bold,
+                      child: Container(
+                        width: 264,
+                        height: 56,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 24, vertical: 16),
+                        clipBehavior: Clip.antiAlias,
+                        decoration: ShapeDecoration(
+                          color: const Color(0xFF0B8FAC),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(1000),
+                          ),
+                          shadows: const [
+                            BoxShadow(
+                              color: Color(0xFF7BC1B7),
+                              blurRadius: 0,
+                              offset: Offset(0, 0),
+                              spreadRadius: 4,
+                            )
+                          ],
                         ),
-                      ),
-                    ),
-                    const SizedBox(width: 16.0),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 12, vertical: 8),
-                      clipBehavior: Clip.antiAlias,
-                      decoration: ShapeDecoration(
-                        color: const Color(0xFF0B8FAC),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(100),
-                        ),
-                      ),
-                      child: const Text(
-                        '3 a 6',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 12,
-                          fontFamily: 'Urbanist',
-                          fontWeight: FontWeight.w800,
+                        child: SingleChildScrollView(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            children: [
+                              Text(
+                                'Continue',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontFamily: 'Urbanist',
+                                  fontWeight: FontWeight.w800,
+                                  height: 0,
+                                  letterSpacing: -0.18,
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(height: 70.0),
-                SizedBox(
-                  height: 360.0,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          const SizedBox(
-                            width: 97,
-                            height: 46,
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                SizedBox(
-                                  width: double.infinity,
-                                  child: Text(
-                                    'Muito Alto',
-                                    style: TextStyle(
-                                      color: Color(0xFF0B8FAC),
-                                      fontSize: 18,
-                                      fontFamily: 'Urbanist',
-                                      fontWeight: FontWeight.w800,
-                                      height: 0,
-                                      letterSpacing: -0.18,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(height: 6),
-                                Text(
-                                  '',
-                                  style: TextStyle(
-                                    color: Color(0xFF0B8FAC),
-                                    fontSize: 12,
-                                    fontFamily: 'Urbanist',
-                                    fontWeight: FontWeight.w800,
-                                    height: 0,
-                                    letterSpacing: 1.20,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            width: 97,
-                            height: 46,
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const SizedBox(
-                                  width: double.infinity,
-                                  child: Text(
-                                    'Alto',
-                                    style: TextStyle(
-                                      color: Color(0xFF0B8FAC),
-                                      fontSize: 18,
-                                      fontFamily: 'Urbanist',
-                                      fontWeight: FontWeight.w800,
-                                      height: 0,
-                                      letterSpacing: -0.18,
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(height: 6),
-                                Container(
-                                  width: double.infinity,
-                                  child: const Text(
-                                    '',
-                                    style: TextStyle(
-                                      color: Color(0xFF0B8FAC),
-                                      fontSize: 12,
-                                      fontFamily: 'Urbanist',
-                                      fontWeight: FontWeight.w800,
-                                      height: 0,
-                                      letterSpacing: 1.20,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            width: 97,
-                            height: 46,
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const SizedBox(
-                                  width: double.infinity,
-                                  child: Text(
-                                    'Normal',
-                                    style: TextStyle(
-                                      color: Color(0xFF0B8FAC),
-                                      fontSize: 18,
-                                      fontFamily: 'Urbanist',
-                                      fontWeight: FontWeight.w800,
-                                      height: 0,
-                                      letterSpacing: -0.18,
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(height: 6),
-                                Container(
-                                  width: double.infinity,
-                                  child: const Text(
-                                    '',
-                                    style: TextStyle(
-                                      color: Color(0xFF0B8FAC),
-                                      fontSize: 12,
-                                      fontFamily: 'Urbanist',
-                                      fontWeight: FontWeight.w800,
-                                      height: 0,
-                                      letterSpacing: 1.20,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            width: 97,
-                            height: 46,
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const SizedBox(
-                                  width: double.infinity,
-                                  child: Text(
-                                    'Baixo',
-                                    style: TextStyle(
-                                      color: Color(0xFF0B8FAC),
-                                      fontSize: 18,
-                                      fontFamily: 'Urbanist',
-                                      fontWeight: FontWeight.w800,
-                                      height: 0,
-                                      letterSpacing: -0.18,
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(height: 6),
-                                Container(
-                                  width: double.infinity,
-                                  child: const Text(
-                                    '',
-                                    style: TextStyle(
-                                      color: Color(0xFF0B8FAC),
-                                      fontSize: 12,
-                                      fontFamily: 'Urbanist',
-                                      fontWeight: FontWeight.w800,
-                                      height: 0,
-                                      letterSpacing: 1.20,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          SizedBox(
-                            width: 97,
-                            height: 46,
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                const SizedBox(
-                                  width: double.infinity,
-                                  child: Text(
-                                    'Muito Baixo',
-                                    style: TextStyle(
-                                      color: Color(0xFF0B8FAC),
-                                      fontSize: 18,
-                                      fontFamily: 'Urbanist',
-                                      fontWeight: FontWeight.w800,
-                                      height: 0,
-                                      letterSpacing: -0.18,
-                                    ),
-                                  ),
-                                ),
-                                const SizedBox(height: 6),
-                                Container(
-                                  width: double.infinity,
-                                  child: const Text(
-                                    '',
-                                    style: TextStyle(
-                                      color: Color(0xFF0B8FAC),
-                                      fontSize: 12,
-                                      fontFamily: 'Urbanist',
-                                      fontWeight: FontWeight.w800,
-                                      height: 0,
-                                      letterSpacing: 1.20,
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          SliderTheme(
-                            data: const SliderThemeData(
-                              showValueIndicator: ShowValueIndicator.always,
-                              valueIndicatorShape:
-                                  PaddleSliderValueIndicatorShape(),
-                              valueIndicatorTextStyle: TextStyle(
-                                color: Colors.black,
-                              ),
-                            ),
-                            child: Transform.rotate(
-                              angle: -1.5708,
-                              child: SizedBox(
-                                width: 309.0,
-                                height: 309.0,
-                                child: Slider(
-                                  value: intensidadeSelecionada,
-                                  onChanged: (value) {
-                                    setState(() {
-                                      intensidadeSelecionada = value;
-                                    });
-                                  },
-                                  min: 1,
-                                  max: 10,
-                                  divisions: 4,
-                                  activeColor: getColor(intensidadeSelecionada),
-                                  inactiveColor: Colors.grey,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Image.asset(
-                            'assets/images/Deprimido.png',
-                            width: 48,
-                            height: 48,
-                          ),
-                          Image.asset(
-                            'assets/images/Triste.png',
-                            width: 48,
-                            height: 48,
-                          ),
-                          Image.asset(
-                            'assets/images/Muito_Feliz.png',
-                            width: 48,
-                            height: 48,
-                          ),
-                          Image.asset(
-                            'assets/images/Feliz.png',
-                            width: 48,
-                            height: 48,
-                          ),
-                          Image.asset(
-                            'assets/images/Neutro.png',
-                            width: 48,
-                            height: 48,
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 30),
-                Container(
-                  width: 350,
-                  height: 56,
-                  margin: const EdgeInsets.only(top: 26),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => GeraText(),
-                            ),
-                          );
-                        },
-                        child: Container(
-                          width: 264,
-                          height: 56,
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 24, vertical: 16),
-                          clipBehavior: Clip.antiAlias,
-                          decoration: ShapeDecoration(
-                            color: const Color(0xFF0B8FAC),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(1000),
-                            ),
-                            shadows: const [
-                              BoxShadow(
-                                color: Color(0xFF7BC1B7),
-                                blurRadius: 0,
-                                offset: Offset(0, 0),
-                                spreadRadius: 4,
-                              )
-                            ],
-                          ),
-                          child: const SingleChildScrollView(
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                Text(
-                                  'Continue',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontFamily: 'Urbanist',
-                                    fontWeight: FontWeight.w800,
-                                    height: 0,
-                                    letterSpacing: -0.18,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 50),
-              ],
-            ),
+              ),
+              const SizedBox(height: 50),
+            ],
           ),
         ),
       ),
