@@ -18,15 +18,17 @@ O projeto Integrador dos alunos IFPA, ciencia da computação tem como criação
 > **Telas**
 
 ![Telas do handhelp](https://github.com/StellaKarolinaNunes/Projeto_Integrador_Handhelp/assets/118007989/07ff3430-8cb8-4de0-9d36-1cb3351e0df5)
+> **Projeto do Figma** [Link do Figma ](https://github.com/StellaKarolinaNunes/Projeto_Integrador) Respeite a licença de uso. Plagio e Crime **Lei 9.610**
 
-> **Projeto do Figma** [Link do Figma ](https://github.com/StellaKarolinaNunes/Projeto_Integrador) Respeite a licença de uso. Plagio e Crime **Lei 9.610** 
+## **Link Projeto online** 
+> **click imagem** <a href="https://handhelp.netlify.app/" target="_blank"> <img src="https://github.com/StellaKarolinaNunes/Projeto_Integrador_Handhelp/assets/118007989/2373027a-365f-4463-83c4-b84258d97d80" width="300" alt="HandHelp 🤝"> </a>
 
 ## Posso sugerir novas funcionalidades?
 > **R:** Sim! Use o mecanismo de contribuição do Github. Nesse momento estamos focados em corrigir erros e melhorar as funcionalidade existentes.
 
 ## Contribuir
 
-> **R:** - Esse é um projeto handhelp feito pela Equipe Help Five para a comunidade e contribuições são bem vindas. Para aumentar a chance de a sua contribuição ser aprovada, escolha um título legal, simples e explicativo para os itens, e siga a formatação correta dos arquivos.
+> **R:** Esse é um projeto handhelp feito pela Equipe Help Five para a comunidade e contribuições são bem vindas. Para aumentar a chance de a sua contribuição ser aprovada, escolha um título legal, simples e explicativo para os itens, e siga a formatação correta dos arquivos.
         🇧🇷: :purple_heart: Como Contribuir com o projeto? [Confira o passo a passo](./Contribuindo.md)
 
 ## Histórico
@@ -34,7 +36,7 @@ O projeto Integrador dos alunos IFPA, ciencia da computação tem como criação
 
 ## Licença do Projeto
 
-> **R:** [MIT](./License)
+> **R:** [License](./License)
 
 ## Equipe handhelp 
 > **R:** Aos contribuidores Stella Karolina Nunes Peixoto,Igor Wenceslau Machado Conceição,João Gabriel Peres De Castro, Jhonefer Vinicius Lima Da Silva e  Aline Cély Araújo da Silva.
