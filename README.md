@@ -31,6 +31,11 @@ O projeto Integrador dos alunos IFPA, ciencia da computação tem como criação
 > **R:** Esse é um projeto handhelp feito pela Equipe Help Five para a comunidade e contribuições são bem vindas. Para aumentar a chance de a sua contribuição ser aprovada, escolha um título legal, simples e explicativo para os itens, e siga a formatação correta dos arquivos.
         🇧🇷: :purple_heart: Como Contribuir com o projeto? [Confira o passo a passo](./Contribuindo.md)
 
+## Estrutura do codigo.
+
+> **R:** Como é feita a estrutura do codigo?
+        🇧🇷: [Confira o passo a passo](./ESTRUTURA.md)
+
 ## Histórico
 > **R:** 🇧🇷: Da uma olhada na aba [Releases](./Releases.md) pra acompanhar as alterações feitas no projeto.
 
