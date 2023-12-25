@@ -1,40 +1,31 @@
 ### Estrutura do projeto
 
-- `./lib` Contém o código-fonte principal do aplicativo.
+**R** O Flutter é um framework de código aberto desenvolvido pelo Google, que permite criar aplicativos nativos para Android e iOS. Ele também é usado para desenvolver aplicativos para a web, desktop e sistemas embarcados, tudo a partir de uma única base de código escrita em Dart, uma linguagem moderna e orientada a objetos.
 
-- `./main.dart` Ponto de entrada do aplicativo, onde o widget principal (MeuApp) é iniciado.
+```
+.
+├── android                                 - contém arquivos necessários de aplicativo Android.
+├── assets                                  - contém todas as imagens,videos e fontes.
+├── ios                                     - contém arquivos necessários de aplicativo iOS 
+├── lib                                     - Pasta mais importante do projeto
+    ├── main.dart                           - É o ponto de partida para o aplicativo Flutter.
+    ├── Logo                                - Onde terá futuras animações na logo do app.
+    ├── screens                             - Telas principais do aplicativo.
+    │   ├── MeuApp.dart                     - Chama a Pagina_inicial contem logo e afim.
+    │   ├── pagina_inicial.dart             - Página inicial com Logo e nome app
+    │   └── PaginaIntensidadeDor.dart       - Tela para escolher a intensidade da dor.
+    │   └── PaginaProfissao.dart            - Página profissão com encaminhamento e conclusão.
+    │   └── PaginaResultado.dart            - Exibe resultado triagem para medico
+    │   └── PaginaRotina.dart               - Tela para escolher a área de rotina.
+    │   └── PaginaSintomas.dart             - Tela para escolher sintomas que sente.
+    │   └── PaginaTriagemConcluida.dart     - Tela exibida após a conclusão da triagem.
+    └── widgets                             - Pasta que contém widgets reutilizáveis.
+    │   └── CustomButton.dart               - Botão personalizado reutilizável.
+    │   └── EscolhaAtendimentoWidget.dart   - Tela para definir Rotina ou Sintomas.
+    │   └── flutter_tts.dart                - biblioteca `flutter_tts` usada para falar o texto
+    │   └── VideoPlayerScreen.dart          - reproduzir um vídeos em libras.
 
-- `./screens` Telas principais do aplicativo.
-  - `lib\ColocarVideos.dart`  Tela que reproduz um vídeo a partir de uma URL fornecida.
-  - `lib\EscolhaAtendi.dart` Tela para definir o atendimento (Rotina ou Sintomas).
-  - `lib\GeraTexto.dart` Tela que exibe o resultado da triagem (sintomas e intensidade).
-  - `lib\home.dart` exibe opções de atendimento, com um layout e afim.
-  - `lib\intensidade_dor.dart` Tela para escolher a intensidade da dor.
-  - `lib\PaginaLogo.dart` Tela mostra logo e nome do aplicativo (primeira tela).
-  - `lib\PaginaSintomas.dart` Tela para escolher sintomas.
-  - `lib\PagSin.dart` Exibe uma imagem do corpo humano em uma área interativa.
-  - `lib\Rotina.dart` Tela para escolher a área de rotina.
-  - `lib\sintomas.dart` tela de sintomas de saúde associada a um tipo específico de condição
-  - `lib\TelaNova.dart` A tela exibe um vídeo associado a uma profissão específica
-  - `lib\Triagem_real.dart` Tela exibida após a conclusão da triagem.]
-  - `lib\values.dart` armazena variaveis
-  - `lib\video.dart`  tela de gravação de vídeo usando a câmera do dispositivo
-
-- `/Widget`  Pasta que contém widgets reutilizáveis.
-  - `/flutter_tts.dart` Configuração e função para falar texto usando o pacote flutter_tts.
-
-- `/assets/` Contém ativos estáticos.
-  - `/assets/fonts/` Arquivos de fonte utilizados no aplicativo. Geralmente
-  - `assets/images/ ` Imagens usadas no aplicativo, como ícones e outros elementos visuais.
-  - `assets\videos`  Arquivos em libras sobre as telas do app HandHelp
-
-### Como me localizar no projeto?
-
-- Todas as páginas do projeto estão listadas em `./lib\screens`
-  - Todos os `Widgets` que representam as páginas estão em `./lib\Widget`
-    - Uma vez dentro de uma página você pode ir navegando pelos widget e telas para ir se encontrando e fazer a alteração que deseja
-
-
+```
 ### Como funciona a parte de Flutter TTS ?
 
 -`lib/Widget/flutter_tts.dart`
