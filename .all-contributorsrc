@@ -1,0 +1,31 @@
+{
+  "projectName": "ciencia da computacao",
+  "projectOwner": "StellaKarolinaNunes",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "none",
+  "contributors": [
+    {
+      "login": "StellaKarolinaNunes",
+      "name": "Stella Karolina",
+      "avatar_url": "https://avatars.githubusercontent.com/u/StellaKarolinaNunes",
+      "profile": "https://github.com/StellaKarolinaNunes",
+      "contributions": [
+        "programador"
+      ]
+    },
+    {
+      "login": "Igormachado90",
+      "name": "Igor Machado",
+      "avatar_url": "https://avatars.githubusercontent.com/u/Igormachado90",
+      "profile": "https://github.com/Igormachado90",
+      "contributions": [
+        "Programador"
+      ]
+    },
+   
