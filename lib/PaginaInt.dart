@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:projeto_integrador/ColocarVideos.dart';
 import 'Rotina.dart';
 
-// void main() {
-//   runApp(TelaNova(''));
-// }
+
 
 class TelaNova extends StatelessWidget {
   // ignore: non_constant_identifier_names
@@ -148,7 +146,7 @@ class TelaNova extends StatelessWidget {
                           textAlign: TextAlign.center,
                         ),
                       ),
-                      const SizedBox(height: 40),
+                      const SizedBox(height: 5.0),
                       const SizedBox(
                         height: 80,
                       ),

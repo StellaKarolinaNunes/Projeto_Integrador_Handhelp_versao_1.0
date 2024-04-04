@@ -77,7 +77,7 @@ class GeraText extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(width: 158.0),
+                  const SizedBox(width: 108.0),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
@@ -166,7 +166,7 @@ class GeraText extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(height: 40),
+            const SizedBox(height: 140),
             GestureDetector(
               onTap: () {
                 falarTexto(textogerado);
@@ -232,14 +232,6 @@ class GeraText extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(1000),
                   ),
-                  shadows: const [
-                    BoxShadow(
-                      color: Color(0xFF7BC1B7),
-                      blurRadius: 0,
-                      offset: Offset(0, 0),
-                      spreadRadius: 4,
-                    )
-                  ],
                 ),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,

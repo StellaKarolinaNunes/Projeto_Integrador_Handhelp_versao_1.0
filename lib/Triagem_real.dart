@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_integrador/GeraTexto.dart';
 import 'ColocarVideos.dart';
+import 'GeraTexto.dart';
 import 'EscolhaAtendi.dart';
 
 
-// void main() {
-//   runApp(const Triagem_real());
-// }
+
 
 // ignore: camel_case_types
 class Triagem_real extends StatelessWidget {

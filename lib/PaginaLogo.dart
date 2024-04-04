@@ -44,14 +44,13 @@ class Tela1 extends StatelessWidget {
                 child: SizedBox(width: 558, height: 288.30),
               ),
               Positioned(
-                left: 79,
+                left: 90,
                 top: 210.30,
                 child: GestureDetector(
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(
-                          builder: (context) => const EscolhaAtendi()),
+                      MaterialPageRoute(builder: (context) => const EscolhaAtendi()),
                     );
                   },
                   child: Container(
@@ -67,7 +66,7 @@ class Tela1 extends StatelessWidget {
                 ),
               ),
               const Positioned(
-                left: 80.50,
+                left: 110,
                 top: 459.94,
                 child: Text(
                   'HandHelp',
@@ -83,7 +82,7 @@ class Tela1 extends StatelessWidget {
                 ),
               ),
               const Positioned(
-                left: 150.50,
+                left: 165.50,
                 top: 699.99,
                 child: Text(
                   'Created by',
@@ -93,12 +92,12 @@ class Tela1 extends StatelessWidget {
                     fontSize: 12,
                     fontFamily: 'Averia One',
                     fontWeight: FontWeight.w400,
-                    height: 0,
+                    height: 0,                    
                   ),
                 ),
               ),
               const Positioned(
-                left: 150.50,
+                left: 165.50,
                 top: 713.99,
                 child: Text(
                   'HandHelp',

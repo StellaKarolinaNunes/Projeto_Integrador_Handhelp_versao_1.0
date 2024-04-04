@@ -48,12 +48,17 @@ dependencies:
   babylonjs_viewer: ^1.2.1
   rive: ^0.12.1
   flutter_animate: ^4.2.0+1
+  webview_flutter: 2.8.0
   flutter_inappwebview: ^5.8.0
   flutter_svg: ^2.0.9
-  auto_size_text: ^3.0.0
+  flutter_html: ^3.0.0-beta.2
+  flutter_webview_plugin: ^0.4.0
+  html: ^0.15.4
+  # flutter_webview_plugin: ^versao_compativel
 
 # dependency_overrides:
 #   exoplayer: ^2.13.0
+
 
 dev_dependencies:
   flutter_test:
@@ -63,7 +68,7 @@ dev_dependencies:
 flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
-  image_path: "assets/images/logo_de_HandHelp.png"
+  image_path: "assets/images/logo_de_HandHelp.png"  
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -84,19 +89,19 @@ flutter:
     - assets/Vlibras/
     - assets/images/logo_transpa.png
     - assets/images/Bronquite.png
-    - assets/images/Dor_de_Cabeça.png
-    - assets/images/Dor_de_Ouvido.png
-    - assets/images/febre.png
+    - assets/images/Dor_de_Cabeça.png  
+    - assets/images/Dor_de_Ouvido.png   
+    - assets/images/febre.png   
     - assets/images/Logo_VOZ.png
-    - assets/images/CorpoM.png
-    - assets/images/Deprimido.png
+    - assets/images/CorpoM.png   
+    - assets/images/Deprimido.png 
     - assets/images/Feliz.png
     - assets/images/Muito_Feliz.png
     - assets/images/Neutro.png
     - assets/images/Triste.png
-    - assets/videos/qual_atendimento_vc_deseja.mp4
+    - assets/videos/qual_atendimento_vc_deseja.mp4   
     - assets/images/CorpoM.png
-
+    
     - assets/Vlibras/vlibras.html
 
 linter:

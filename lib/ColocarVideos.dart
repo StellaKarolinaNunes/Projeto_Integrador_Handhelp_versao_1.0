@@ -71,6 +71,10 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   }
 }
 
+// void main() {
+//   runApp(MyApp());
+// }
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
