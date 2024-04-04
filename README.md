@@ -16,8 +16,6 @@ O projeto Integrador dos alunos IFPA, ciencia da computação tem como criação
 ## Posso sugerir novas funcionalidades?
 > **R:** Sim! Use o mecanismo de contribuição do Github. Nesse momento estamos focados em corrigir erros e melhorar as funcionalidade existentes.
 
-# About the Project/Sobre o Projeto
-
 ## Contributing/Contribuir
 
 ### O que devo ter em mente antes de abrir um PullRequest?
@@ -26,6 +24,14 @@ O projeto Integrador dos alunos IFPA, ciencia da computação tem como criação
 - Mais interessante seria ajudar com o código e projeto em si
 - 🇧🇷:  :purple_heart: Como Contribuir com o projeto? [Confira o passo a passo](./Contribuindo.md)
 
+## Screens
+
+![telas](https://github.com/StellaKarolinaNunes/Projeto_Integrador_Handhelp_versao_1.0/assets/118007989/efe97111-896f-43c5-86fe-95d6bfa215f2)
+>projeto figma: [Link](https://www.figma.com/file/isMQk2cDkOtkfXkKuW4Zo6/App-HandHelp?type=design&node-id=1009%3A904&mode=dev)
+
+## Prototype
+
+- 🇧🇷: Da uma olhada no link  [handhelp](https://handhelp.netlify.app/)  pra ver Prototype do app.
 
 ## History/Histórico
 - 🇧🇷: Da uma olhada na aba [Releases](./Releases.md) pra acompanhar as alterações feitas no projeto.
