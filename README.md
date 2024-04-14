@@ -55,9 +55,12 @@ O projeto Integrador dos alunos IFPA, ciencia da computação tem como criação
 
 ## Layout ou Deploy da Aplicação :dash:
 
+> **click imagem** <a href="https://handhelp.netlify.app/" target="_blank"> <img src="https://github.com/StellaKarolinaNunes/Projeto_Integrador_Handhelp_versao_1.0/assets/118007989/878c7cca-5c88-4290-92e7-5a1fd87da419" width="300" alt="Handhelp 🤝"> </a>
+
+
 > ![telas](https://github.com/StellaKarolinaNunes/Projeto_Integrador_Handhelp_versao_1.0/assets/118007989/efe97111-896f-43c5-86fe-95d6bfa215f2)
+
 >projeto figma: [Link](https://www.figma.com/file/isMQk2cDkOtkfXkKuW4Zo6/App-HandHelp?type=design&node-id=1009%3A904&mode=dev)
->Link do deploy da aplicação: [Link do handhelp WebApp](https://handhelp.netlify.app/)
 
 ## Como rodar a aplicação :arrow_forward:
 
@@ -91,27 +94,27 @@ Inicie o aplicativo:
 flutter run
 ```
 
-# FAQ/Perguntas Frequentes
 
-## Posso gerar meu próprio guia usando esse repositório?
+## FAQ/Perguntas Frequentes ❓❔
+
+Posso gerar meu próprio guia usando esse repositório?
 > **R:** Sim! Só pedimos que você faça um link para [Link do HandHelp](https://github.com/StellaKarolinaNunes/Projeto_Integrador)  😁 e respeite a licença de uso. 
 
-## Posso sugerir novas funcionalidades?
+## Posso sugerir novas funcionalidades? 🆕
 > **R:** Sim! Use o mecanismo de contribuição do Github. Nesse momento estamos focados em corrigir erros e melhorar as funcionalidade existentes.
 
-## Contributing/Contribuir
+## Contributing/Contribuir (●'◡'●)
 
-### O que devo ter em mente antes de abrir um PullRequest?
-- Esse é um projeto handhelp feito pela Equipe Help Five para a comunidade e contribuições são bem vindas.
-- Para aumentar a chance de a sua contribuição ser aprovada, escolha um título legal, simples e explicativo para os itens, e siga a formatação correta dos arquivos.
-- Mais interessante seria ajudar com o código e projeto em si
-- 🇧🇷:  :purple_heart: Como Contribuir com o projeto? [Confira o passo a passo](./Contribuindo.md)
+ O que devo ter em mente antes de abrir um PullRequest?
+> Esse é um projeto handhelp feito pela Equipe Help Five para a comunidade e contribuições são bem vindas.
+> Para aumentar a chance de a sua contribuição ser aprovada, escolha um título legal, simples e explicativo para os itens, e siga a formatação correta dos arquivos.
+> Mais interessante seria ajudar com o código e projeto em si
+> 🇧🇷:  :purple_heart: Como Contribuir com o projeto? [Confira o passo a passo](./Contribuindo.md)
 
-## License/Licença do Projeto
+## License/Licença do Projeto  
 
-- [MIT](./License)
+> [MIT](./License)
 
 ## Equipe handhelp 
 > Aos contribuidores Stella Karolina Nunes Peixoto,Igor Wenceslau Machado Conceição,João Gabriel Peres De Castro, Jhonefer Vinicius Lima Da Silva e  Aline Cély Araújo da Silva.
-
 >contribuidor: David Silva
