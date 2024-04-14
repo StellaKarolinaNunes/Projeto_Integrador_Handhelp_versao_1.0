@@ -117,4 +117,5 @@ Posso gerar meu próprio guia usando esse repositório?
 
 ## Equipe handhelp 
 > Aos contribuidores Stella Karolina Nunes Peixoto,Igor Wenceslau Machado Conceição,João Gabriel Peres De Castro, Jhonefer Vinicius Lima Da Silva e  Aline Cély Araújo da Silva.
+
 >contribuidor: David Silva
