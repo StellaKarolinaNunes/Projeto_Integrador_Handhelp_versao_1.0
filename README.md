@@ -225,10 +225,10 @@ Você pode usar, modificar e distribuir livremente, apenas mantenha referência 
 - [Igor Wenceslau Machado Conceição](https://github.com/Igormachado90)
 - [Aline Cély Araújo da Silva](https://github.com/AlineCely)
 
-- *CONTRIBUIÇÃO*[David S. da Silva](https://github.com/wi2david)
+- *CONTRIBUIÇÃO* [David S. da Silva](https://github.com/wi2david)
    
 - *Professor* [Deriks Karlay Dias Costa](https://github.com/karlaycosta)
 
 ---
 
-> _Projeto acadêmico IFPA | Ciência da Computação – Lista de Usuários Flutter, referência para projetos de listagem com API e busca._
+> _Projeto acadêmico IFPA | Ciência da Computação – HANDHELP: Aplicativo para auxiliar pessoa surdas no atendimento de triagem nas unidades básicas de saúde no município de Tucuruí - Pá._
