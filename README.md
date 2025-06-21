@@ -1,121 +1,234 @@
-<h1 align="left">
-Handhelp
-  </h1>
+<h1 align="center">
+  HandHelp
+</h1>
 
-<p align="left">
+<p align="center">
   <img src="https://img.shields.io/static/v1?label=flutter&message=framework&color=blue&style=for-the-badge&logo=flutter"/>
-  <img src="https://img.shields.io/static/v1?label=Netlify&message=deploy&color=blue&style=for-the-badge&logo=netlify"/>
-  <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
-  <img src="http://img.shields.io/static/v1?label=TESTES&message=%3E1.0&color=GREEN&style=for-the-badge"/>
-   <img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=GREEN&style=for-the-badge"/>
+  <img src="https://img.shields.io/static/v1?label=API&message=REST&color=blue&style=for-the-badge&logo=cloud"/>
+  <img src="https://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
+  <img src="https://img.shields.io/static/v1?label=TESTES&message=%3E1.0&color=green&style=for-the-badge"/>
+  <img src="https://img.shields.io/static/v1?label=STATUS&message=CONCLUÍDO&color=green&style=for-the-badge"/>
 </p>
 
- <p align="left">
-  <img src="assets/images/Librasbanner.png" width="800" />
-</p>
+---
+
+# :star2: Sumário
+
+- [Introdução](#introdução)
+- [Demonstração](#demonstração)
+- [Funcionalidades](#funcionalidades)
+- [Instalação](#instalação)
+- [Uso](#uso)
+- [Exemplos](#exemplos)
+- [FAQ / Perguntas Frequentes](#faq--perguntas-frequentes)
+- [Contribuição](#contribuição)
+- [Boas Práticas](#boas-práticas)
+- [Recursos & Links Adicionais](#recursos--links-adicionais)
+- [Licença](#licença)
+- [Equipe](#equipe)
+
+---
+
+## :books: Introdução
+
+O projeto Integrador dos alunos IFPA, ciencia da computação tem como criação do HandHelp  com o objetivo proporcionar uma experiência inclusiva e acessível para pessoas surdas durante o processo de triagem em unidades básicas de saúde em Tucuruí, Pará. Nosso compromisso é desenvolver ferramentas para facilitar o processo de atendimento e triagem nas unidades básicas de saúde em Tucuruí, Pará, para garantir que pessoas surdas tenham acesso adequado aos serviços de saúde, promovendo a inclusão e contribuindo para a capacitação no uso das tecnologias de assistência. O HandHelp está comprometido em criar um ambiente de saúde mais acessível, proporcionando uma experiência positiva e informativa para todos, independentemente das barreiras linguísticas
+
+---
+
+## :rocket: Demonstração
+
+| ![](https://github.com/StellaKarolinaNunes/Projeto_Integrador_Handhelp_versao_1.0/assets/118007989/efe97111-896f-43c5-86fe-95d6bfa215f2)  |
+|---|
+
+> **Nota:**  
+> Este projeto é de caráter acadêmico.
+
+---
+
+## :zap: Funcionalidades
+
+- **Escolher se deseja Atendimento rotina ou Triagem.**
+- **Selecionar lugar localizado a dor.** 
+- **Selecionar Intensidade da dor.**
+- **Fala ao medico tudo que foi selecionando usando flutter tts..**
+- **se for rotina pode escolhe entre Rotina.** 
+---
+
+## :computer: Instalação
+
+### Pré-requisitos
+
+- [Flutter SDK](https://docs.flutter.dev/get-started/install)
+- [Git](https://git-scm.com/)
+- Dispositivo (Android/iOS) ou emulador/simulador ou navegador (web)
+- (Opcional) [VS Code](https://code.visualstudio.com/) + Extensão Flutter
+
+### Passo a Passo
+
+1. **Clone o repositório:**
+
+    ```bash
+    git clone https://github.com/StellaKarolinaNunes/Projeto_Integrador_Handhelp_versao_1.0.git
+    cd Projeto_Integrador_Handhelp_versao_1.0
+    ```
+
+2. **Instale as dependências:**
+
+    ```bash
+    flutter pub get
+    ```
+
+3. **Configure um dispositivo ou emulador:**
+
+    - Certifique-se que esteja visível em `flutter devices`.
+
+4. **Execute o aplicativo:**
+
+    ```bash
+    flutter run
+    ```
+
+5. **Para rodar no navegador (web):**
+
+    ```bash
+    flutter run -d chrome
+    ```
+
+> **Dica:**  
+> Use `flutter doctor` para garantir que todos os requisitos estejam corretos.
+
+---
+
+## :wrench: Uso
+
+- Selecione o tipo de atendimento:
+> Ao abrir o app, escolha entre “Atendimento de rotina” ou “Triagem”.
+
+- Informe o local da dor:
+> Selecione na Local em qual parte do corpo está sentindo dor.
+
+-  Indique a intensidade da dor:
+> Escolha o nível de intensidade (leve, moderada, intensa).
+
+-  Finalização e comunicação:
+> O aplicativo irá sintetizar e comunicar automaticamente ao profissional de saúde tudo o que foi selecionado, usando áudio (texto para fala), facilitando o atendimento de pessoas surdas.
 
 
-> Status do Projeto: :heavy_check_mark: :warning: (concluido, em desenvolvimento, etc)
+### Principais Comandos Flutter
 
-
-### Tópicos 
-
-:small_blue_diamond: [Descrição do projeto](#descrição-do-projeto)
-
-:small_blue_diamond: [Funcionalidades](#funcionalidades)
-
-:small_blue_diamond: [Deploy da Aplicação](#deploy-da-aplicação-dash)
-
-:small_blue_diamond: [FAQ/Perguntas-Frequentes](#FAQ/Perguntas-Frequentes)
-
-:small_blue_diamond: [Contributing/Contribuir](#Contributing/Contribuir) 
-
-:small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
-
-:small_blue_diamond: [License/Licença do Projeto](#License/Licença-Projeto)
-
-:small_blue_diamond: [Equipe handhelp](#Equipe-handhelp)
-
-## Descrição-do-projeto 
-
-<p align="justify">
-O projeto Integrador dos alunos IFPA, ciencia da computação tem como criação do HandHelp  com o objetivo proporcionar uma experiência inclusiva e acessível para pessoas surdas durante o processo de triagem em unidades básicas de saúde em Tucuruí, Pará. Nosso compromisso é desenvolver ferramentas para facilitar o processo de atendimento e triagem nas unidades básicas de saúde em Tucuruí, Pará, para garantir que pessoas surdas tenham acesso adequado aos serviços de saúde, promovendo a inclusão e contribuindo para a capacitação no uso das tecnologias de assistência. O HandHelp está comprometido em criar um ambiente de saúde mais acessível, proporcionando uma experiência positiva e informativa para todos, independentemente das barreiras linguísticas.
-
-</p>
-
-## Funcionalidades
-
-:heavy_check_mark: Escolher se deseja Atendimento rotina ou Triagem.
-
-:heavy_check_mark: Selecionar lugar localizado a dor.  
-
-:heavy_check_mark: Selecionar Intensidade da dor.
-
-:heavy_check_mark: Fala ao medico tudo que foi selecionando usando fluttertts.
-
-## Layout ou Deploy da Aplicação :dash:
-
-> **click imagem** <a href="https://handhelp.netlify.app/" target="_blank"> <img src="https://github.com/StellaKarolinaNunes/Projeto_Integrador_Handhelp_versao_1.0/assets/118007989/878c7cca-5c88-4290-92e7-5a1fd87da419" width="300" alt="Handhelp 🤝"> </a>
-
-
-> ![telas](https://github.com/StellaKarolinaNunes/Projeto_Integrador_Handhelp_versao_1.0/assets/118007989/efe97111-896f-43c5-86fe-95d6bfa215f2)
-
->projeto figma: [Link](https://www.figma.com/file/isMQk2cDkOtkfXkKuW4Zo6/App-HandHelp?type=design&node-id=1009%3A904&mode=dev)
-
-## Como rodar a aplicação :arrow_forward:
-
-Instale o Flutter SDK: [aqui.](https://docs.flutter.dev/get-started/install)
-
-Configure o ambiente de desenvolvimento:
-
-> **R:** Certifique-se de ter um emulador configurado ou um dispositivo físico conectado ao seu computador.Se estiver usando VS Code, instale a extensão Flutter e execute o comando flutter doctor para garantir que tudo esteja configurado corretamente. Siga as instruções de instalação para o seu sistema operacional.
-
-Clone o repositório para sua máquina local:
-
+```bash
+flutter pub get       # Instala as dependências do projeto
+flutter run           # Executa o app no dispositivo/emulador
+flutter build apk     # Gera APK para Android
+flutter build web     # Gera build para web
+flutter doctor        # Diagnóstico do ambiente Flutter
 ```
-git clone https://github.com/StellaKarolinaNunes/Projeto_Integrador_Handhelp_versao_1.0.git
-```
 
-Navegue até o diretório do projeto:
+---
 
-```
-cd Projeto_Integrador_Handhelp_versao_1.0.git
-```
+## :bulb: Exemplos
 
-Execute o comando flutter pub get para instalar as dependências do projeto:
+**Exemplo 1:**  
+Aperte em triagem e siga passo a passo para poder facilitar processo de triagem
 
-```
-flutter pub get
-```
+**Exemplo 2:**  
+Click Rotina e podera escolhe qual atendimento vai ser encaminhando.
 
-Inicie o aplicativo:
+---
 
-```
-flutter run
-```
+## :question: FAQ / Perguntas Frequentes
 
+### 1. O que este projeto faz?
+O HandHelp é um aplicativo Flutter criado para tornar o atendimento em unidades básicas de saúde mais inclusivo, especialmente para pessoas surdas. Ele auxilia no processo de triagem, permitindo ao paciente informar sintomas, local e intensidade da dor, e transmite essas informações ao profissional de saúde de forma acessível, inclusive por síntese de voz.
 
-## FAQ/Perguntas Frequentes ❓❔
+### 2. Preciso de alguma configuração especial?
+Não. Basta ter o Flutter instalado e atualizado. O HandHelp pode ser executado em dispositivos Android, iOS, navegadores (web) e emuladores. Não exige configurações especiais além do ambiente Flutter padrão.
 
-Posso gerar meu próprio guia usando esse repositório?
-> **R:** Sim! Só pedimos que você faça um link para [Link do HandHelp](https://github.com/StellaKarolinaNunes/Projeto_Integrador)  😁 e respeite a licença de uso. 
+### 3. O HandHelp funciona offline?
+Sim, parte dos recursos do aplicativo funcionam offline, como a navegação, seleção de sintomas e síntese de voz. Caso a aplicação dependa de alguma API para triagem avançada, verifique se há conexão disponível.
 
-## Posso sugerir novas funcionalidades? 🆕
-> **R:** Sim! Use o mecanismo de contribuição do Github. Nesse momento estamos focados em corrigir erros e melhorar as funcionalidade existentes.
+### 4. O que fazer se o app travar ou exibir erro ao rodar?
+- Verifique se você está com o Flutter atualizado (`flutter doctor`).
+- Confira sua conexão com a internet se estiver usando recursos online.
+- Reinicie o app ou o dispositivo.
+- Para erros persistentes, consulte as [issues do projeto](https://github.com/StellaKarolinaNunes/Projeto_Integrador_Handhelp_versao_1.0/issues) ou abra uma nova.
 
-## Contributing/Contribuir (●'◡'●)
+### 5.Como atualizar ou melhorar as funcionalidades?
+Sugestões e melhorias são bem-vindas!  
+Abra uma issue ou envie um pull request seguindo as boas práticas do projeto. A equipe foca em correções e melhorias contínuas.
 
- O que devo ter em mente antes de abrir um PullRequest?
-> Esse é um projeto handhelp feito pela Equipe Help Five para a comunidade e contribuições são bem vindas.
-> Para aumentar a chance de a sua contribuição ser aprovada, escolha um título legal, simples e explicativo para os itens, e siga a formatação correta dos arquivos.
-> Mais interessante seria ajudar com o código e projeto em si
-> 🇧🇷:  :purple_heart: Como Contribuir com o projeto? [Confira o passo a passo](./Contribuindo.md)
+### 6. Como adicionar novos usuários?
+Este app é apenas para listagem. Para adicionar usuários, é necessário implementar essa funcionalidade ou adicionar diretamente pela API, se permitido.
 
-## License/Licença do Projeto  
+### 7. Como rodar o HandHelp em diferentes plataformas?
+- Para dispositivos Android/iOS: Use `flutter run` com o dispositivo conectado.
+- Para web: Use `flutter run -d chrome` ou acesse a versão online [aqui](https://handhelp.netlify.app/).
+- Dúvidas sobre setup? Consulte o manual de instalação acima e use `flutter doctor`.
+  
+### 8. Não encontrou sua dúvida aqui?
+Abra uma [issue](https://github.com/StellaKarolinaNunes/Projeto_Integrador_Handhelp_versao_1.0/issues/new) com sua dúvida, sugestão ou feedback. Ficarei feliz em ajudar! 💬✨
 
-> [MIT](./License)
+---
 
-## Equipe handhelp 
-> Aos contribuidores Stella Karolina Nunes Peixoto,Igor Wenceslau Machado Conceição,João Gabriel Peres De Castro, Jhonefer Vinicius Lima Da Silva e  Aline Cély Araújo da Silva.
+## :handshake: Contribuição
 
->contribuidor: David Silva
+Contribuições são bem-vindas!
+
+1. [Leia o guia de contribuição](./Contribuindo.md) :purple_heart:
+2. Faça um fork deste repositório.
+3. Crie uma branch descritiva:  
+   `git checkout -b feature/seu-recurso`
+4. Faça commits claros e objetivos.
+5. Abra um Pull Request detalhado.
+
+**Dicas para contribuir:**
+
+- Use títulos de PR claros e descritivos.
+- Mantenha o padrão de código e documentação.
+- Sempre teste suas alterações.
+- Use Issues para comunicação e dúvidas.
+
+---
+
+## :bookmark_tabs: Boas Práticas
+
+- Código limpo, comentado e modular.
+- Mensagens de commit claras.
+- Teste manual/local antes do PR.
+- Atualize sua branch antes de abrir um PR.
+- Siga o [Guia de Estilo Flutter](https://docs.flutter.dev/development/style-guide).
+
+---
+
+## :link: Recursos & Links Adicionais
+
+- [Documentação Oficial Flutter](https://docs.flutter.dev/)
+- [Provider (State Management)](https://pub.dev/packages/provider)
+- [Acessibilidade em Flutter](https://docs.flutter.dev/development/accessibility-and-localization/accessibility)
+- [Guia de Contribuição Open Source](https://opensource.guide/how-to-contribute/)
+
+---
+
+## :page_facing_up: Licença
+
+Este projeto está sob a [Licença MIT](./LICENSE).  
+Você pode usar, modificar e distribuir livremente, apenas mantenha referência ao repositório original.
+
+---
+
+## :trophy: Equipe
+
+**Desenvolvimento:**  
+- [Stella Karolina Nunes Peixoto](https://github.com/StellaKarolinaNunes)  
+- [João Gabriel Peres De Castro](https://github.com/Gab0701)  
+- [Jhonefer Vinicius Lima Da Silva](https://github.com/jhony996358)
+- [Igor Wenceslau Machado Conceição](https://github.com/Igormachado90)
+- [Aline Cély Araújo da Silva](https://github.com/AlineCely)
+
+- *CONTRIBUIÇÃO*[David S. da Silva](https://github.com/wi2david)
+   
+- *Professor* [Deriks Karlay Dias Costa](https://github.com/karlaycosta)
+
+---
+
+> _Projeto acadêmico IFPA | Ciência da Computação – Lista de Usuários Flutter, referência para projetos de listagem com API e busca._
