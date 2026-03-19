@@ -1,10 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:projeto_integradormain.dart';
-// import 'package:projeto_integrador/sintomas.dart';
-
-// void main() {
-//   runApp(const CodeApp());
-// }
 
 class CodeApp extends StatelessWidget {
   const CodeApp({super.key, Key? Key});
@@ -28,9 +22,6 @@ class CodeApp extends StatelessWidget {
 class Home1 extends StatelessWidget {
   const Home1({super.key, Key? Key});
 
-  // ignore: non_constant_identifier_names
-  // final String TipoSaude = "Bronquite";
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -39,7 +30,7 @@ class Home1 extends StatelessWidget {
           margin: const EdgeInsets.only(top: 20),
           child: Row(
             children: [
-              // Primeira Column - icons de votla
+              
               const SizedBox(width: 15.0),
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -49,12 +40,7 @@ class Home1 extends StatelessWidget {
                     height: 95.0,
                     child: GestureDetector(
                       onTap: () {
-                        // Navigator.push(
-                        //   context,
-                        //   MaterialPageRoute(
-                        //     // builder: (context) => const FigmaToCodeApp(),
-                        //   ),
-                        // );
+                     
                       },
                       child: const Icon(
                         Icons.keyboard_arrow_left_rounded,
@@ -66,7 +52,7 @@ class Home1 extends StatelessWidget {
                 ],
               ),
               const SizedBox(width: 0.20),
-              // Segunda Column - Texto
+          
               const Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -82,7 +68,7 @@ class Home1 extends StatelessWidget {
                 ],
               ),
               const SizedBox(width: 140.0),
-              // Terceira Column - Ícone de elemento
+           
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
@@ -155,7 +141,7 @@ class Home1 extends StatelessWidget {
                   _navigateToSintomas(context, 'Bronquite');
                 },
                 child: Container(
-                  width: 150, // Defina a largura aqui
+                  width: 150, 
                   height: 140,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
@@ -184,7 +170,7 @@ class Home1 extends StatelessWidget {
                   _navigateToSintomas(context, "Febre");
                 },
                 child: Container(
-                  width: 150, // Defina a largura aqui
+                  width: 150, 
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     image: const DecorationImage(
@@ -216,9 +202,6 @@ class Home1 extends StatelessWidget {
   }
 
   void _navigateToSintomas(BuildContext context, tipoSaude) {
-    // Navigator.push(
-      // context,
-      // MaterialPageRoute(builder: (context) => Sintomas(tipoSaude)),
-    // )
+  
   }
 }

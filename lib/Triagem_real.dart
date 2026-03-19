@@ -3,10 +3,7 @@ import 'ColocarVideos.dart';
 import 'GeraTexto.dart';
 import 'EscolhaAtendi.dart';
 
-
-
-
-// ignore: camel_case_types
+ 
 class Triagem_real extends StatelessWidget {
   const Triagem_real({super.key, Key? Key});
 
@@ -36,7 +33,7 @@ class Triagem extends StatelessWidget {
           margin: const EdgeInsets.only(top: 20),
           child: Row(
             children: [
-              // Primeira Column - icons de votla
+ 
               const SizedBox(width: 5.0),
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -63,7 +60,7 @@ class Triagem extends StatelessWidget {
                 ],
               ),
               const SizedBox(width: 0.20),
-              // Segunda Column - Texto
+ 
               const Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -78,8 +75,7 @@ class Triagem extends StatelessWidget {
                   ),
                 ],
               ),
-              const SizedBox(width: 102.0),
-              // Terceira Column - Ícone de elemento
+              const SizedBox(width: 102.0), 
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [

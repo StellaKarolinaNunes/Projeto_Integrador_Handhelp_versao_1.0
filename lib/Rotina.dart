@@ -3,13 +3,7 @@ import 'package:projeto_integrador/ColocarVideos.dart';
 import 'package:projeto_integrador/PaginaInt.dart';
 import 'EscolhaAtendi.dart';
 
-// import 'ColocarVideos.dart';
-// import 'EscolhaAtendi.dart';
-// import 'PaginaInt.dart';
-
-// void main() {
-//   runApp(const Rotina("Rotina"));
-// }
+ 
 
 class Rotina extends StatelessWidget {
   final String tipoSaude;
@@ -60,7 +54,7 @@ class Home2 extends StatelessWidget {
                               builder: (context) => const EscolhaAtendi()),
                         );
                       },
-                      //Primeiro column - icons de votla
+     
                       child: const Icon(
                         Icons.keyboard_arrow_left_rounded,
                         size: 40.0,
@@ -70,7 +64,7 @@ class Home2 extends StatelessWidget {
                   ),
                 ],
               ),
-              //Segunda Column - Texto
+       
               const SizedBox(width: 10.0),
               const Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -85,46 +79,11 @@ class Home2 extends StatelessWidget {
                   ),
                 ],
               ),
-              // const SizedBox(width: 200.0),
-              // // Terceira Column - Ícone de elemento
-              // Column(
-              //   crossAxisAlignment: CrossAxisAlignment.end,
-              //   children: [
-              //     Container(
-              //       padding:
-              //           const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-              //       clipBehavior: Clip.antiAlias,
-              //       decoration: ShapeDecoration(
-              //         color: const Color(0xFF0B8FAC),
-              //         shape: RoundedRectangleBorder(
-              //           borderRadius: BorderRadius.circular(100),
-              //         ),
-              //       ),
-              //       child: const Row(
-              //         mainAxisSize: MainAxisSize.min,
-              //         mainAxisAlignment: MainAxisAlignment.end,
-              //         crossAxisAlignment: CrossAxisAlignment.center,
-              //         children: [
-              //           Text(
-              //             '5 a 6',
-              //             textAlign: TextAlign.center,
-              //             style: TextStyle(
-              //               color: Colors.white,
-              //               fontSize: 12,
-              //               fontFamily: 'Urbanist',
-              //               fontWeight: FontWeight.w800,
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //     ),
-              //   ],
-              // ),
+     
             ],
           ),
         ),
-
-        //Aqui é usar vídeos de libras
+ 
         Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -150,7 +109,7 @@ class Home2 extends StatelessWidget {
                 ],
               ),
               const SizedBox(
-                  height: 20), // Adicione espaço vertical entre as linhas
+                  height: 20), 
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -172,7 +131,7 @@ class Home2 extends StatelessWidget {
                 ],
               ),
               const SizedBox(
-                  height: 20), // Adicione espaço vertical entre as linhas
+                  height: 20),   
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

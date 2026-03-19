@@ -1,4 +1,4 @@
-// ignore_for_file: file_names
+ 
 import 'package:flutter/material.dart';
 import 'package:projeto_integrador/values.dart';
 import 'EscolhaAtendi.dart';
@@ -7,7 +7,7 @@ import 'intensidade_dor.dart';
 
 
 class PaginaSintomas extends StatelessWidget {
-  // ignore: non_constant_identifier_names
+ 
   const PaginaSintomas({super.key, Key? Key});
 
   @override
@@ -27,7 +27,7 @@ class PaginaSintomas extends StatelessWidget {
 }
 
 class Sintomas extends StatelessWidget {
-  // ignore: non_constant_identifier_names
+  
   const Sintomas({super.key, Key? Key});
 
   @override
@@ -38,7 +38,7 @@ class Sintomas extends StatelessWidget {
           margin: const EdgeInsets.only(top: 20),
           child: Row(
             children: [
-              // Primeira Column - icons de votla
+             
               const SizedBox(width: 5.0),
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -65,7 +65,7 @@ class Sintomas extends StatelessWidget {
                 ],
               ),
               const SizedBox(width: 0.20),
-              // Segunda Column - Texto
+              
               const Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -81,7 +81,7 @@ class Sintomas extends StatelessWidget {
                 ],
               ),
               const SizedBox(width: 158.0),
-              // Terceira Column - Ícone de elemento
+              
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
@@ -137,7 +137,7 @@ class Sintomas extends StatelessWidget {
                     MaterialButton(
                       minWidth: 32,
                       height: 20,
-                      // color: Colors.blue,
+                     
                       onPressed: () {
                         _mostrarSintomas(
                           context,
@@ -157,7 +157,7 @@ class Sintomas extends StatelessWidget {
                     MaterialButton(
                       minWidth: 0.09,
                       height: 6,
-                      // color: Colors.blue,
+                      
                       onPressed: () {
                         _mostrarSintomas(context, 'Dor no Ouvido!',
                             ['Zumbido', 'Secreção do Ouvido','Sensação de pressão ou inchaço no ouvido ']);
@@ -174,14 +174,14 @@ class Sintomas extends StatelessWidget {
                     MaterialButton(
                       minWidth: 0.90,
                       height: 13,
-                      // color: Colors.blue,
+                     
                       onPressed: () {
                         _mostrarSintomas(
                             context, 'Dor no Olho!', ['Visão turva', 'Irritação nos olhos',
                             'Dificuldade para enxergar de perto ou longe','Perda repentina da visão',
                             'Manchas ou moscas volantes']);
                       },
-                      // Other properties...
+                     
                     ),
                   ],
                 ),
@@ -194,13 +194,13 @@ class Sintomas extends StatelessWidget {
                     MaterialButton(
                       minWidth: 50.1,
                       height: 30,
-                      // color: Colors.blue,
+                     
                       onPressed: () {
                         _mostrarSintomas(context, 'Dor no Peito!',
                             ['Tosse', 'Falta de ar', 'Chiado no peito','Sensibilidade ou inchaço nos peitos',
                             'Secreção nos seis']);
                       },
-                      // Other properties...
+                  
                     ),
                   ],
                 ),
@@ -213,12 +213,12 @@ class Sintomas extends StatelessWidget {
                     MaterialButton(
                       minWidth: 50.1,
                       height: 45,
-                      // color: Colors.blue,
+                     
                       onPressed: () {
                         _mostrarSintomas(
                             context, 'Dor no Costa!', ['Dificuldade para se mover', 'Formigamento ou dormência']);
                       },
-                      // Other properties...
+                     
                     ),
                   ],
                 ),
@@ -231,13 +231,13 @@ class Sintomas extends StatelessWidget {
                     MaterialButton(
                       minWidth: 5.1,
                       height: 19,
-                      // color: Colors.blue,
+                      
                       onPressed: () {
                         _mostrarSintomas(
                             context, 'Dor no Mão!', ['Formigamento ou dormência nas mãos', 'Lesôes nas mãos',
                             'Dificuldade para usar as mãos']);
                       },
-                      // Other properties...
+                     
                     ),
                   ],
                 ),
@@ -250,12 +250,12 @@ class Sintomas extends StatelessWidget {
                     MaterialButton(
                       minWidth: 40.1,
                       height: 42,
-                      // color: Colors.blue,
+                   
                       onPressed: () {
                         _mostrarSintomas(context, 'Dor no barrigo!',
                             ['Dor abdominal', 'Diarreia','Náuseas e vômitos','gases','Aumento do volume abdominal']);
                       },
-                      // Other properties...
+                    
                     ),
                   ],
                 ),
@@ -268,12 +268,12 @@ class Sintomas extends StatelessWidget {
                     MaterialButton(
                       minWidth: 10,
                       height: 35,
-                      // color: Colors.blue,
+                        
                       onPressed: () {
                         _mostrarSintomas(context, 'Dor no pantruilho!',
                             ['Dificuldade para andar ou subir escadas ', 'Inchaço na panturrilha','Infecções']);
                       },
-                      // Other properties...
+                    
                     ),
                   ],
                 ),
@@ -286,13 +286,13 @@ class Sintomas extends StatelessWidget {
                     MaterialButton(
                       minWidth: 30,
                       height: 22,
-                      // color: Colors.blue,
+                    
                       onPressed: () {
                         _mostrarSintomas(context, 'Dor no Coluna!',
                             ['Dificuldade para se mover', 'Fraqueza','Formigamento ou dormência'
                             ,'Alterações na sensibilidade']);
                       },
-                      // Other properties...
+                   
                     ),
                   ],
                 ),

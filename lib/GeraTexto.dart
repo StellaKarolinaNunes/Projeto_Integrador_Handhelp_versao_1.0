@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'intensidade_dor.dart';
-import 'triagem_real.dart';
+import 'Triagem_real.dart';
 import 'values.dart';
 
 FlutterTts flutterTts = FlutterTts()
@@ -21,9 +21,9 @@ class GeraText extends StatelessWidget {
     Future<void> falarTexto(String textogerado) async {
       var result = await flutterTts.speak(textogerado);
       if (result == 1) {
-        // A fala foi iniciada com sucesso
+       
       } else {
-        // Houve algum erro na fala
+     
       }
     }
 
@@ -170,7 +170,7 @@ class GeraText extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 falarTexto(textogerado);
-                // Adicione a ação desejada ao pressionar o botão
+             
               },
               child: Container(
                 width: 187,
@@ -218,7 +218,7 @@ class GeraText extends StatelessWidget {
                   context,
                   MaterialPageRoute(
                     builder: (context) =>
-                        const Triagem_real(), // Corrigi o nome da classe
+                        const Triagem_real(),   
                   ),
                 );
               },

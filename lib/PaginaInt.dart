@@ -6,7 +6,7 @@ import 'Rotina.dart';
 
 
 class TelaNova extends StatelessWidget {
-  // ignore: non_constant_identifier_names
+   
   final String profissao;
   final String videoFinal;
   // const TelaNova(this.profissao, String videoFinal, {super.key, required this.videoFinal});
@@ -27,7 +27,7 @@ class TelaNova extends StatelessWidget {
               margin: const EdgeInsets.only(top: 20),
               child: Row(
                 children: [
-                  // Primeira Column - icons de votla
+                 
                   const SizedBox(width: 5.0),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -58,18 +58,17 @@ class TelaNova extends StatelessWidget {
                 ],
               ),
             ),
-// ----------------------------
+ 
             Stack(
               children: [
                 Container(
                   width: 270,
-                  height: 270,
-                  // color: Colors.black26,
+                  height: 270, 
                   child: VideoPlayerScreen(videoUrl: videoFinal),
                 ),
               ],
             ),
-// -------------------------------
+ 
             const SizedBox(height: 120),
             SizedBox(
               width: 343,

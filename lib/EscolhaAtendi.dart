@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+ 
 import 'package:flutter/material.dart';
 import 'ColocarVideos.dart';
 import 'Rotina.dart';
@@ -35,7 +35,7 @@ class Home1 extends StatelessWidget {
           margin: const EdgeInsets.only(top: 20),
           child: Row(
             children: [
-              // Primeira Column - icons de votla
+              
               const SizedBox(width: 5.0),
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -62,7 +62,7 @@ class Home1 extends StatelessWidget {
                 ],
               ),
               const SizedBox(width: 0.20),
-              // Segunda Column - Texto
+           
               const Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
@@ -78,7 +78,7 @@ class Home1 extends StatelessWidget {
                 ],
               ),
               const SizedBox(width: 90.0),
-              // Terceira Column - Ícone de elemento
+            
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [

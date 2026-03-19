@@ -3,21 +3,13 @@ import 'package:projeto_integrador/values.dart';
 import 'GeraTexto.dart';
 import 'PaginaSintomas.dart';
 
-// void main() {
-//   runApp(const IntensityPage(
-//     escolhasAnteriores: [],
-//   ));
-// }
-
 class IntensityPage extends StatefulWidget {
   final List<String> escolhasAnteriores;
-  // final Key? key;
 
   const IntensityPage({Key? key, required this.escolhasAnteriores})
       : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
   _IntensityPageState createState() => _IntensityPageState();
 }
 
@@ -25,18 +17,17 @@ class _IntensityPageState extends State<IntensityPage> {
   double intensidade = 5.0;
   String tlabel = getColorLabel(intensidadeSelecionada);
 
-  // Função para obter a cor com base na intensidade
   Color getColor(double value) {
     if (value < 3) {
-      return const Color(0xFFBDA193); // Muito Baixo
+      return const Color(0xFFBDA193); 
     } else if (value < 5) {
-      return const Color(0xFFFFCE5C); // Baixo
+      return const Color(0xFFFFCE5C); 
     } else if (value < 7) {
-      return const Color(0xFF9BB068); // Normal
+      return const Color(0xFF9BB068); 
     } else if (value < 9) {
-      return const Color(0xFFFE814B); // Alto
+      return const Color(0xFFFE814B); 
     } else {
-      return const Color(0xFFA18FFF); // Muito Alto
+      return const Color(0xFFA18FFF); 
     }
   }
 
@@ -51,7 +42,6 @@ class _IntensityPageState extends State<IntensityPage> {
               margin: const EdgeInsets.only(top: 20),
               child: Row(
                 children: [
-                  // Primeira Column - ícone de volta
                   const SizedBox(width: 5.0),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -78,7 +68,6 @@ class _IntensityPageState extends State<IntensityPage> {
                     ],
                   ),
                   const SizedBox(width: 0.20),
-                  // Segunda Column - Texto
                   const Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -94,8 +83,7 @@ class _IntensityPageState extends State<IntensityPage> {
                     ],
                   ),
                   const SizedBox(width: 110.0),
-                  // Terceira Column - Ícone de elemento
-                  Column(
+                    Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Container(
@@ -342,8 +330,8 @@ class _IntensityPageState extends State<IntensityPage> {
                   Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      // const SizedBox(height: 220),
-                      SliderTheme(
+                        
+                        SliderTheme(
                         data: const SliderThemeData(
                           showValueIndicator: ShowValueIndicator.always,
                           valueIndicatorShape:
@@ -367,12 +355,10 @@ class _IntensityPageState extends State<IntensityPage> {
                               min: 1,
                               max: 10,
                               divisions: 4,
-                              // label: tlabel.toString(),
+                              
                               activeColor: getColor(intensidadeSelecionada),
                               inactiveColor:
-                                  Colors.grey, // Cor da parte inativa do Slider
-                              // Define a orientação vertical
-                              // axis: Axis.vertical,
+                                    Colors.grey,  
                             ),
                           ),
                         ),
@@ -385,8 +371,8 @@ class _IntensityPageState extends State<IntensityPage> {
                     children: [
                       Image.asset(
                         'assets/images/Deprimido.png',
-                        width: 48, // Ajuste conforme necessário
-                        height: 48, // Ajuste conforme necessário
+                        width: 48,  
+                        height: 48, 
                       ),
                       Image.asset(
                         'assets/images/Triste.png',
@@ -414,7 +400,6 @@ class _IntensityPageState extends State<IntensityPage> {
               ),
             ),
             const SizedBox(height: 140),
-            // const SizedBox(height: 290),
             Container(
               width: 350,
               height: 56,
@@ -428,7 +413,7 @@ class _IntensityPageState extends State<IntensityPage> {
                         context,
                         MaterialPageRoute(
                           builder: (context) =>
-                              GeraText(), // Certifique-se de que a classe GeraText está corretamente definida
+                              GeraText(), 
                         ),
                       );
                     },

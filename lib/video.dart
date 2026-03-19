@@ -21,7 +21,7 @@ class CameraApp extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  // ignore: library_private_types_in_public_api
+ 
   _CameraAppState createState() => _CameraAppState();
 }
 
@@ -66,11 +66,7 @@ class _CameraAppState extends State<CameraApp> {
         onPressed: () async {
           try {
             await _initializeControllerFuture;
-
-// Substitua pelo caminho desejado
-            // await _controller.startVideoRecording("/path/onde/salvar/video.mp4");
-
-            // Aguarde alguns segundos (ou conforme necessário) antes de parar a gravação
+ 
             await Future.delayed(const Duration(seconds: 5));
 
             await _controller.stopVideoRecording();

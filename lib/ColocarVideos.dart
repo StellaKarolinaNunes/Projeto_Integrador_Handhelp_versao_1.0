@@ -1,5 +1,4 @@
-// ignore_for_file: library_private_types_in_public_api
-
+  
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
 
@@ -22,7 +21,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
       _controller.addListener(() {
         if (_controller.value.hasError) {
           print('Erro durante a reprodução: ${_controller.value.errorDescription}');
-          // print('Stack trace: ${_controller.value.stackTrace}');
+         
         }
       });
     });
@@ -71,9 +70,7 @@ class _VideoPlayerScreenState extends State<VideoPlayerScreen> {
   }
 }
 
-// void main() {
-//   runApp(MyApp());
-// }
+
 
 class MyApp extends StatelessWidget {
   @override
