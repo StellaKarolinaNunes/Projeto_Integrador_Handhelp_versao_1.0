@@ -1,271 +1,474 @@
- <h1 align="center">
-  HandHelp
-    <br />
-    <br />
-    <a href="https://github.com/StellaKarolinaNunes/HandHelp">
-     <img src="assets/images/BANNER_1.png " alt="HandHelp Banner " width="100%">
-    </a>
-  </h1>
+<div align="center">
 
-<p align="center">
-  <img src="https://img.shields.io/static/v1?label=flutter&message=framework&color=blue&style=for-the-badge&logo=flutter"/>
-  <img src="https://img.shields.io/static/v1?label=API&message=REST&color=blue&style=for-the-badge&logo=cloud"/>
-  <img src="https://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
-  <img src="https://img.shields.io/static/v1?label=TESTES&message=%3E1.0&color=green&style=for-the-badge"/>
-  <img src="https://img.shields.io/static/v1?label=STATUS&message=CONCLUÍDO&color=green&style=for-the-badge"/>
-</p>
+# HandHelp
 
+### Protótipo acessível para apoiar a triagem de pessoas surdas em serviços de saúde
+
+<a href="https://github.com/StellaKarolinaNunes/Projeto_Integrador_Handhelp_versao_1.0">
+  <img src="./assets/images/BANNER_1.png" alt="Banner do projeto HandHelp" width="100%">
+</a>
 
 <br>
+
+<img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter">
+
+<img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart">
+
+<img src="https://img.shields.io/badge/Libras-Acessibilidade-7C3AED?style=for-the-badge" alt="Libras e acessibilidade">
+
+<img src="https://img.shields.io/badge/Flutter%20Web-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Flutter Web">
+
+<img src="https://img.shields.io/badge/Status-Protótipo%20acadêmico-F59E0B?style=for-the-badge" alt="Status do projeto">
+
+<br><br>
+
+<p align="center">
+  <a href="https://handhelp.netlify.app/">
+    <img src="https://img.shields.io/badge/▶%20Acessar%20Protótipo%20Web-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Acessar Protótipo Web">
+  </a>
+  <a href="https://github.com/StellaKarolinaNunes/Projeto_Integrador_Handhelp_versao_1.0">
+    <img src="https://img.shields.io/badge/⌘%20Explorar%20Código--Fonte-181717?style=for-the-badge&logo=github&logoColor=white" alt="Explorar Código-Fonte">
+  </a>
+</p>
+
+</div>
 
 ---
 
+## Sobre o projeto
 
-##  Introdução
- O projeto Integrador dos alunos IFPA, ciencia da computação tem como criação do HandHelp  com o objetivo proporcionar uma experiência inclusiva e acessível para pessoas surdas durante o processo de triagem em unidades básicas de saúde em Tucuruí, Pará. Nosso compromisso é desenvolver ferramentas para facilitar o processo de atendimento e triagem nas unidades básicas de saúde em Tucuruí, Pará, para garantir que pessoas surdas tenham acesso adequado aos serviços de saúde, promovendo a inclusão e contribuindo para a capacitação no uso das tecnologias de assistência. O HandHelp está comprometido em criar um ambiente de saúde mais acessível, proporcionando uma experiência positiva e informativa para todos, independentemente das barreiras linguísticasprojeto.
+O **HandHelp** é um protótipo acadêmico desenvolvido em Flutter para apoiar a comunicação durante a triagem de pessoas surdas em unidades básicas de saúde.
 
-<br>
+A proposta foi criada no contexto do Projeto Integrador do curso de Ciência da Computação do IFPA, com foco em acessibilidade, inclusão e aplicação de tecnologia assistiva em saúde.
 
-## Por que HandHelp?
- A comunicação eficaz é o pilar de qualquer diagnóstico médico, mas para a comunidade surda, o ambiente de saúde muitas vezes se torna um espaço de exclusão. Na ausência de ferramentas acessíveis durante a triagem, o paciente é forçado a enfrentar o ruído clínico e a perda de sua autonomia. Essa falha de comunicação não apenas gera ansiedade e isolamento, mas escala para riscos reais: diagnósticos imprecisos e atrasos críticos no atendimento que podem comprometer desfechos clínicos.
+A aplicação utiliza uma interface visual, fluxos guiados e recursos de apoio em Libras para ajudar o paciente a registrar informações básicas sobre sintomas, dor e necessidade de atendimento. Ao final, as informações podem ser organizadas em um resumo que auxilia a comunicação com a equipe de saúde.
 
-<br>
+> Este repositório representa a versão inicial do HandHelp, desenvolvida como protótipo acadêmico. O aplicativo não substitui atendimento médico, diagnóstico profissional, intérprete de Libras ou serviços de emergência.
 
-## A Solução
- A **HandHelp** é um aplicativo **totalmente gratuito** que atua como ponte de acessibilidade entre o paciente surdo e o profissional de saúde. Através de uma interface multimodal, o sistema permite que o usuário realize uma auto-triagem detalhada, utilizando recursos visuais e vídeos em Libras para garantir clareza diagnóstica e autonomia total do paciente.
+---
 
- <br>
+## Objetivo
 
+O HandHelp busca reduzir barreiras de comunicação que podem surgir durante o início de um atendimento em saúde.
 
-##  Demonstração e deploy web (Protótipo)
+Em muitos contextos, pessoas surdas podem enfrentar dificuldades para explicar sintomas, localização da dor, intensidade ou duração de um problema quando não há recursos acessíveis disponíveis.
 
-| ![](https://github.com/StellaKarolinaNunes/Projeto_Integrador_Handhelp_versao_1.0/assets/118007989/efe97111-896f-43c5-86fe-95d6bfa215f2)  | 
-|---| 
+O projeto propõe uma interface multimodal para apoiar esse primeiro contato, utilizando elementos visuais, navegação guiada, recursos de Libras e formulários simplificados.
 
-<a href="https://handhelp.netlify.app/" target="_blank"> <img src="./assets/images/deploy.png" width="1200" alt="Website-handhelp "> </a>
+A proposta também busca reforçar conceitos de:
 
-> **Nota:**  
-> Este projeto é de caráter acadêmico.
+* acessibilidade digital;
+* tecnologia assistiva;
+* desenvolvimento mobile com Flutter;
+* interfaces inclusivas;
+* experiência do usuário;
+* organização de fluxos de triagem;
+* comunicação visual em aplicações de saúde.
 
-<br>
+---
 
- ## Funcionalidades Principais
+## Problema
 
-*   **Triagem Inteligente**: Fluxo adaptativo completo para coleta de sintomas (Localização, Intensidade e Duração).
-*   **Módulo Gestacional**: Acompanhamento de gestação, cronômetro de contrações e histórico de consultas/exames pré-natais.
-*   **Monitoramento de Sinais Vitais**: Registro contínuo de glicemia, pressão arterial e peso.
-*   **Gerenciamento de Consultas**: Agendamento e histórico estruturado de compromissos médicos.
-*   **Segurança Biométrica**: Proteção de acesso via PIN e autenticação biométrica nativa.
-*   **Geração de Relatório Clínico**: Conversão automática das entradas em um documento estruturado para o médico.
-*   **Suporte em Libras**: Vídeos integrados que auxiliam o paciente em cada etapa do processo.
-*   **Modo Offline**: Funcionamento completo sem dependência de conectividade via banco de dados local criptografado.
- 
-  ---
+A comunicação é uma etapa essencial em qualquer atendimento de saúde.
 
- ##  Estrutura de Pastas
- ```bash
-handhelp/
-├── android/                     # Configurações Android nativas
-├── ios/                         # Configurações iOS nativas
-├── assets/                      # Recursos estáticos
-│   ├── fonts/                   # Família Urbanist
-│   ├── images/                  # Imagens e ícones
-│   |── videos/                  # Vídeos e animações em Libras
-|   └── Vlibras                  # Vídeos e animações em Libras
-├── lib/                         # Código-fonte do aplicativo
-│   ├── barra_intensidade.dart   # Barra de intensidade do aplicativo
-│   ├── colocavideos.dart        # Coloca os vídeos na tela
-│   ├── EscolhaAtendi.dart       # Tela de escolha de atendimento
-│   ├── GeraTexto.dart           # Tela de geração de texto
-│   ├── home.dart                # Tela inicial
-│   ├── intensidade_dor.dart     # Tela de intensidade da dor
-│   ├── main.dart                # Tela principal
-│   ├── PaginaInt.dart           # Tela de intensidade
-│   ├── PaginaLogo.dart          # Tela de login
-│   ├── PaginaSintoma.dart       # Tela de sintoma
-│   ├── PagSin.dart              # Tela de sintoma
-│   ├── Rotina.dart              # Tela de rotina
-│   ├── sintoma.dart             # Tela de sintoma
-│   ├── Triagem_real.dart        # Tela de triagem
-│   ├── values.dart              # Tela de valores
-│   ├── videos.dart              # Tela de vídeoa
-├── linux/                       # Configurações Linux nativas
-├── macos/                       # Configurações MacOS nativas
-├── test/                        # Testes do aplicativo
-├── videos/                      # Vídeos e animações em Libras
-├── vlibras/                     # Vídeos e animações em Libras
-├── web/                         # Configurações Web nativas
-├── windows/                     # Configurações Windows nativas
-├── .gitignore                   # Arquivos ignorados pelo Git
-├── analysis_options.yaml        # Configurações de análise do código
-├── pubspec.yaml                 # Dependências e configurações do projeto
+Quando não há intérprete disponível, linguagem acessível ou recursos visuais adequados, o paciente surdo pode ter dificuldade para explicar o que está sentindo. Isso pode aumentar a ansiedade, reduzir a autonomia e dificultar a coleta inicial de informações.
+
+O HandHelp foi idealizado para apoiar a triagem por meio de uma ferramenta visual e guiada, ajudando o paciente a registrar dados importantes antes da comunicação com a equipe de saúde.
+
+---
+
+## Solução desenvolvida
+
+A solução consiste em um aplicativo Flutter que orienta o usuário por etapas relacionadas à triagem básica.
+
+O fluxo permite selecionar sintomas, registrar localização de dor, indicar intensidade e acessar vídeos ou recursos de apoio em Libras. Ao final, a aplicação organiza as informações inseridas para facilitar a apresentação durante o atendimento.
+
+A versão atual funciona como protótipo de interface e demonstração de fluxo, com foco em acessibilidade, navegação e experiência do usuário.
+
+---
+
+## Funcionalidades
+
+### Recursos disponíveis no protótipo
+
+* **Tela inicial acessível:** apresentação visual do aplicativo e início do fluxo de triagem.
+* **Escolha do tipo de atendimento:** organização inicial do atendimento desejado.
+* **Seleção de sintomas:** registro de informações básicas sobre o que o usuário está sentindo.
+* **Localização da dor:** apoio visual para identificar regiões do corpo.
+* **Intensidade da dor:** registro da intensidade por meio de interface guiada.
+* **Fluxo de triagem:** navegação estruturada entre as etapas principais.
+* **Geração de resumo textual:** organização das informações coletadas durante o fluxo.
+* **Vídeos em Libras:** apoio visual em etapas do aplicativo.
+* **Execução web:** possibilidade de visualizar o protótipo pelo navegador.
+* **Interface responsiva:** adaptação da aplicação para diferentes tamanhos de tela.
+
+### Estrutura prevista para evolução
+
+* acompanhamento de sinais vitais;
+* histórico de consultas;
+* módulo gestacional;
+* proteção por PIN ou biometria;
+* persistência local de dados;
+* geração de relatórios estruturados;
+* funcionamento offline completo;
+* integração com APIs e serviços externos.
+
+---
+
+## Tecnologias utilizadas
+
+| Tecnologia   | Aplicação no projeto                             |
+| ------------ | ------------------------------------------------ |
+| Flutter      | Desenvolvimento da interface multiplataforma     |
+| Dart         | Linguagem principal da aplicação                 |
+| Flutter Web  | Execução do protótipo no navegador               |
+| VLibras      | Referência e apoio para acessibilidade em Libras |
+| Google Fonts | Tipografia utilizada na interface                |
+| Git          | Controle de versão                               |
+| GitHub       | Hospedagem do repositório                        |
+| Netlify      | Publicação da versão web demonstrativa           |
+
+---
+
+## Destaques técnicos
+
+* Protótipo voltado para acessibilidade em saúde;
+* Interface visual com foco em pessoas surdas;
+* Fluxo guiado para coleta inicial de sintomas;
+* Uso de recursos multimodais, como texto, imagens e vídeos;
+* Estrutura Flutter multiplataforma;
+* Organização inicial de telas por funcionalidade;
+* Demonstração web publicada para apresentação acadêmica;
+* Base preparada para evolução futura com arquitetura mais escalável;
+* Projeto alinhado a temas de inclusão, acessibilidade e tecnologia assistiva.
+
+---
+
+## Fluxo principal da aplicação
+
+```text
+Usuário inicia o HandHelp
+        │
+        ▼
+Tela inicial e apresentação do aplicativo
+        │
+        ▼
+Escolha do atendimento
+        │
+        ▼
+Triagem guiada
+        │
+        ├── Seleção de sintomas
+        ├── Localização da dor
+        ├── Intensidade da dor
+        ├── Informações adicionais
+        └── Apoio visual em Libras
+        │
+        ▼
+Geração de resumo das informações
+        │
+        ▼
+Apresentação do resumo ao profissional de saúde
 ```
- 
- <br>
 
-##  Instalação
+---
 
-### Pré-requisitos para Rodar HandHelp na sua maquina 
+## Demonstração web
 
+<div align="center">
 
-* [Flutter SDK](https://docs.flutter.dev/get-started/install)
-* [Git](https://git-scm.com/)
-* Dispositivo (Android/iOS) ou emulador/simulador ou navegador (web)
-* (Opcional) [VS Code](https://code.visualstudio.com/) + Extensão Flutter
- 
-<br>
+<a href="https://handhelp.netlify.app/">
+  <img src="./assets/images/deploy.png" width="100%" alt="Demonstração web do HandHelp">
+</a>
 
-### Tecnologias utilizadas
+<br><br>
 
-* [Flutter](https://flutter.dev/) - Framework UI para desenvolvimento multiplataforma.
-* [Dart](https://dart.dev/) - Linguagem de programação otimizada para interfaces de usuário.
-* [VLibras](https://www.gov.br/governodigital/pt-br/vlibras) - Ferramentas de tradução automática de conteúdos digitais para Libras.
-* [Git](https://git-scm.com/) - Sistema de controle de versão distribuído.
+<a href="https://handhelp.netlify.app/">
+  <img src="https://img.shields.io/badge/Acessar%20HandHelp%20na%20Web-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Acessar HandHelp na Web">
+</a>
 
+</div>
 
-<br>
+> As imagens e a demonstração pública possuem finalidade acadêmica e não devem ser utilizadas para inserir dados médicos reais.
 
-###  Instalação Rápida
+---
 
-####  1. Clone o repositório e entre na pasta
-
-    ```bash
-    git clone https://github.com/StellaKarolinaNunes/Projeto_Integrador_Handhelp_versao_1.0.git
-    cd Projeto_Integrador_Handhelp_versao_1.0
-    ```
-
-####  2. Instale as dependências
-
-    ```bash
-    flutter pub get
-    ```
-
-### 3. **Configure um dispositivo ou emulador:**
-
-    - Certifique-se que esteja visível em `flutter devices`.
-
-### 4. **Execute o aplicativo:**
-
-    ```bash
-    flutter run
-    ```
-
-### 5. **Para rodar no navegador (web):**
-
-    ```bash
-    flutter run -d chrome
-    ```
-
-###6. Principais Comandos Flutter
+## Estrutura do projeto
 
 ```bash
-flutter pub get       # Instala as dependências do projeto
-flutter run           # Executa o app no dispositivo/emulador
-flutter build apk     # Gera APK para Android
-flutter build web     # Gera build para web
-flutter doctor        # Diagnóstico do ambiente Flutter
+Projeto_Integrador_Handhelp_versao_1.0/
+├── assets/
+│   ├── fonts/
+│   │   └── urbanist/
+│   │
+│   ├── images/
+│   │   ├── BANNER_1.png
+│   │   ├── deploy.png
+│   │   └── imagens-e-ícones-do-app/
+│   │
+│   ├── videos/
+│   │   └── vídeos-de-apoio-em-libras/
+│   │
+│   └── vlibras/
+│       └── recursos-de-acessibilidade/
+│
+├── lib/
+│   ├── main.dart
+│   ├── home.dart
+│   ├── EscolhaAtendi.dart
+│   ├── Triagem_real.dart
+│   ├── PaginaSintoma.dart
+│   ├── sintoma.dart
+│   ├── intensidade_dor.dart
+│   ├── barra_intensidade.dart
+│   ├── PaginaInt.dart
+│   ├── GeraTexto.dart
+│   ├── colocavideos.dart
+│   ├── videos.dart
+│   ├── Rotina.dart
+│   ├── values.dart
+│   └── PaginaLogo.dart
+│
+├── test/
+│   └── widget_test.dart
+│
+├── android/
+├── ios/
+├── linux/
+├── macos/
+├── web/
+├── windows/
+│
+├── analysis_options.yaml
+├── pubspec.yaml
+├── pubspec.lock
+├── LICENSE
+└── README.md
 ```
 
-### 7. Scripts Disponíveis
+> Pastas geradas automaticamente pelo Flutter, como `build/` e `.dart_tool/`, não aparecem na estrutura porque não devem ser enviadas ao Git.
 
-*  `flutter pub get`: Atualiza pacotes.
-*  `flutter doctor`: Verifica o ambiente e lista dependências ausentes ou erros de configuração.
-*  `flutter test`: Executa a suíte de testes unitários e de widget.
-*  `flutter build apk --obfuscate --split-debug-info=./debug`: Build de produção com obfuscação.
-*  `flutter build appbundle`: Gera pacote para publicação na Google Play.
+---
 
-> **Dica:**  
-> Use `flutter doctor` para garantir que todos os requisitos estejam corretos.
- 
-<br>
+## Como executar o projeto
 
-##  Roadmap
+### Pré-requisitos
 
- Atualmente estamos trabalhando nas seguintes frentes:
+Antes de iniciar, é necessário ter instalado:
 
-- [ ] **Arquitetura:** Implementação de Clean Architecture e princípios SOLID.
-- [ ] **Gerenciamento de Estado:** Integração de Bloc ou Riverpod para escalabilidade.
-- [ ] **API & Persistência:** Integração com serviços RESTful e cache local (Hive/SQLite).
-- [ ] **Testes:** Ampliação da cobertura de testes unitários, de widget e integração.
+* Flutter SDK;
+* Dart SDK compatível com a versão do Flutter;
+* Git;
+* Android Studio ou VS Code;
+* extensões Flutter e Dart instaladas;
+* emulador Android configurado, navegador compatível ou dispositivo físico conectado.
 
- <br>
+### 1. Clone o repositório
 
- ##  Contribuição
-Contribuições são muito bem-vindas! Siga estes passos:
+```bash
+git clone https://github.com/StellaKarolinaNunes/Projeto_Integrador_Handhelp_versao_1.0.git
+```
 
-### Como Contribuir
-1. **Fork** este repositório
-2. **Clone** seu fork localmente
-3. **Crie** uma branch para sua feature: `git checkout -b feature/nova-funcionalidade`
-4. **Faça** suas alterações e commits
-5. **Teste** suas modificações
-6. **Abra** um Pull Request detalhado
+### 2. Acesse a pasta do projeto
 
-<br>
+```bash
+cd Projeto_Integrador_Handhelp_versao_1.0
+```
 
-###  Diretrizes
+### 3. Verifique o ambiente Flutter
 
-- Código limpo e bem comentado
-- Mensagens de commit claras e objetivas
-- Teste todas as funcionalidades
-- Mantenha a documentação atualizada
-- Siga os padrões de código existentes
+```bash
+flutter doctor
+```
 
-<br>
+### 4. Instale as dependências
 
-##  Licença
+```bash
+flutter pub get
+```
+
+### 5. Execute a aplicação
+
+```bash
+flutter run
+```
+
+### 6. Execute no navegador
+
+```bash
+flutter run -d chrome
+```
+
+### 7. Liste dispositivos disponíveis
+
+```bash
+flutter devices
+```
+
+---
+
+## Testes e build
+
+### Executar testes
+
+```bash
+flutter test
+```
+
+### Analisar o código
+
+```bash
+flutter analyze
+```
+
+### Gerar APK
+
+```bash
+flutter build apk
+```
+
+### Gerar build web
+
+```bash
+flutter build web
+```
+
+### Gerar App Bundle
+
+```bash
+flutter build appbundle
+```
+
+---
+
+## Roadmap
+
+### Organização e arquitetura
+
+* [x] Protótipo inicial de triagem;
+* [x] Estrutura Flutter multiplataforma;
+* [x] Telas para sintomas, dor e fluxo de atendimento;
+* [x] Recursos visuais e vídeos de apoio;
+* [x] Demonstração web publicada;
+* [ ] Aplicar Clean Architecture;
+* [ ] Organizar melhor pastas por módulos e responsabilidades;
+* [ ] Aplicar princípios SOLID;
+* [ ] Padronizar nomes de arquivos e classes.
+
+### Estado e persistência
+
+* [ ] Implementar gerenciamento de estado com Provider, Bloc ou Riverpod;
+* [ ] Adicionar armazenamento local para dados do usuário;
+* [ ] Criar histórico de triagens;
+* [ ] Implementar cache offline;
+* [ ] Adicionar banco local com SQLite ou Hive;
+* [ ] Implementar proteção local por PIN.
+
+### Acessibilidade e saúde
+
+* [ ] Ampliar o acervo de vídeos em Libras;
+* [ ] Melhorar semântica para leitores de tela;
+* [ ] Criar modo de alto contraste;
+* [ ] Adicionar ajustes de tamanho de texto;
+* [ ] Refinar textos e instruções em Libras;
+* [ ] Criar resumo estruturado mais completo para profissionais.
+
+### Qualidade e evolução
+
+* [ ] Criar testes unitários;
+* [ ] Criar testes de widgets;
+* [ ] Criar testes de integração;
+* [ ] Melhorar tratamento de erros;
+* [ ] Adicionar validação de campos;
+* [ ] Criar documentação técnica mais detalhada;
+* [ ] Evoluir a versão acadêmica para uma arquitetura de produção.
+
+---
+
+## Contribuição
+
+Contribuições são bem-vindas, especialmente em acessibilidade, Flutter, UX inclusiva, Libras, organização de arquitetura e testes.
+
+```bash
+# Faça um fork do projeto no GitHub
+
+# Clone o seu fork
+git clone https://github.com/SEU-USUARIO/Projeto_Integrador_Handhelp_versao_1.0.git
+
+# Entre na pasta do projeto
+cd Projeto_Integrador_Handhelp_versao_1.0
+
+# Crie uma branch para sua alteração
+git checkout -b feature/nova-funcionalidade
+
+# Instale as dependências
+flutter pub get
+
+# Execute os testes
+flutter test
+
+# Adicione as alterações
+git add .
+
+# Crie um commit descritivo
+git commit -m "feat: adiciona melhoria de acessibilidade"
+
+# Envie a branch para o GitHub
+git push origin feature/nova-funcionalidade
+```
+
+Depois, abra um Pull Request explicando:
+
+* o objetivo da alteração;
+* quais telas ou componentes foram modificados;
+* como a funcionalidade foi testada;
+* se houve impacto na acessibilidade;
+* se foram adicionados recursos visuais ou vídeos em Libras.
+
+### Diretrizes
+
+* Preserve a finalidade inclusiva do projeto;
+* Evite linguagem médica que sugira diagnóstico automático;
+* Não adicione dados reais de pacientes;
+* Nunca envie credenciais, chaves ou informações privadas;
+* Considere acessibilidade em toda alteração de interface;
+* Mantenha textos claros, simples e objetivos;
+* Utilize nomes compreensíveis para telas, widgets e variáveis;
+* Atualize o README quando houver mudanças importantes;
+* Teste o fluxo completo antes de abrir um Pull Request.
+
+---
+
+## Licença
 
 Este projeto está licenciado sob a [Licença MIT](LICENSE).
 
-``` bash
-MIT License - você pode usar, modificar e distribuir livremente,
-mantendo a referência ao repositório original.
+```text
+MIT License
+
+Você pode usar, modificar e distribuir este projeto,
+desde que mantenha os créditos e a referência ao repositório original.
 ```
 
- <br>
+---
 
- ## Contato
+## Créditos
 
- Se você tiver dúvidas, sugestões ou quiser saber mais sobre o projeto, entre em contato:
+### Desenvolvimento e contexto acadêmico
 
- - **Principais Desenvolvedores:** [Stella Karolina](https://github.com/StellaKarolinaNunes)
- - **Repositório:** [HandHelp no GitHub](https://github.com/StellaKarolinaNunes/Projeto_Integrador_Handhelp_versao_1.0.git)
- - **LinkedIn:** [Stella Karolina Nunes](https://www.linkedin.com/in/stella-karolina/)
+* **Desenvolvimento principal:** [Stella Karolina Nunes](https://github.com/StellaKarolinaNunes)
+* **Instituição:** Instituto Federal de Educação, Ciência e Tecnologia do Pará — IFPA Campus Tucuruí
+* **Curso:** Bacharelado em Ciência da Computação
+* **Projeto:** Projeto Integrador
+* **Professor orientador:** [Alex Santos de Oliveira](https://github.com/alex2024383)
 
- <br>
+### Acessibilidade e recursos
 
- ## Créditos
-
- O **HandHelp** é construído com o apoio de tecnologias e comunidades incríveis:
-* [VLibras](https://www.gov.br/governodigital/pt-br/vlibras)
-* [Git](https://git-scm.com/)
- - **Framework:** [Flutter](https://flutter.dev/) & [Dart](https://dart.dev/)
- - **Design:** [Google Fonts (Urbanist)](https://fonts.google.com/specimen/Urbanist)
-* **Intérprete de Libras:** [Aline Cely](https://github.com/AlineCely)
-* **Professor Orientador:** [Alex Santos de Oliveira](https://github.com/alex2024383)
-
- <br>
-
- 
-### Desenvolvimento Principal
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/StellaKarolinaNunes">
-        <img src="https://github.com/StellaKarolinaNunes.png" width="100px" alt="Stella Karolina"/>
-        <br />
-        <sub><b>Stella Karolina (Desenvolvedora)</b></sub>
-        <br />
-      </a>
-    </td>
-  </tr>
-</table>
-
- 
-
- 
-
-
-
- 
+* **Apoio em Libras:** [Aline Cely](https://github.com/AlineCely)
+* **Referência de acessibilidade em Libras:** [VLibras](https://www.gov.br/governodigital/pt-br/vlibras)
+* **Framework:** [Flutter](https://flutter.dev/)
+* **Linguagem:** [Dart](https://dart.dev/)
+* **Tipografia:** [Google Fonts — Urbanist](https://fonts.google.com/specimen/Urbanist)
+* **Publicação web:** [Netlify](https://www.netlify.com/)
+* **Controle de versão:** Git e GitHub
+* **Badges:** [Shields.io](https://shields.io/)
