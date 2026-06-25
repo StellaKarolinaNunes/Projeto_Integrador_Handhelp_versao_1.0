@@ -1,11 +1,11 @@
 <div align="center">
 
-# HandHelp
+# HandHelp v1.0 — Legado
 
-### Protótipo acessível para apoiar a triagem de pessoas surdas em serviços de saúde
+### Protótipo acadêmico acessível para apoiar a comunicação de pessoas surdas durante a triagem em serviços de saúde
 
 <a href="https://github.com/StellaKarolinaNunes/Projeto_Integrador_Handhelp_versao_1.0">
-  <img src="./assets/images/BANNER_1.png" alt="Banner do projeto HandHelp" width="100%">
+  <img src="./assets/images/BANNER_1.png" alt="Banner do projeto HandHelp v1.0" width="100%">
 </a>
 
 <br>
@@ -16,18 +16,21 @@
 
 <img src="https://img.shields.io/badge/Libras-Acessibilidade-7C3AED?style=for-the-badge" alt="Libras e acessibilidade">
 
-<img src="https://img.shields.io/badge/Flutter%20Web-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Flutter Web">
+<img src="https://img.shields.io/badge/Projeto%20Integrador-IFPA-2563EB?style=for-the-badge" alt="Projeto Integrador IFPA">
 
-<img src="https://img.shields.io/badge/Status-Protótipo%20acadêmico-F59E0B?style=for-the-badge" alt="Status do projeto">
+<img src="https://img.shields.io/badge/Status-Legado%20Acadêmico-F59E0B?style=for-the-badge" alt="Status legado acadêmico">
 
 <br><br>
 
 <p align="center">
   <a href="https://handhelp.netlify.app/">
-    <img src="https://img.shields.io/badge/▶%20Acessar%20Protótipo%20Web-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Acessar Protótipo Web">
+    <img src="https://img.shields.io/badge/▶%20Acessar%20Protótipo%20Web-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Acessar protótipo web">
   </a>
   <a href="https://github.com/StellaKarolinaNunes/Projeto_Integrador_Handhelp_versao_1.0">
-    <img src="https://img.shields.io/badge/⌘%20Explorar%20Código--Fonte-181717?style=for-the-badge&logo=github&logoColor=white" alt="Explorar Código-Fonte">
+    <img src="https://img.shields.io/badge/⌘%20Explorar%20Código%20Legado-181717?style=for-the-badge&logo=github&logoColor=white" alt="Explorar código legado">
+  </a>
+  <a href="">
+    <img src="https://img.shields.io/badge/↗%20Acompanhar%20Nova%20Versão-7C3AED?style=for-the-badge&logo=github&logoColor=white" alt="Em breve nova versão do HandHelp">
   </a>
 </p>
 
@@ -35,112 +38,148 @@
 
 ---
 
+## Status do projeto
+
+> **Este repositório representa o HandHelp v1.0, desenvolvido como Projeto Integrador acadêmico.**
+> A versão é mantida como registro histórico, referência de aprendizado e base conceitual para a evolução do projeto.
+
+O desenvolvimento principal foi direcionado para uma versão mais recente do HandHelp, com melhorias previstas em arquitetura, organização interna, acessibilidade, persistência de dados, segurança e experiência do usuário.
+
+| Versão                  | Situação           | Finalidade                                            |
+| ----------------------- | ------------------ | ----------------------------------------------------- |
+| `HandHelp v1.0`         | Legado acadêmico   | Protótipo inicial do Projeto Integrador               |
+| Nova versão do HandHelp | Em desenvolvimento | Evolução técnica, arquitetural e funcional do projeto |
+
+### O que isso significa
+
+* esta versão não deve ser considerada uma solução final para uso em ambiente clínico;
+* melhorias novas devem ser implementadas prioritariamente na versão atualizada;
+* correções críticas ou ajustes de documentação ainda podem ser realizados neste repositório;
+* o código permanece disponível para estudo, consulta e comparação de evolução;
+* este protótipo serviu como base para decisões de interface, fluxo de triagem e acessibilidade da nova versão.
+
+---
+
 ## Sobre o projeto
 
-O **HandHelp** é um protótipo acadêmico desenvolvido em Flutter para apoiar a comunicação durante a triagem de pessoas surdas em unidades básicas de saúde.
+O **HandHelp v1.0** é um protótipo acadêmico desenvolvido em Flutter para apoiar a comunicação de pessoas surdas durante etapas iniciais de triagem em serviços de saúde.
 
-A proposta foi criada no contexto do Projeto Integrador do curso de Ciência da Computação do IFPA, com foco em acessibilidade, inclusão e aplicação de tecnologia assistiva em saúde.
+A proposta foi criada no contexto do Projeto Integrador do curso de Ciência da Computação do IFPA, com foco em acessibilidade, inclusão e aplicação de tecnologia assistiva.
 
-A aplicação utiliza uma interface visual, fluxos guiados e recursos de apoio em Libras para ajudar o paciente a registrar informações básicas sobre sintomas, dor e necessidade de atendimento. Ao final, as informações podem ser organizadas em um resumo que auxilia a comunicação com a equipe de saúde.
+A aplicação utiliza elementos visuais, navegação guiada, fluxos de sintomas e recursos de apoio em Libras para ajudar o usuário a registrar informações básicas relacionadas à dor, sintomas e necessidade de atendimento.
 
-> Este repositório representa a versão inicial do HandHelp, desenvolvida como protótipo acadêmico. O aplicativo não substitui atendimento médico, diagnóstico profissional, intérprete de Libras ou serviços de emergência.
+Ao final do fluxo, os dados informados podem ser organizados em um resumo textual para facilitar a comunicação inicial com a equipe de saúde.
+
+> O HandHelp não substitui atendimento médico, diagnóstico profissional, avaliação clínica, intérprete de Libras ou serviços de urgência e emergência.
+
+---
+
+## Contexto do projeto
+
+Pessoas surdas podem enfrentar barreiras de comunicação durante atendimentos em saúde, especialmente quando não há intérprete disponível ou quando o serviço não oferece recursos visuais acessíveis.
+
+Durante uma triagem, informações como localização da dor, intensidade, duração dos sintomas e necessidade de atendimento precisam ser compreendidas com clareza.
+
+O HandHelp foi idealizado como uma ferramenta de apoio para tornar esse primeiro contato mais visual, guiado e acessível.
+
+A proposta não é substituir profissionais ou processos clínicos, mas ajudar a organizar informações iniciais que podem apoiar a comunicação entre paciente e equipe de atendimento.
 
 ---
 
 ## Objetivo
 
-O HandHelp busca reduzir barreiras de comunicação que podem surgir durante o início de um atendimento em saúde.
+O objetivo do HandHelp v1.0 foi construir um protótipo funcional que demonstrasse como uma aplicação mobile pode apoiar processos de triagem acessível.
 
-Em muitos contextos, pessoas surdas podem enfrentar dificuldades para explicar sintomas, localização da dor, intensidade ou duração de um problema quando não há recursos acessíveis disponíveis.
-
-O projeto propõe uma interface multimodal para apoiar esse primeiro contato, utilizando elementos visuais, navegação guiada, recursos de Libras e formulários simplificados.
-
-A proposta também busca reforçar conceitos de:
+O projeto buscou aplicar conhecimentos relacionados a:
 
 * acessibilidade digital;
 * tecnologia assistiva;
 * desenvolvimento mobile com Flutter;
 * interfaces inclusivas;
-* experiência do usuário;
-* organização de fluxos de triagem;
-* comunicação visual em aplicações de saúde.
-
----
-
-## Problema
-
-A comunicação é uma etapa essencial em qualquer atendimento de saúde.
-
-Quando não há intérprete disponível, linguagem acessível ou recursos visuais adequados, o paciente surdo pode ter dificuldade para explicar o que está sentindo. Isso pode aumentar a ansiedade, reduzir a autonomia e dificultar a coleta inicial de informações.
-
-O HandHelp foi idealizado para apoiar a triagem por meio de uma ferramenta visual e guiada, ajudando o paciente a registrar dados importantes antes da comunicação com a equipe de saúde.
+* comunicação visual;
+* fluxos guiados de interação;
+* apoio em Libras;
+* organização de informações de sintomas;
+* experiência do usuário em contextos de saúde.
 
 ---
 
 ## Solução desenvolvida
 
-A solução consiste em um aplicativo Flutter que orienta o usuário por etapas relacionadas à triagem básica.
+A solução consiste em uma aplicação Flutter organizada em telas que conduzem o usuário por etapas de triagem básica.
 
-O fluxo permite selecionar sintomas, registrar localização de dor, indicar intensidade e acessar vídeos ou recursos de apoio em Libras. Ao final, a aplicação organiza as informações inseridas para facilitar a apresentação durante o atendimento.
+O fluxo inclui seleção de atendimento, escolha de sintomas, identificação de localização da dor, intensidade e geração de um resumo das informações preenchidas.
 
-A versão atual funciona como protótipo de interface e demonstração de fluxo, com foco em acessibilidade, navegação e experiência do usuário.
+A interface foi pensada para reduzir a dependência exclusiva de comunicação textual e verbal, utilizando elementos visuais e recursos em Libras como apoio à navegação.
+
+Esta versão representa o primeiro ciclo de desenvolvimento do HandHelp e serviu como base para a evolução da nova versão do sistema.
 
 ---
 
-## Funcionalidades
+## Funcionalidades disponíveis no HandHelp v1.0
 
-### Recursos disponíveis no protótipo
-
-* **Tela inicial acessível:** apresentação visual do aplicativo e início do fluxo de triagem.
-* **Escolha do tipo de atendimento:** organização inicial do atendimento desejado.
+* **Tela inicial:** apresentação do aplicativo e início da jornada de triagem.
+* **Escolha de atendimento:** organização inicial do tipo de atendimento desejado.
 * **Seleção de sintomas:** registro de informações básicas sobre o que o usuário está sentindo.
-* **Localização da dor:** apoio visual para identificar regiões do corpo.
-* **Intensidade da dor:** registro da intensidade por meio de interface guiada.
-* **Fluxo de triagem:** navegação estruturada entre as etapas principais.
-* **Geração de resumo textual:** organização das informações coletadas durante o fluxo.
-* **Vídeos em Libras:** apoio visual em etapas do aplicativo.
-* **Execução web:** possibilidade de visualizar o protótipo pelo navegador.
-* **Interface responsiva:** adaptação da aplicação para diferentes tamanhos de tela.
+* **Localização da dor:** apoio visual para indicar regiões do corpo.
+* **Intensidade da dor:** registro guiado da intensidade da dor.
+* **Fluxo de triagem:** navegação entre etapas relacionadas aos sintomas.
+* **Geração de resumo textual:** organização das informações informadas pelo usuário.
+* **Recursos visuais em Libras:** vídeos e materiais de apoio em etapas do protótipo.
+* **Execução web:** demonstração acessível por navegador.
+* **Interface Flutter:** base multiplataforma para Android, Web e outros ambientes suportados.
 
-### Estrutura prevista para evolução
+---
 
-* acompanhamento de sinais vitais;
-* histórico de consultas;
-* módulo gestacional;
-* proteção por PIN ou biometria;
-* persistência local de dados;
-* geração de relatórios estruturados;
-* funcionamento offline completo;
-* integração com APIs e serviços externos.
+## Funcionalidades previstas para a nova versão
+
+A nova versão do HandHelp está sendo desenvolvida a partir dos aprendizados obtidos neste protótipo.
+
+Entre as evoluções planejadas estão:
+
+* reorganização da arquitetura do projeto;
+* aplicação de princípios SOLID;
+* separação mais clara entre telas, serviços, modelos e componentes;
+* gerenciamento de estado escalável;
+* persistência local protegida;
+* histórico de triagens;
+* melhoria na acessibilidade para leitores de tela;
+* ajustes de alto contraste;
+* ampliação de recursos em Libras;
+* validações mais completas;
+* relatórios estruturados;
+* testes unitários, de widget e integração;
+* melhorias para uso offline;
+* maior segurança no tratamento de informações sensíveis.
 
 ---
 
 ## Tecnologias utilizadas
 
-| Tecnologia   | Aplicação no projeto                             |
-| ------------ | ------------------------------------------------ |
-| Flutter      | Desenvolvimento da interface multiplataforma     |
-| Dart         | Linguagem principal da aplicação                 |
-| Flutter Web  | Execução do protótipo no navegador               |
-| VLibras      | Referência e apoio para acessibilidade em Libras |
-| Google Fonts | Tipografia utilizada na interface                |
-| Git          | Controle de versão                               |
-| GitHub       | Hospedagem do repositório                        |
-| Netlify      | Publicação da versão web demonstrativa           |
+| Tecnologia         | Aplicação no projeto                         |
+| ------------------ | -------------------------------------------- |
+| Flutter            | Desenvolvimento da interface multiplataforma |
+| Dart               | Linguagem principal da aplicação             |
+| Flutter Web        | Execução do protótipo no navegador           |
+| Recursos em Libras | Apoio visual durante a navegação             |
+| Google Fonts       | Tipografia utilizada na interface            |
+| Git                | Controle de versão                           |
+| GitHub             | Hospedagem do repositório                    |
+| Netlify            | Publicação da demonstração web               |
 
 ---
 
 ## Destaques técnicos
 
-* Protótipo voltado para acessibilidade em saúde;
-* Interface visual com foco em pessoas surdas;
-* Fluxo guiado para coleta inicial de sintomas;
-* Uso de recursos multimodais, como texto, imagens e vídeos;
-* Estrutura Flutter multiplataforma;
-* Organização inicial de telas por funcionalidade;
-* Demonstração web publicada para apresentação acadêmica;
-* Base preparada para evolução futura com arquitetura mais escalável;
-* Projeto alinhado a temas de inclusão, acessibilidade e tecnologia assistiva.
+* Protótipo focado em acessibilidade para pessoas surdas;
+* Aplicação desenvolvida em Flutter;
+* Fluxo visual para registro de sintomas;
+* Navegação guiada entre etapas de triagem;
+* Uso de imagens, textos e vídeos como recursos multimodais;
+* Demonstração web para apresentação acadêmica;
+* Estrutura inicial preparada para evolução;
+* Projeto alinhado a acessibilidade, inclusão e tecnologia assistiva;
+* Base conceitual utilizada para a nova versão do HandHelp.
 
 ---
 
@@ -162,13 +201,13 @@ Triagem guiada
         ├── Localização da dor
         ├── Intensidade da dor
         ├── Informações adicionais
-        └── Apoio visual em Libras
+        └── Recursos visuais em Libras
         │
         ▼
-Geração de resumo das informações
+Geração de resumo textual
         │
         ▼
-Apresentação do resumo ao profissional de saúde
+Apresentação das informações ao profissional de saúde
 ```
 
 ---
@@ -178,18 +217,18 @@ Apresentação do resumo ao profissional de saúde
 <div align="center">
 
 <a href="https://handhelp.netlify.app/">
-  <img src="./assets/images/deploy.png" width="100%" alt="Demonstração web do HandHelp">
+  <img src="./assets/images/deploy.png" width="100%" alt="Demonstração web do HandHelp v1.0">
 </a>
 
 <br><br>
 
 <a href="https://handhelp.netlify.app/">
-  <img src="https://img.shields.io/badge/Acessar%20HandHelp%20na%20Web-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Acessar HandHelp na Web">
+  <img src="https://img.shields.io/badge/Acessar%20Protótipo%20Legado%20na%20Web-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Acessar protótipo legado na web">
 </a>
 
 </div>
 
-> As imagens e a demonstração pública possuem finalidade acadêmica e não devem ser utilizadas para inserir dados médicos reais.
+> A demonstração web representa a versão acadêmica inicial do HandHelp. Ela não deve ser utilizada para inserir dados reais de pacientes ou informações clínicas sensíveis.
 
 ---
 
@@ -246,11 +285,11 @@ Projeto_Integrador_Handhelp_versao_1.0/
 └── README.md
 ```
 
-> Pastas geradas automaticamente pelo Flutter, como `build/` e `.dart_tool/`, não aparecem na estrutura porque não devem ser enviadas ao Git.
+> A estrutura apresentada corresponde à versão inicial do projeto. A nova versão do HandHelp possui uma organização em evolução, com foco em maior modularização e separação de responsabilidades.
 
 ---
 
-## Como executar o projeto
+## Como executar a versão legada
 
 ### Pré-requisitos
 
@@ -260,7 +299,7 @@ Antes de iniciar, é necessário ter instalado:
 * Dart SDK compatível com a versão do Flutter;
 * Git;
 * Android Studio ou VS Code;
-* extensões Flutter e Dart instaladas;
+* extensões Flutter e Dart;
 * emulador Android configurado, navegador compatível ou dispositivo físico conectado.
 
 ### 1. Clone o repositório
@@ -299,7 +338,7 @@ flutter run
 flutter run -d chrome
 ```
 
-### 7. Liste dispositivos disponíveis
+### 7. Liste os dispositivos disponíveis
 
 ```bash
 flutter devices
@@ -307,90 +346,87 @@ flutter devices
 
 ---
 
-## Testes e build
-
-### Executar testes
+## Comandos úteis
 
 ```bash
-flutter test
-```
+# Instala as dependências
+flutter pub get
 
-### Analisar o código
+# Executa a aplicação
+flutter run
 
-```bash
+# Executa no navegador
+flutter run -d chrome
+
+# Verifica a configuração do ambiente
+flutter doctor
+
+# Analisa possíveis problemas no código
 flutter analyze
-```
 
-### Gerar APK
+# Executa testes disponíveis
+flutter test
 
-```bash
+# Gera APK Android
 flutter build apk
-```
 
-### Gerar build web
-
-```bash
+# Gera versão web
 flutter build web
-```
-
-### Gerar App Bundle
-
-```bash
-flutter build appbundle
 ```
 
 ---
 
-## Roadmap
+## Roadmap histórico
 
-### Organização e arquitetura
+Esta seção representa o planejamento original da versão v1.0.
+
+### Base do protótipo
 
 * [x] Protótipo inicial de triagem;
 * [x] Estrutura Flutter multiplataforma;
 * [x] Telas para sintomas, dor e fluxo de atendimento;
 * [x] Recursos visuais e vídeos de apoio;
 * [x] Demonstração web publicada;
+* [x] Geração inicial de resumo textual.
+
+### Melhorias migradas para a nova versão
+
 * [ ] Aplicar Clean Architecture;
-* [ ] Organizar melhor pastas por módulos e responsabilidades;
+* [ ] Organizar pastas por módulos e responsabilidades;
 * [ ] Aplicar princípios SOLID;
-* [ ] Padronizar nomes de arquivos e classes.
-
-### Estado e persistência
-
-* [ ] Implementar gerenciamento de estado com Provider, Bloc ou Riverpod;
-* [ ] Adicionar armazenamento local para dados do usuário;
+* [ ] Padronizar nomes de arquivos e classes;
+* [ ] Implementar gerenciamento de estado;
+* [ ] Criar persistência local;
 * [ ] Criar histórico de triagens;
 * [ ] Implementar cache offline;
-* [ ] Adicionar banco local com SQLite ou Hive;
-* [ ] Implementar proteção local por PIN.
-
-### Acessibilidade e saúde
-
-* [ ] Ampliar o acervo de vídeos em Libras;
+* [ ] Adicionar banco local;
+* [ ] Implementar proteção por PIN ou biometria;
+* [ ] Melhorar recursos em Libras;
+* [ ] Criar suporte a alto contraste;
 * [ ] Melhorar semântica para leitores de tela;
-* [ ] Criar modo de alto contraste;
-* [ ] Adicionar ajustes de tamanho de texto;
-* [ ] Refinar textos e instruções em Libras;
-* [ ] Criar resumo estruturado mais completo para profissionais.
-
-### Qualidade e evolução
-
 * [ ] Criar testes unitários;
 * [ ] Criar testes de widgets;
 * [ ] Criar testes de integração;
-* [ ] Melhorar tratamento de erros;
-* [ ] Adicionar validação de campos;
-* [ ] Criar documentação técnica mais detalhada;
-* [ ] Evoluir a versão acadêmica para uma arquitetura de produção.
+* [ ] Evoluir o projeto para uma arquitetura mais robusta.
 
 ---
 
 ## Contribuição
 
-Contribuições são bem-vindas, especialmente em acessibilidade, Flutter, UX inclusiva, Libras, organização de arquitetura e testes.
+Este repositório é mantido principalmente como referência histórica e acadêmica.
+
+Contribuições podem ser feitas para:
+
+* corrigir erros que impeçam a execução do protótipo;
+* melhorar a documentação;
+* corrigir links, imagens ou instruções;
+* realizar pequenos ajustes de manutenção;
+* registrar melhorias que possam ser migradas para a nova versão.
+
+Para funcionalidades novas, melhorias estruturais ou evoluções importantes, priorize o repositório da nova versão do HandHelp.
 
 ```bash
-# Faça um fork do projeto no GitHub
+# Faça um fork do projeto
 
 # Clone o seu fork
 git clone https://github.com/SEU-USUARIO/Projeto_Integrador_Handhelp_versao_1.0.git
@@ -398,44 +434,35 @@ git clone https://github.com/SEU-USUARIO/Projeto_Integrador_Handhelp_versao_1.0.
 # Entre na pasta do projeto
 cd Projeto_Integrador_Handhelp_versao_1.0
 
-# Crie uma branch para sua alteração
-git checkout -b feature/nova-funcionalidade
+# Crie uma branch para manutenção
+git checkout -b fix/correcao-documentacao
 
 # Instale as dependências
 flutter pub get
 
-# Execute os testes
+# Teste a aplicação
 flutter test
 
 # Adicione as alterações
 git add .
 
 # Crie um commit descritivo
-git commit -m "feat: adiciona melhoria de acessibilidade"
+git commit -m "docs: atualiza instruções do projeto legado"
 
-# Envie a branch para o GitHub
-git push origin feature/nova-funcionalidade
+# Envie a branch
+git push origin fix/correcao-documentacao
 ```
-
-Depois, abra um Pull Request explicando:
-
-* o objetivo da alteração;
-* quais telas ou componentes foram modificados;
-* como a funcionalidade foi testada;
-* se houve impacto na acessibilidade;
-* se foram adicionados recursos visuais ou vídeos em Libras.
 
 ### Diretrizes
 
-* Preserve a finalidade inclusiva do projeto;
-* Evite linguagem médica que sugira diagnóstico automático;
-* Não adicione dados reais de pacientes;
-* Nunca envie credenciais, chaves ou informações privadas;
-* Considere acessibilidade em toda alteração de interface;
-* Mantenha textos claros, simples e objetivos;
-* Utilize nomes compreensíveis para telas, widgets e variáveis;
-* Atualize o README quando houver mudanças importantes;
-* Teste o fluxo completo antes de abrir um Pull Request.
+* Preserve o caráter histórico e acadêmico da versão v1.0;
+* Evite adicionar funcionalidades grandes diretamente neste repositório;
+* Não inclua dados reais de pacientes;
+* Não envie senhas, tokens, chaves ou credenciais;
+* Evite linguagem que sugira diagnóstico automático;
+* Mantenha textos claros e acessíveis;
+* Atualize a documentação quando houver mudanças relevantes;
+* Priorize a nova versão para melhorias de arquitetura e funcionalidades.
 
 ---
 
@@ -472,3 +499,17 @@ desde que mantenha os créditos e a referência ao repositório original.
 * **Publicação web:** [Netlify](https://www.netlify.com/)
 * **Controle de versão:** Git e GitHub
 * **Badges:** [Shields.io](https://shields.io/)
+
+---
+
+<div align="center">
+
+### HandHelp v1.0
+
+Protótipo acadêmico preservado como base histórica para a evolução do HandHelp.
+
+<a href="">
+  <img src="https://img.shields.io/badge/Conheça%20a%20nova%20versão%20em%20desenvolvimento-7C3AED?style=for-the-badge&logo=github&logoColor=white" alt="Em breve a nova versão do HandHelp">
+</a>
+
+</div>
